@@ -1,0 +1,148 @@
+// Template content for SURVEY and GAME CONTENT imports (client-safe data). Every template parses cleanly with our own parser.
+import type { Locale } from "@/lib/types";
+import type { GameType } from "./types";
+
+type T = Record<Locale, string[]>;
+
+export const SURVEY: T = {
+  uz: [
+    "So'rovnoma nomi: Ota-onalar mamnunligi",
+    "Tavsif: Fikringiz maktabni yaxshilashga yordam beradi.",
+    "Auditoriya: Ota-onalar",
+    "Boshlanish: 2026-01-10",
+    "Tugash: 2026-02-10",
+    "Anonim: Ha",
+    "",
+    "1. Maktabdan umuman qanchalik mamnunsiz?",
+    "Shkala: 1-5 (Yoqmaydi - Juda yoqadi)",
+    "",
+    "2. Farzandingiz qaysi to'garaklarga qatnashadi? (Bir nechta)",
+    "☐ Sport",
+    "☐ Rassomlik",
+    "☐ Dasturlash",
+    "",
+    "3. Ovqatlanish sifatini qanday baholaysiz?",
+    "A) A'lo",
+    "B) Yaxshi",
+    "C) Qoniqarli",
+    "",
+    "4. Maktabni do'stlaringizga tavsiya qilasizmi? (Ha/Yo'q)",
+    "",
+    "5. Maktabni yaxshilash bo'yicha takliflaringiz?",
+    "Javob matni: ______",
+  ],
+  ru: [
+    "Название опроса: Удовлетворённость родителей",
+    "Описание: Ваше мнение помогает улучшить школу.",
+    "Аудитория: Родители",
+    "Начало: 2026-01-10",
+    "Конец: 2026-02-10",
+    "Анонимно: Да",
+    "",
+    "1. Насколько вы в целом довольны школой?",
+    "Шкала: 1-5 (Не нравится - Очень нравится)",
+    "",
+    "2. В какие кружки ходит ваш ребёнок? (Несколько)",
+    "☐ Спорт",
+    "☐ Рисование",
+    "☐ Программирование",
+    "",
+    "3. Как вы оцениваете качество питания?",
+    "А) Отлично",
+    "Б) Хорошо",
+    "В) Удовлетворительно",
+    "",
+    "4. Порекомендуете ли вы школу друзьям? (Да/Нет)",
+    "",
+    "5. Ваши предложения по улучшению школы?",
+    "Свободный ответ: ______",
+  ],
+  en: [
+    "Survey title: Parent satisfaction",
+    "Description: Your opinion helps us improve the school.",
+    "Audience: Parents",
+    "Start: 2026-01-10",
+    "End: 2026-02-10",
+    "Anonymous: Yes",
+    "",
+    "1. Overall, how satisfied are you with the school?",
+    "Scale: 1-5 (Not at all - Very much)",
+    "",
+    "2. Which clubs does your child attend? (Multiple)",
+    "☐ Sports",
+    "☐ Art",
+    "☐ Programming",
+    "",
+    "3. How do you rate the quality of meals?",
+    "A) Excellent",
+    "B) Good",
+    "C) Satisfactory",
+    "",
+    "4. Would you recommend the school to friends? (Yes/No)",
+    "",
+    "5. Do you have suggestions for improving the school?",
+    "Open question: ______",
+  ],
+};
+
+const Q5 = (lang: Locale) => {
+  const d: Record<Locale, string[][]> = {
+    uz: [["Poytaxt?", "Toshkent", "Buxoro", "B"], ["Eng katta daryo?", "Amudaryo", "Sirdaryo", "A"], ["2+2?", "3", "4", "B"], ["Haftada necha kun?", "7", "6", "A"], ["Suv formulasi?", "H2O", "CO2", "A"]],
+    ru: [["Столица?", "Ташкент", "Бухара", "А"], ["Самая большая река?", "Амударья", "Сырдарья", "А"], ["2+2?", "3", "4", "Б"], ["Дней в неделе?", "7", "6", "А"], ["Формула воды?", "H2O", "CO2", "А"]],
+    en: [["Capital?", "Tashkent", "Bukhara", "B"], ["Longest river?", "Amu Darya", "Syr Darya", "A"], ["2+2?", "3", "4", "B"], ["Days in a week?", "7", "6", "A"], ["Water formula?", "H2O", "CO2", "A"]],
+  };
+  const ans = lang === "uz" ? "Javob" : lang === "ru" ? "Ответ" : "Answer";
+  const ab = lang === "ru" ? ["А", "Б"] : ["A", "B"];
+  return d[lang].flatMap((q, i) => [`${i + 1}. ${q[0]}`, `${ab[0]}) ${q[1]}`, `${ab[1]}) ${q[2]}`, `${ans}: ${q[3]}`]);
+};
+
+export const GAME: Record<GameType, T> = {
+  matching: {
+    uz: ["Nomi: Ingliz tili: hayvonlar", "Fan: Ingliz tili", "Sinf: 3", "Qiyinlik: Oson", "O'yin turi: Juftlikni top", "", "cat - mushuk", "dog - it", "bird - qush", "fish - baliq", "horse - ot", "cow = sigir"],
+    ru: ["Название: Английский: животные", "Предмет: Английский язык", "Класс: 3", "Сложность: Легко", "Тип игры: Найди пару", "", "cat - кошка", "dog - собака", "bird - птица", "fish - рыба", "horse - лошадь", "cow = корова"],
+    en: ["Title: English: animals", "Subject: English", "Grade: 3", "Difficulty: Easy", "Game type: Matching pairs", "", "cat - mushuk", "dog - it", "bird - qush", "fish - baliq", "horse - ot", "cow = sigir"],
+  },
+  true_false: {
+    uz: [
+      "Nomi: Geografiya: to'g'ri yoki noto'g'ri",
+      "Fan: Geografiya",
+      "O'yin turi: To'g'ri yoki noto'g'ri",
+      "",
+      "1. Toshkent O'zbekistonning poytaxti. (To'g'ri)",
+      "Izoh: Toshkent mamlakatning eng katta shahri.",
+      "2. Quyosh g'arbdan chiqadi. (Noto'g'ri)",
+      "3. Amudaryo O'zbekiston orqali oqadi. (To'g'ri)",
+      "4. Afrika eng kichik qit'a. (Noto'g'ri)",
+      "5. Yer Quyosh atrofida aylanadi. (To'g'ri)",
+    ],
+    ru: [
+      "Название: География: верно или неверно",
+      "Предмет: География",
+      "Тип игры: Верно или неверно",
+      "",
+      "1. Ташкент - столица Узбекистана. (Верно)",
+      "Пояснение: Ташкент - крупнейший город страны.",
+      "2. Солнце восходит на западе. (Неверно)",
+      "3. Амударья протекает через Узбекистан. (Верно)",
+      "4. Африка - самый маленький континент. (Неверно)",
+      "5. Земля вращается вокруг Солнца. (Верно)",
+    ],
+    en: [
+      "Title: Geography: true or false",
+      "Subject: Geography",
+      "Game type: True or false",
+      "",
+      "1. Tashkent is the capital of Uzbekistan. (True)",
+      "Explanation: Tashkent is the largest city of the country.",
+      "2. The Sun rises in the west. (False)",
+      "3. The Amu Darya flows through Uzbekistan. (True)",
+      "4. Africa is the smallest continent. (False)",
+      "5. The Earth orbits the Sun. (True)",
+    ],
+  },
+  quiz_race: {
+    uz: ["Nomi: Umumiy bilim viktorinasi", "Fan: Umumiy bilim", "O'yin turi: Viktorina", "", ...Q5("uz")],
+    ru: ["Название: Викторина на общие знания", "Предмет: Общие знания", "Тип игры: Викторина", "", ...Q5("ru")],
+    en: ["Title: General knowledge quiz", "Subject: General knowledge", "Game type: Quiz race", "", ...Q5("en")],
+  },
+};

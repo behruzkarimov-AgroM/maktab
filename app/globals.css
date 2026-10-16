@@ -1,0 +1,395 @@
+@import "tailwindcss";
+
+/* Class-based dark mode: <html class="dark"> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ------------------------------------------------------------------ */
+/* Design tokens (light)                                               */
+/* ------------------------------------------------------------------ */
+:root {
+  --background: #f5f8fc;
+  --foreground: #0f1d33;
+  --surface: #ffffff;
+  --surface-2: #eaf0f8;
+  --muted: #e8eef6;
+  --muted-foreground: #55657d;
+  --border: #d5deea;
+  --ring: #457b9d;
+
+  --primary: #1d3557; /* logo navy */
+  --primary-foreground: #ffffff;
+  --secondary: #3f7396; /* steel blue (AA with white text) */
+  --secondary-foreground: #ffffff;
+  --accent: #f4b942; /* gold */
+  --accent-foreground: #2b1d00;
+  --mint: #2fb98f;
+  --sky: #5fa8d3;
+  --danger: #ef4444;
+
+  /* soft complementary card tints */
+  --brand-from: #1d3557;
+  --brand-to: #457b9d;
+  --accent-text: #a56d08;
+
+  --tint-blue: #e3eefa;
+  --tint-cream: #fdf4e1;
+  --tint-gold: #fcecc2;
+  --tint-mint: #dff5ec;
+
+  --glass-bg: rgb(255 255 255 / 0.65);
+  --glass-border: rgb(255 255 255 / 0.7);
+  --glass-shadow: 0 8px 32px rgb(29 53 87 / 0.12);
+
+  --mesh-1: rgb(29 53 87 / 0.14);
+  --mesh-2: rgb(69 123 157 / 0.16);
+  --mesh-3: rgb(244 185 66 / 0.18);
+}
+
+.dark {
+  color-scheme: dark;
+  --background: #0a1424;
+  --foreground: #e8eef7;
+  --surface: #11203a;
+  --surface-2: #182b48;
+  --muted: #14243b;
+  --muted-foreground: #9fb0c8;
+  --border: #22364f;
+  --ring: #7aa5c9;
+
+  --primary: #7fb0dc;
+  --primary-foreground: #0a1424;
+  --secondary: #8fc0dc;
+  --secondary-foreground: #0a1424;
+  --accent: #f6c85f;
+  --accent-foreground: #2b1d00;
+  --mint: #4be0b4;
+  --sky: #7ec3ea;
+  --danger: #f87171;
+
+  --brand-from: #1d3557;
+  --brand-to: #3a6d94;
+  --accent-text: #f6c85f;
+
+  /* lift navy surfaces so buttons/chips stay visible on the dark background */
+  --color-indigo-500: #5a86b5;
+  --color-indigo-600: #3f6fa3;
+  --color-indigo-700: #335d8c;
+
+  /* muted text (text-slate-500) must stay AA on dark surfaces */
+  --color-slate-500: #8a9bb2;
+
+  --tint-blue: #14304f;
+  --tint-cream: #2a2619;
+  --tint-gold: #33290f;
+  --tint-mint: #12332d;
+
+  --glass-bg: rgb(17 32 58 / 0.62);
+  --glass-border: rgb(255 255 255 / 0.09);
+  --glass-shadow: 0 8px 32px rgb(0 0 0 / 0.35);
+
+  --mesh-1: rgb(127 176 220 / 0.14);
+  --mesh-2: rgb(69 123 157 / 0.2);
+  --mesh-3: rgb(246 200 95 / 0.07);
+}
+
+/* Brand palette remap: legacy indigo/violet/fuchsia/purple/pink utilities
+   now resolve to the logo palette (navy / steel blue / gold). */
+@theme {
+  /* slate-500 is the app-wide "muted text" colour: darkened a notch so it is >= 4.5:1 on white, slate-50/100 and the brand tints */
+  --color-slate-500: #56677f;
+
+  --color-indigo-50: #eef3fa;
+  --color-indigo-100: #dde7f3;
+  --color-indigo-200: #bccfe6;
+  --color-indigo-300: #8fb0d6;
+  --color-indigo-400: #6590bd;
+  --color-indigo-500: #3f6a99;
+  --color-indigo-600: #1d3557;
+  --color-indigo-700: #172b47;
+  --color-indigo-800: #11213a;
+  --color-indigo-900: #0b1627;
+  --color-indigo-950: #070e1a;
+
+  --color-violet-50: #eef5f9;
+  --color-violet-100: #dbeaf2;
+  --color-violet-200: #b9d5e4;
+  --color-violet-300: #8fbbd4;
+  --color-violet-400: #6a9fc0;
+  --color-violet-500: #5088ad;
+  --color-violet-600: #3f7396;
+  --color-violet-700: #335d7a;
+  --color-violet-800: #2b4a62;
+  --color-violet-900: #223b4e;
+  --color-violet-950: #16273a;
+
+  --color-purple-50: #eef5f9;
+  --color-purple-100: #dbeaf2;
+  --color-purple-200: #b9d5e4;
+  --color-purple-300: #8fbbd4;
+  --color-purple-400: #6a9fc0;
+  --color-purple-500: #5088ad;
+  --color-purple-600: #3f7396;
+  --color-purple-700: #335d7a;
+  --color-purple-800: #2b4a62;
+  --color-purple-900: #223b4e;
+  --color-purple-950: #16273a;
+
+  --color-fuchsia-50: #fff9e8;
+  --color-fuchsia-100: #fdefc4;
+  --color-fuchsia-200: #fbe08f;
+  --color-fuchsia-300: #f8cf63;
+  --color-fuchsia-400: #f4b942;
+  --color-fuchsia-500: #e0a22a;
+  --color-fuchsia-600: #a56d08;
+  --color-fuchsia-700: #85570a;
+  --color-fuchsia-800: #6a450d;
+  --color-fuchsia-900: #4f340f;
+  --color-fuchsia-950: #2b1d00;
+
+  --color-pink-50: #fff9e8;
+  --color-pink-100: #fdefc4;
+  --color-pink-200: #fbe08f;
+  --color-pink-300: #f8cf63;
+  --color-pink-400: #f4b942;
+  --color-pink-500: #e0a22a;
+  --color-pink-600: #a56d08;
+  --color-pink-700: #85570a;
+  --color-pink-800: #6a450d;
+  --color-pink-900: #4f340f;
+  --color-pink-950: #2b1d00;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-mint: var(--mint);
+  --color-sky: var(--sky);
+  --color-danger: var(--danger);
+  --color-tint-blue: var(--tint-blue);
+  --color-tint-cream: var(--tint-cream);
+  --color-tint-gold: var(--tint-gold);
+  --color-tint-mint: var(--tint-mint);
+  --color-brand-from: var(--brand-from);
+  --color-brand-to: var(--brand-to);
+  --color-accent-text: var(--accent-text);
+
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-montserrat), var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-blob: blob 14s ease-in-out infinite;
+  --animate-shimmer: shimmer 2.2s linear infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes blob {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -20px) scale(1.08); }
+    66% { transform: translate(-20px, 20px) scale(0.95); }
+  }
+  @keyframes shimmer {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Base                                                                */
+/* ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: auto; /* Lenis handles smooth scrolling */
+    -webkit-text-size-adjust: 100%;
+  }
+  html.lenis, html.lenis body { height: auto; }
+  .lenis.lenis-smooth { scroll-behavior: auto !important; }
+  .lenis.lenis-stopped { overflow: hidden; }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    background-image:
+      radial-gradient(60rem 40rem at 10% -10%, var(--mesh-1), transparent 60%),
+      radial-gradient(50rem 40rem at 100% 0%, var(--mesh-2), transparent 60%),
+      radial-gradient(50rem 40rem at 50% 110%, var(--mesh-3), transparent 60%);
+    background-attachment: fixed;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  ::selection { background: var(--primary); color: var(--primary-foreground); }
+
+  :focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: 0.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Utilities                                                           */
+/* ------------------------------------------------------------------ */
+
+/* Glassmorphism */
+@utility glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  backdrop-filter: blur(16px) saturate(160%);
+}
+@utility glass-strong {
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+}
+
+/* Text gradient */
+@utility gradient-text {
+  background-image: linear-gradient(120deg, var(--primary), var(--secondary) 60%, var(--accent-text));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* Brand surface: navy -> steel blue (white text is AA on both modes) */
+@utility gradient-brand {
+  background-image: linear-gradient(135deg, var(--brand-from), var(--brand-to));
+  color: #fff;
+}
+@utility gradient-sun {
+  background-image: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 70%, #fff));
+  color: var(--accent-foreground);
+}
+/* Hero / page band: navy -> steel blue -> hint of gold */
+@utility gradient-hero {
+  background-image: linear-gradient(135deg, #14253f 0%, #1d3557 38%, #3a6d94 82%, #8a8a6a 130%);
+  color: #fff;
+}
+
+/* Bento grid: 1 col mobile, 2 tablet, 4 desktop. Children use .bento-span-* */
+@utility bento {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+  grid-auto-flow: dense;
+  @media (min-width: 40rem) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (min-width: 64rem) { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; }
+}
+@utility bento-item {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  position: relative;
+  min-width: 0;
+}
+@utility bento-span-2 {
+  @media (min-width: 40rem) { grid-column: span 2 / span 2; }
+}
+@utility bento-span-3 {
+  @media (min-width: 64rem) { grid-column: span 3 / span 3; }
+  @media (min-width: 40rem) and (max-width: 63.999rem) { grid-column: span 2 / span 2; }
+}
+@utility bento-row-2 {
+  @media (min-width: 40rem) { grid-row: span 2 / span 2; }
+}
+
+/* Page container */
+@utility container-page {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (min-width: 40rem) { padding-inline: 1.5rem; }
+  @media (min-width: 64rem) { padding-inline: 2rem; }
+}
+
+/* Section vertical rhythm */
+@utility section-y {
+  padding-block: 3.5rem;
+  @media (min-width: 64rem) { padding-block: 5.5rem; }
+}
+
+/* Decorative blurred blob */
+@utility blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  opacity: 0.55;
+  pointer-events: none;
+  animation: var(--animate-blob);
+}
+
+/* Skeleton shimmer */
+@utility skeleton {
+  background: linear-gradient(90deg, var(--muted) 25%, var(--surface-2) 50%, var(--muted) 75%);
+  background-size: 200% 100%;
+  animation: var(--animate-shimmer);
+  border-radius: var(--radius-xl);
+}
+
+/* Hide scrollbar helper (tabs, carousels) */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+/* ------------------------------------------------------------------ */
+/* Print (olympiad pass, certificates, results)                         */
+/* ------------------------------------------------------------------ */
+@page { margin: 14mm; }
+
+@media print {
+  html, body {
+    background: #fff !important;
+    background-image: none !important;
+    color: #000 !important;
+  }
+  .no-print, header[data-site-header], footer[data-site-footer], nav[data-mobile-nav] {
+    display: none !important;
+  }
+  .print-only { display: block !important; }
+  .glass, .glass-strong {
+    background: #fff !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    border: 1px solid #ccc !important;
+  }
+  * { animation: none !important; transition: none !important; }
+  a[href]::after { content: none !important; }
+  .print-break-avoid { break-inside: avoid; page-break-inside: avoid; }
+}
+.print-only { display: none; }

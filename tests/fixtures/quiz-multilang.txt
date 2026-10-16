@@ -1,0 +1,16 @@
+Sinf: 5
+Fan: Matematika
+
+[UZ] Kasrlar
+[RU] Дроби
+[EN] Fractions
+
+[UZ] 1. 1/2 + 1/4 nechaga teng?
+[RU] 1. Чему равно 1/2 + 1/4?
+[EN] 1. What is 1/2 + 1/4?
+A) 3/4
+B) 2/6
+C) 1/6
+Javob: A
+[UZ] Izoh: Maxrajni tenglashtiramiz.
+[RU] Пояснение: Приводим к общему знаменателю.

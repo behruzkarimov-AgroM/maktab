@@ -1,0 +1,27 @@
+English: Present Simple
+Subject: English
+Grade: 7
+Difficulty: easy
+
+Question 1. She ___ to school every day.
+A) go
+B) goes *
+C) going
+D) gone
+Explanation: Third person singular takes -es.
+
+Question 2. They ___ football on Sundays.
+A) plays
+B) playing
+C) play*
+D) played
+
+Question 3. ___ you speak English?
+A) Do
+B) Does
+C) Are
+
+Answer key
+1. B
+2. C
+3. A

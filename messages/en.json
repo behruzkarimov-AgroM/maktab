@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "title": "Children's Academy — private school",
+    "titleTemplate": "%s | Children's Academy",
+    "description": "Children's Academy is a modern private school: quality education, olympiads, quizzes and brain games."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "campus": "Campus life",
+    "team": "Team",
+    "achievements": "Achievements",
+    "olympiads": "Olympiads",
+    "quizzes": "Quizzes",
+    "psychology": "Psychology",
+    "surveys": "Surveys",
+    "games": "Brain games",
+    "contact": "Contact",
+    "more": "More",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "main": "Main navigation",
+    "skipToContent": "Skip to main content",
+    "assessment": "Assessment"
+  },
+  "common": {
+    "apply": "Apply now",
+    "learnMore": "Learn more",
+    "readMore": "Read more",
+    "viewAll": "View all",
+    "submit": "Submit",
+    "send": "Send",
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "start": "Start",
+    "retry": "Retry",
+    "loading": "Loading...",
+    "search": "Search",
+    "all": "All",
+    "yes": "Yes",
+    "no": "No",
+    "name": "Name",
+    "fullName": "Full name",
+    "phone": "Phone",
+    "grade": "Grade",
+    "message": "Message",
+    "required": "Required field",
+    "success": "Success!",
+    "demoMode": "Demo mode"
+  },
+  "footer": {
+    "tagline": "Knowledge, care and future in one place.",
+    "quickLinks": "Quick links",
+    "contacts": "Contact",
+    "followUs": "Follow us",
+    "workingHours": "Working hours",
+    "address": "Address",
+    "rights": "All rights reserved.",
+    "defaultAddress": "Tashkent, Yunusabad district",
+    "defaultHours": "Mon-Sat: 08:00 - 18:00",
+    "privacy": "Privacy statement",
+    "schoolSystem": "School system",
+    "privacyNote": "No cookies or ad tracking on this site. Children's data is used only for admissions and results.",
+    "languages": "Language",
+    "social": "Social media"
+  },
+  "theme": {
+    "label": "Theme",
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "label": "Language",
+    "switch": "Change language",
+    "uz": "O'zbekcha",
+    "ru": "Русский",
+    "en": "English"
+  },
+  "errors": {
+    "notFoundTitle": "Page not found",
+    "notFoundText": "Sorry, the page you are looking for does not exist or has been moved.",
+    "backHome": "Back to home",
+    "somethingWrong": "Something went wrong",
+    "tryAgain": "Please try again",
+    "network": "Network error. Check your connection.",
+    "retryButton": "Try again"
+  },
+  "seo": {
+    "home": {
+      "title": "Children's Academy — modern private school",
+      "description": "Children's Academy: grades 1–11, strong programs, olympiads, quizzes, psychology tests and brain games. Apply for admission."
+    },
+    "about": {
+      "title": "About the school",
+      "description": "Mission, vision and history of Children's Academy: a modern learning environment that unlocks every child's talent."
+    },
+    "programs": {
+      "title": "Programs",
+      "description": "Programs for primary, middle and high school: subjects, languages, STEM and international opportunities."
+    },
+    "campus": {
+      "title": "Campus life",
+      "description": "Campus, classrooms, clubs, sports and events: everyday life at Children's Academy."
+    },
+    "team": {
+      "title": "Our team",
+      "description": "Meet the teachers and leadership of Children's Academy."
+    },
+    "achievements": {
+      "title": "Achievements",
+      "description": "Our students' wins at olympiads, competitions and contests."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Address, phone numbers, working hours and admission request form."
+    },
+    "privacy": {
+      "title": "Privacy statement",
+      "description": "What data Children's Academy forms collect, why, and how children's data is protected."
+    },
+    "games": {
+      "title": "Brain games",
+      "description": "Games that train attention, memory and logic, with a leaderboard."
+    },
+    "psychology": {
+      "title": "Psychological tests",
+      "description": "Friendly psychological tests for children, teens and parents."
+    },
+    "surveys": {
+      "title": "Surveys",
+      "description": "Anonymous surveys for parents and students: your opinion helps us improve the school."
+    },
+    "quizzes": {
+      "title": "Quiz center",
+      "description": "Online subject quizzes with results and certificates."
+    },
+    "olympiads": {
+      "title": "Olympiads",
+      "description": "Register online, download a QR pass and check your result."
+    },
+    "assessment": {
+      "title": "Assessment center",
+      "description": "Knowledge and psychological diagnostics center."
+    }
+  },
+  "privacy": {
+    "title": "Privacy statement",
+    "intro": "This page explains what data the forms on this site collect and how it is used. The site does not use cookies.",
+    "updated": "Last updated: October 2026",
+    "sections": [
+      {
+        "title": "Who we are",
+        "body": [
+          "The data controller is Children's Academy private school. Contact details are on the Contact page."
+        ]
+      },
+      {
+        "title": "What we collect",
+        "body": [
+          "Admission form: parent's name, phone number, (optional) child's name, target grade, language and message text.",
+          "Olympiads, quizzes, assessments and psychology tests: participant name, grade, answers and results; contact details for olympiad registration.",
+          "Brain-game leaderboard: the nickname you enter and your score. We recommend not using a real name."
+        ]
+      },
+      {
+        "title": "Why we use it",
+        "body": [
+          "To answer your request, register participation, issue results and certificates and score tests. Data is never used for advertising, sold or shared with third parties."
+        ]
+      },
+      {
+        "title": "Cookies and tracking",
+        "body": [
+          "The site does not use cookies. Only convenience settings stay in your browser storage: theme (light/dark), language and test progress. Visit statistics are anonymous page views that do not identify a person."
+        ]
+      },
+      {
+        "title": "Children's data",
+        "body": [
+          "Children's data is collected through a parent or legal guardian, or with their permission. We ask only for the minimum needed. Psychology test results are not a diagnosis, are informational only and are not shared with third parties without consent.",
+          "A parent can ask at any time to view, correct or delete their child's data."
+        ]
+      },
+      {
+        "title": "Storage and security",
+        "body": [
+          "Data is stored in a protected database and only authorised staff can access it. A notification about new admission requests may be sent to the admissions office. Data is not kept longer than the purpose requires."
+        ]
+      },
+      {
+        "title": "Your rights",
+        "body": [
+          "You may access, correct or delete your data and withdraw consent. To make a request, use the e-mail or phone number on the Contact page."
+        ]
+      }
+    ]
+  }
+}

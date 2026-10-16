@@ -1,0 +1,108 @@
+[
+  {
+    "id": "00000000-0000-4000-8000-00000000c001",
+    "game_type": "matching",
+    "title": { "uz": "Ingliz–o'zbek lug'ati: kundalik so'zlar", "ru": "Англо-узбекский словарь: повседневные слова", "en": "English–Uzbek vocabulary: everyday words" },
+    "description": { "uz": "Ingliz so'zini o'zbekcha tarjimasi bilan juftlang.", "ru": "Соедините английское слово с его узбекским переводом.", "en": "Match each English word with its Uzbek translation." },
+    "subject_key": "english",
+    "grade": 3,
+    "difficulty": "easy",
+    "sort_order": 1,
+    "items": [
+      { "id": "p1", "left": { "uz": "apple", "ru": "apple", "en": "apple" }, "right": { "uz": "olma", "ru": "olma", "en": "olma" } },
+      { "id": "p2", "left": { "uz": "book", "ru": "book", "en": "book" }, "right": { "uz": "kitob", "ru": "kitob", "en": "kitob" } },
+      { "id": "p3", "left": { "uz": "water", "ru": "water", "en": "water" }, "right": { "uz": "suv", "ru": "suv", "en": "suv" } },
+      { "id": "p4", "left": { "uz": "house", "ru": "house", "en": "house" }, "right": { "uz": "uy", "ru": "uy", "en": "uy" } },
+      { "id": "p5", "left": { "uz": "friend", "ru": "friend", "en": "friend" }, "right": { "uz": "do'st", "ru": "do'st", "en": "do'st" } },
+      { "id": "p6", "left": { "uz": "school", "ru": "school", "en": "school" }, "right": { "uz": "maktab", "ru": "maktab", "en": "maktab" } },
+      { "id": "p7", "left": { "uz": "bread", "ru": "bread", "en": "bread" }, "right": { "uz": "non", "ru": "non", "en": "non" } },
+      { "id": "p8", "left": { "uz": "sun", "ru": "sun", "en": "sun" }, "right": { "uz": "quyosh", "ru": "quyosh", "en": "quyosh" } },
+      { "id": "p9", "left": { "uz": "teacher", "ru": "teacher", "en": "teacher" }, "right": { "uz": "o'qituvchi", "ru": "o'qituvchi", "en": "o'qituvchi" } },
+      { "id": "p10", "left": { "uz": "cat", "ru": "cat", "en": "cat" }, "right": { "uz": "mushuk", "ru": "mushuk", "en": "mushuk" } }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-00000000c002",
+    "game_type": "matching",
+    "title": { "uz": "Tabiiy fanlar: atama va ta'rif", "ru": "Естествознание: термин и определение", "en": "Science: term and definition" },
+    "description": { "uz": "Fan atamalarini ularning ta'rifi bilan juftlang.", "ru": "Соедините научные термины с их определениями.", "en": "Match science terms with their definitions." },
+    "subject_key": "science",
+    "grade": 5,
+    "difficulty": "medium",
+    "sort_order": 2,
+    "items": [
+      { "id": "p1", "left": { "uz": "Fotosintez", "ru": "Фотосинтез", "en": "Photosynthesis" }, "right": { "uz": "O'simliklarning yorug'likda oziq modda hosil qilishi", "ru": "Образование растениями питательных веществ на свету", "en": "Plants making food from light" } },
+      { "id": "p2", "left": { "uz": "Gravitatsiya", "ru": "Гравитация", "en": "Gravity" }, "right": { "uz": "Jismlarning bir-biriga tortilish kuchi", "ru": "Сила притяжения тел друг к другу", "en": "The force that pulls objects together" } },
+      { "id": "p3", "left": { "uz": "Ekotizim", "ru": "Экосистема", "en": "Ecosystem" }, "right": { "uz": "Tirik organizmlar va ularning yashash muhiti birligi", "ru": "Единство живых организмов и среды их обитания", "en": "Living things and the environment they share" } },
+      { "id": "p4", "left": { "uz": "Bug'lanish", "ru": "Испарение", "en": "Evaporation" }, "right": { "uz": "Suyuqlikning gazga aylanishi", "ru": "Превращение жидкости в газ", "en": "A liquid turning into a gas" } },
+      { "id": "p5", "left": { "uz": "Atom", "ru": "Атом", "en": "Atom" }, "right": { "uz": "Kimyoviy elementning eng kichik zarrasi", "ru": "Мельчайшая частица химического элемента", "en": "The smallest particle of a chemical element" } },
+      { "id": "p6", "left": { "uz": "Energiya", "ru": "Энергия", "en": "Energy" }, "right": { "uz": "Ish bajarish qobiliyati", "ru": "Способность совершать работу", "en": "The ability to do work" } },
+      { "id": "p7", "left": { "uz": "Yashash muhiti", "ru": "Среда обитания", "en": "Habitat" }, "right": { "uz": "Jonzot yashaydigan tabiiy joy", "ru": "Природное место, где живёт организм", "en": "The natural home of an organism" } },
+      { "id": "p8", "left": { "uz": "Mineral", "ru": "Минерал", "en": "Mineral" }, "right": { "uz": "Tabiiy hosil bo'lgan bir jinsli qattiq modda", "ru": "Природное однородное твёрдое вещество", "en": "A naturally formed, uniform solid substance" } }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-00000000c003",
+    "game_type": "true_false",
+    "title": { "uz": "Geografiya: to'g'ri yoki noto'g'ri?", "ru": "География: верно или неверно?", "en": "Geography: true or false?" },
+    "description": { "uz": "Dunyo va O'zbekiston geografiyasi bo'yicha tezkor savollar.", "ru": "Быстрые вопросы по географии мира и Узбекистана.", "en": "Quick questions on world and Uzbekistan geography." },
+    "subject_key": "geography",
+    "grade": 5,
+    "difficulty": "easy",
+    "sort_order": 3,
+    "items": [
+      { "id": "s1", "statement": { "uz": "Toshkent — O'zbekistonning poytaxti.", "ru": "Ташкент — столица Узбекистана.", "en": "Tashkent is the capital of Uzbekistan." }, "is_true": true, "explanation": null },
+      { "id": "s2", "statement": { "uz": "Amazonka daryosi Afrikada joylashgan.", "ru": "Река Амазонка находится в Африке.", "en": "The Amazon River is in Africa." }, "is_true": false, "explanation": { "uz": "Amazonka Janubiy Amerikada oqadi. Afrikadagi mashhur daryo — Nil.", "ru": "Амазонка течёт в Южной Америке. Знаменитая река Африки — Нил.", "en": "The Amazon flows in South America. Africa's famous river is the Nile." } },
+      { "id": "s3", "statement": { "uz": "Tinch okeani Yerdagi eng katta okeandir.", "ru": "Тихий океан — самый большой океан Земли.", "en": "The Pacific is the largest ocean on Earth." }, "is_true": true, "explanation": null },
+      { "id": "s4", "statement": { "uz": "Everest cho'qqisi Alp tog'larida joylashgan.", "ru": "Пик Эверест находится в Альпах.", "en": "Mount Everest is in the Alps." }, "is_true": false, "explanation": { "uz": "Everest Himolay tog'larida, Nepal va Xitoy chegarasida joylashgan.", "ru": "Эверест расположен в Гималаях, на границе Непала и Китая.", "en": "Everest is in the Himalayas, on the border of Nepal and China." } },
+      { "id": "s5", "statement": { "uz": "Antarktida — eng sovuq qit'a.", "ru": "Антарктида — самый холодный континент.", "en": "Antarctica is the coldest continent." }, "is_true": true, "explanation": null },
+      { "id": "s6", "statement": { "uz": "Avstraliya Yevropa qit'asida joylashgan.", "ru": "Австралия находится в Европе.", "en": "Australia is in Europe." }, "is_true": false, "explanation": { "uz": "Avstraliya — alohida qit'a, Janubiy yarim sharda joylashgan.", "ru": "Австралия — отдельный континент в Южном полушарии.", "en": "Australia is a continent of its own, in the Southern Hemisphere." } },
+      { "id": "s7", "statement": { "uz": "Samarqand — O'zbekistonning qadimiy shaharlaridan biri.", "ru": "Самарканд — один из древних городов Узбекистана.", "en": "Samarkand is one of the ancient cities of Uzbekistan." }, "is_true": true, "explanation": null },
+      { "id": "s8", "statement": { "uz": "Nil daryosi Janubiy Amerikada oqadi.", "ru": "Река Нил течёт в Южной Америке.", "en": "The Nile flows through South America." }, "is_true": false, "explanation": { "uz": "Nil Shimoliy-Sharqiy Afrikadan o'tib, O'rta dengizga quyiladi.", "ru": "Нил течёт по северо-востоку Африки и впадает в Средиземное море.", "en": "The Nile flows through north-east Africa into the Mediterranean Sea." } },
+      { "id": "s9", "statement": { "uz": "Yer yuzida beshta okean bor.", "ru": "На Земле пять океанов.", "en": "There are five oceans on Earth." }, "is_true": true, "explanation": null },
+      { "id": "s10", "statement": { "uz": "Orol dengizi Yaponiyada joylashgan.", "ru": "Аральское море находится в Японии.", "en": "The Aral Sea is in Japan." }, "is_true": false, "explanation": { "uz": "Orol dengizi O'zbekiston va Qozog'iston o'rtasida, Markaziy Osiyoda joylashgan.", "ru": "Аральское море расположено в Центральной Азии, между Узбекистаном и Казахстаном.", "en": "The Aral Sea is in Central Asia, between Uzbekistan and Kazakhstan." } }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-00000000c004",
+    "game_type": "quiz_race",
+    "title": { "uz": "Umumiy bilim viktorinasi", "ru": "Викторина на общие знания", "en": "General knowledge quiz" },
+    "description": { "uz": "Tabiat, fan va tarixdan aralash savollar.", "ru": "Смешанные вопросы о природе, науке и истории.", "en": "Mixed questions on nature, science and history." },
+    "subject_key": "general",
+    "grade": null,
+    "difficulty": "medium",
+    "sort_order": 4,
+    "items": [
+      { "id": "q1", "question": { "uz": "Quyoshga eng yaqin sayyora qaysi?", "ru": "Какая планета ближе всего к Солнцу?", "en": "Which planet is closest to the Sun?" }, "options": [ { "id": "A", "text": { "uz": "Merkuriy", "ru": "Меркурий", "en": "Mercury" } }, { "id": "B", "text": { "uz": "Venera", "ru": "Венера", "en": "Venus" } }, { "id": "C", "text": { "uz": "Mars", "ru": "Марс", "en": "Mars" } }, { "id": "D", "text": { "uz": "Yupiter", "ru": "Юпитер", "en": "Jupiter" } } ], "correct_option_id": "A", "explanation": { "uz": "Merkuriy Quyoshga eng yaqin sayyoradir.", "ru": "Меркурий — ближайшая к Солнцу планета.", "en": "Mercury is the planet nearest the Sun." } },
+      { "id": "q2", "question": { "uz": "Suvning kimyoviy formulasi qanday?", "ru": "Какова химическая формула воды?", "en": "What is the chemical formula of water?" }, "options": [ { "id": "A", "text": { "uz": "CO2", "ru": "CO2", "en": "CO2" } }, { "id": "B", "text": { "uz": "H2O", "ru": "H2O", "en": "H2O" } }, { "id": "C", "text": { "uz": "O2", "ru": "O2", "en": "O2" } }, { "id": "D", "text": { "uz": "NaCl", "ru": "NaCl", "en": "NaCl" } } ], "correct_option_id": "B", "explanation": { "uz": "Suv molekulasi ikkita vodorod va bitta kislorod atomidan iborat.", "ru": "Молекула воды состоит из двух атомов водорода и одного атома кислорода.", "en": "A water molecule has two hydrogen atoms and one oxygen atom." } },
+      { "id": "q3", "question": { "uz": "O'zbekiston Mustaqilligi kuni qachon nishonlanadi?", "ru": "Когда отмечается День независимости Узбекистана?", "en": "When is Uzbekistan's Independence Day?" }, "options": [ { "id": "A", "text": { "uz": "1-yanvar", "ru": "1 января", "en": "1 January" } }, { "id": "B", "text": { "uz": "21-mart", "ru": "21 марта", "en": "21 March" } }, { "id": "C", "text": { "uz": "1-sentabr", "ru": "1 сентября", "en": "1 September" } }, { "id": "D", "text": { "uz": "9-may", "ru": "9 мая", "en": "9 May" } } ], "correct_option_id": "C", "explanation": null },
+      { "id": "q4", "question": { "uz": "Eng katta sutemizuvchi hayvon qaysi?", "ru": "Какое млекопитающее самое большое?", "en": "Which is the largest mammal?" }, "options": [ { "id": "A", "text": { "uz": "Fil", "ru": "Слон", "en": "Elephant" } }, { "id": "B", "text": { "uz": "Jirafa", "ru": "Жираф", "en": "Giraffe" } }, { "id": "C", "text": { "uz": "Ko'k kit", "ru": "Синий кит", "en": "Blue whale" } }, { "id": "D", "text": { "uz": "Qutb ayig'i", "ru": "Белый медведь", "en": "Polar bear" } } ], "correct_option_id": "C", "explanation": { "uz": "Ko'k kit Yer tarixidagi eng katta hayvonlardan biridir.", "ru": "Синий кит — одно из крупнейших животных в истории Земли.", "en": "The blue whale is one of the largest animals ever to live." } },
+      { "id": "q5", "question": { "uz": "Mirzo Ulug'bek qaysi sohada mashhur?", "ru": "В какой области известен Мирзо Улугбек?", "en": "What was Mirzo Ulugbek famous for?" }, "options": [ { "id": "A", "text": { "uz": "Astronomiya", "ru": "Астрономия", "en": "Astronomy" } }, { "id": "B", "text": { "uz": "Tibbiyot", "ru": "Медицина", "en": "Medicine" } }, { "id": "C", "text": { "uz": "Dengiz sayohati", "ru": "Морские путешествия", "en": "Sea voyages" } }, { "id": "D", "text": { "uz": "Kimyo", "ru": "Химия", "en": "Chemistry" } } ], "correct_option_id": "A", "explanation": { "uz": "Ulug'bek Samarqandda rasadxona qurdirgan va yulduzlar jadvalini tuzgan.", "ru": "Улугбек построил обсерваторию в Самарканде и составил звёздный каталог.", "en": "Ulugbek built an observatory in Samarkand and compiled a star catalogue." } },
+      { "id": "q6", "question": { "uz": "O'simliklar fotosintezda qaysi gazni yutadi?", "ru": "Какой газ поглощают растения при фотосинтезе?", "en": "Which gas do plants absorb during photosynthesis?" }, "options": [ { "id": "A", "text": { "uz": "Kislorod", "ru": "Кислород", "en": "Oxygen" } }, { "id": "B", "text": { "uz": "Azot", "ru": "Азот", "en": "Nitrogen" } }, { "id": "C", "text": { "uz": "Karbonat angidrid", "ru": "Углекислый газ", "en": "Carbon dioxide" } }, { "id": "D", "text": { "uz": "Vodorod", "ru": "Водород", "en": "Hydrogen" } } ], "correct_option_id": "C", "explanation": { "uz": "O'simliklar karbonat angidridni yutib, kislorod chiqaradi.", "ru": "Растения поглощают углекислый газ и выделяют кислород.", "en": "Plants take in carbon dioxide and release oxygen." } },
+      { "id": "q7", "question": { "uz": "Dunyodagi eng baland tog' qaysi?", "ru": "Какая гора самая высокая в мире?", "en": "What is the highest mountain in the world?" }, "options": [ { "id": "A", "text": { "uz": "Elbrus", "ru": "Эльбрус", "en": "Elbrus" } }, { "id": "B", "text": { "uz": "Everest", "ru": "Эверест", "en": "Everest" } }, { "id": "C", "text": { "uz": "Kilimanjaro", "ru": "Килиманджаро", "en": "Kilimanjaro" } }, { "id": "D", "text": { "uz": "Mont-Blan", "ru": "Монблан", "en": "Mont Blanc" } } ], "correct_option_id": "B", "explanation": null },
+      { "id": "q8", "question": { "uz": "Kattalar tanasida nechta suyak bor?", "ru": "Сколько костей в теле взрослого человека?", "en": "How many bones does an adult human have?" }, "options": [ { "id": "A", "text": { "uz": "106", "ru": "106", "en": "106" } }, { "id": "B", "text": { "uz": "206", "ru": "206", "en": "206" } }, { "id": "C", "text": { "uz": "306", "ru": "306", "en": "306" } }, { "id": "D", "text": { "uz": "406", "ru": "406", "en": "406" } } ], "correct_option_id": "B", "explanation": null },
+      { "id": "q9", "question": { "uz": "Quyosh qaysi tomondan chiqadi?", "ru": "С какой стороны восходит Солнце?", "en": "In which direction does the Sun rise?" }, "options": [ { "id": "A", "text": { "uz": "Sharq", "ru": "Восток", "en": "East" } }, { "id": "B", "text": { "uz": "G'arb", "ru": "Запад", "en": "West" } }, { "id": "C", "text": { "uz": "Shimol", "ru": "Север", "en": "North" } }, { "id": "D", "text": { "uz": "Janub", "ru": "Юг", "en": "South" } } ], "correct_option_id": "A", "explanation": null },
+      { "id": "q10", "question": { "uz": "Qaysi hayvon qush emas?", "ru": "Какое животное не является птицей?", "en": "Which animal is NOT a bird?" }, "options": [ { "id": "A", "text": { "uz": "Pingvin", "ru": "Пингвин", "en": "Penguin" } }, { "id": "B", "text": { "uz": "Burgut", "ru": "Орёл", "en": "Eagle" } }, { "id": "C", "text": { "uz": "Ko'rshapalak", "ru": "Летучая мышь", "en": "Bat" } }, { "id": "D", "text": { "uz": "Boyqush", "ru": "Сова", "en": "Owl" } } ], "correct_option_id": "C", "explanation": { "uz": "Ko'rshapalak — uchadigan sutemizuvchi, qush emas.", "ru": "Летучая мышь — летающее млекопитающее, а не птица.", "en": "A bat is a flying mammal, not a bird." } }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-00000000c005",
+    "game_type": "quiz_race",
+    "title": { "uz": "Matematika poygasi, 4-sinf", "ru": "Математическая гонка, 4 класс", "en": "Maths race, grade 4" },
+    "description": { "uz": "Tez hisoblang va to'g'ri javobni tanlang.", "ru": "Считайте быстро и выбирайте верный ответ.", "en": "Calculate fast and pick the right answer." },
+    "subject_key": "math",
+    "grade": 4,
+    "difficulty": "easy",
+    "sort_order": 5,
+    "items": [
+      { "id": "q1", "question": { "uz": "7 × 8 = ?", "ru": "7 × 8 = ?", "en": "7 × 8 = ?" }, "options": [ { "id": "A", "text": { "uz": "54", "ru": "54", "en": "54" } }, { "id": "B", "text": { "uz": "56", "ru": "56", "en": "56" } }, { "id": "C", "text": { "uz": "63", "ru": "63", "en": "63" } }, { "id": "D", "text": { "uz": "48", "ru": "48", "en": "48" } } ], "correct_option_id": "B", "explanation": null },
+      { "id": "q2", "question": { "uz": "100 − 37 = ?", "ru": "100 − 37 = ?", "en": "100 − 37 = ?" }, "options": [ { "id": "A", "text": { "uz": "63", "ru": "63", "en": "63" } }, { "id": "B", "text": { "uz": "73", "ru": "73", "en": "73" } }, { "id": "C", "text": { "uz": "67", "ru": "67", "en": "67" } }, { "id": "D", "text": { "uz": "57", "ru": "57", "en": "57" } } ], "correct_option_id": "A", "explanation": null },
+      { "id": "q3", "question": { "uz": "20 ning 3/4 qismi nechaga teng?", "ru": "Чему равны 3/4 от 20?", "en": "What is 3/4 of 20?" }, "options": [ { "id": "A", "text": { "uz": "10", "ru": "10", "en": "10" } }, { "id": "B", "text": { "uz": "12", "ru": "12", "en": "12" } }, { "id": "C", "text": { "uz": "15", "ru": "15", "en": "15" } }, { "id": "D", "text": { "uz": "18", "ru": "18", "en": "18" } } ], "correct_option_id": "C", "explanation": { "uz": "20 ÷ 4 = 5, 5 × 3 = 15.", "ru": "20 ÷ 4 = 5, 5 × 3 = 15.", "en": "20 ÷ 4 = 5, then 5 × 3 = 15." } },
+      { "id": "q4", "question": { "uz": "Tomoni 6 sm bo'lgan kvadratning perimetri necha sm?", "ru": "Чему равен периметр квадрата со стороной 6 см?", "en": "What is the perimeter of a square with side 6 cm?" }, "options": [ { "id": "A", "text": { "uz": "12 sm", "ru": "12 см", "en": "12 cm" } }, { "id": "B", "text": { "uz": "24 sm", "ru": "24 см", "en": "24 cm" } }, { "id": "C", "text": { "uz": "36 sm", "ru": "36 см", "en": "36 cm" } }, { "id": "D", "text": { "uz": "18 sm", "ru": "18 см", "en": "18 cm" } } ], "correct_option_id": "B", "explanation": { "uz": "Perimetr = 4 × 6 = 24.", "ru": "Периметр = 4 × 6 = 24.", "en": "Perimeter = 4 × 6 = 24." } },
+      { "id": "q5", "question": { "uz": "Qaysi son eng katta?", "ru": "Какое число самое большое?", "en": "Which number is the largest?" }, "options": [ { "id": "A", "text": { "uz": "0,5", "ru": "0,5", "en": "0.5" } }, { "id": "B", "text": { "uz": "0,45", "ru": "0,45", "en": "0.45" } }, { "id": "C", "text": { "uz": "0,6", "ru": "0,6", "en": "0.6" } }, { "id": "D", "text": { "uz": "0,09", "ru": "0,09", "en": "0.09" } } ], "correct_option_id": "C", "explanation": null },
+      { "id": "q6", "question": { "uz": "144 ÷ 12 = ?", "ru": "144 ÷ 12 = ?", "en": "144 ÷ 12 = ?" }, "options": [ { "id": "A", "text": { "uz": "10", "ru": "10", "en": "10" } }, { "id": "B", "text": { "uz": "11", "ru": "11", "en": "11" } }, { "id": "C", "text": { "uz": "12", "ru": "12", "en": "12" } }, { "id": "D", "text": { "uz": "14", "ru": "14", "en": "14" } } ], "correct_option_id": "C", "explanation": null },
+      { "id": "q7", "question": { "uz": "2,5 soatda necha daqiqa bor?", "ru": "Сколько минут в 2,5 часах?", "en": "How many minutes are in 2.5 hours?" }, "options": [ { "id": "A", "text": { "uz": "120", "ru": "120", "en": "120" } }, { "id": "B", "text": { "uz": "130", "ru": "130", "en": "130" } }, { "id": "C", "text": { "uz": "150", "ru": "150", "en": "150" } }, { "id": "D", "text": { "uz": "250", "ru": "250", "en": "250" } } ], "correct_option_id": "C", "explanation": { "uz": "2 soat = 120 daqiqa, yarim soat = 30 daqiqa.", "ru": "2 часа = 120 минут, полчаса = 30 минут.", "en": "2 hours = 120 minutes, half an hour = 30 minutes." } },
+      { "id": "q8", "question": { "uz": "5 sm × 9 sm to'g'ri to'rtburchakning yuzi qancha?", "ru": "Чему равна площадь прямоугольника 5 см × 9 см?", "en": "What is the area of a 5 cm × 9 cm rectangle?" }, "options": [ { "id": "A", "text": { "uz": "28 sm²", "ru": "28 см²", "en": "28 cm²" } }, { "id": "B", "text": { "uz": "45 sm²", "ru": "45 см²", "en": "45 cm²" } }, { "id": "C", "text": { "uz": "14 sm²", "ru": "14 см²", "en": "14 cm²" } }, { "id": "D", "text": { "uz": "54 sm²", "ru": "54 см²", "en": "54 cm²" } } ], "correct_option_id": "B", "explanation": { "uz": "Yuz = 5 × 9 = 45.", "ru": "Площадь = 5 × 9 = 45.", "en": "Area = 5 × 9 = 45." } }
+    ]
+  }
+]

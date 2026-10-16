@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "title": "Children's Academy — xususiy maktab",
+    "titleTemplate": "%s | Children's Academy",
+    "description": "Children's Academy — zamonaviy xususiy maktab: sifatli ta'lim, olimpiadalar, testlar va aqliy o'yinlar."
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Maktab haqida",
+    "programs": "Dasturlar",
+    "campus": "Maktab hayoti",
+    "team": "Jamoa",
+    "achievements": "Yutuqlar",
+    "olympiads": "Olimpiadalar",
+    "quizzes": "Testlar",
+    "psychology": "Psixologiya",
+    "surveys": "So'rovnomalar",
+    "games": "Aqliy o'yinlar",
+    "contact": "Aloqa",
+    "more": "Yana",
+    "menu": "Menyu",
+    "openMenu": "Menyuni ochish",
+    "closeMenu": "Menyuni yopish",
+    "main": "Asosiy navigatsiya",
+    "skipToContent": "Asosiy kontentga o'tish",
+    "assessment": "Diagnostika"
+  },
+  "common": {
+    "apply": "Ariza qoldirish",
+    "learnMore": "Batafsil",
+    "readMore": "Ko'proq o'qish",
+    "viewAll": "Hammasini ko'rish",
+    "submit": "Yuborish",
+    "send": "Jo'natish",
+    "cancel": "Bekor qilish",
+    "save": "Saqlash",
+    "close": "Yopish",
+    "back": "Orqaga",
+    "next": "Keyingi",
+    "previous": "Oldingi",
+    "start": "Boshlash",
+    "retry": "Qayta urinish",
+    "loading": "Yuklanmoqda...",
+    "search": "Qidirish",
+    "all": "Hammasi",
+    "yes": "Ha",
+    "no": "Yo'q",
+    "name": "Ism",
+    "fullName": "Ism va familiya",
+    "phone": "Telefon",
+    "grade": "Sinf",
+    "message": "Xabar",
+    "required": "Majburiy maydon",
+    "success": "Muvaffaqiyatli!",
+    "demoMode": "Demo rejim"
+  },
+  "footer": {
+    "tagline": "Bilim, mehr va kelajak bir joyda.",
+    "quickLinks": "Tezkor havolalar",
+    "contacts": "Aloqa ma'lumotlari",
+    "followUs": "Bizni kuzating",
+    "workingHours": "Ish vaqti",
+    "address": "Manzil",
+    "rights": "Barcha huquqlar himoyalangan.",
+    "defaultAddress": "Toshkent shahri, Yunusobod tumani",
+    "defaultHours": "Du-Sha: 08:00 - 18:00",
+    "privacy": "Maxfiylik siyosati",
+    "schoolSystem": "Maktab tizimi",
+    "privacyNote": "Saytda cookie va reklama kuzatuvi yo'q. Bolalar ma'lumotlari faqat qabul va natijalar uchun ishlatiladi.",
+    "languages": "Til",
+    "social": "Ijtimoiy tarmoqlar"
+  },
+  "theme": {
+    "label": "Mavzu",
+    "toggle": "Mavzuni almashtirish",
+    "light": "Yorug'",
+    "dark": "Qorong'u",
+    "system": "Tizim"
+  },
+  "language": {
+    "label": "Til",
+    "switch": "Tilni almashtirish",
+    "uz": "O'zbekcha",
+    "ru": "Русский",
+    "en": "English"
+  },
+  "errors": {
+    "notFoundTitle": "Sahifa topilmadi",
+    "notFoundText": "Kechirasiz, siz izlayotgan sahifa mavjud emas yoki ko'chirilgan.",
+    "backHome": "Bosh sahifaga qaytish",
+    "somethingWrong": "Nimadir xato ketdi",
+    "tryAgain": "Qayta urinib ko'ring",
+    "network": "Tarmoq xatosi. Internetni tekshiring.",
+    "retryButton": "Qayta urinish"
+  },
+  "seo": {
+    "home": {
+      "title": "Children's Academy — zamonaviy xususiy maktab",
+      "description": "Children's Academy: 1–11 sinflar, kuchli dasturlar, olimpiadalar, viktorinalar, psixologik testlar va aql o'yinlari. Qabulga yoziling."
+    },
+    "about": {
+      "title": "Maktab haqida",
+      "description": "Children's Academy missiyasi, qarashi va tarixi: bolalar iste'dodini ochuvchi zamonaviy ta'lim muhiti."
+    },
+    "programs": {
+      "title": "Ta'lim dasturlari",
+      "description": "Boshlang'ich, o'rta va yuqori sinflar uchun dasturlar: fanlar, til, STEM va xalqaro imkoniyatlar."
+    },
+    "campus": {
+      "title": "Maktab hayoti",
+      "description": "Kampus, sinfxonalar, to'garaklar, sport va tadbirlar — Children's Academy kundalik hayoti."
+    },
+    "team": {
+      "title": "Jamoamiz",
+      "description": "Children's Academy ustozlari va rahbariyati bilan tanishing."
+    },
+    "achievements": {
+      "title": "Yutuqlar",
+      "description": "O'quvchilarimizning olimpiada, tanlov va musobaqalardagi g'alabalari."
+    },
+    "contact": {
+      "title": "Aloqa",
+      "description": "Manzil, telefon, ish vaqti va qabulga yozilish uchun ariza qoldiring."
+    },
+    "privacy": {
+      "title": "Maxfiylik siyosati",
+      "description": "Children's Academy formalar orqali qanday ma'lumot yig'ishi, nima uchun va bolalar ma'lumotlari qanday himoyalanishi."
+    },
+    "games": {
+      "title": "Aqliy o'yinlar",
+      "description": "Diqqat, xotira va mantiqni rivojlantiruvchi o'yinlar va reyting jadvali."
+    },
+    "psychology": {
+      "title": "Psixologik testlar",
+      "description": "Bolalar, o'smirlar va ota-onalar uchun do'stona psixologik testlar."
+    },
+    "surveys": {
+      "title": "So'rovnomalar",
+      "description": "Ota-onalar va o'quvchilar uchun anonim so'rovnomalar: fikringiz maktabni yaxshilashga yordam beradi."
+    },
+    "quizzes": {
+      "title": "Testlar markazi",
+      "description": "Fanlar bo'yicha onlayn testlar, natija va sertifikat."
+    },
+    "olympiads": {
+      "title": "Olimpiadalar",
+      "description": "Onlayn ro'yxatdan o'ting, QR-kodli ruxsatnomani yuklab oling va natijani tekshiring."
+    },
+    "assessment": {
+      "title": "Baholash markazi",
+      "description": "Bilim va psixologik diagnostika markazi."
+    }
+  },
+  "privacy": {
+    "title": "Maxfiylik siyosati",
+    "intro": "Bu sahifada saytdagi formalar qanday ma'lumot yig'ishi va ular qanday ishlatilishi tushuntirilgan. Sayt cookie-fayllardan foydalanmaydi.",
+    "updated": "Oxirgi yangilanish: 2026-yil oktyabr",
+    "sections": [
+      {
+        "title": "Biz kimmiz",
+        "body": [
+          "Ma'lumotlar operatori — Children's Academy Group Termez xususiy maktabi. Aloqa ma'lumotlari «Aloqa» sahifasida ko'rsatilgan."
+        ]
+      },
+      {
+        "title": "Qanday ma'lumotlar yig'iladi",
+        "body": [
+          "Qabul formasi: ota-ona ismi, telefon raqami, (ixtiyoriy) bola ismi, kirmoqchi bo'lgan sinf, til va xabar matni.",
+          "Olimpiada, viktorina, diagnostika va psixologik testlar: ishtirokchi ismi, sinfi, javoblari va natijalari; olimpiadalarda ro'yxatdan o'tish uchun aloqa ma'lumotlari.",
+          "Aql o'yinlari reytingi: siz kiritgan taxallus (ism) va natija. Haqiqiy ismni kiritmaslikni tavsiya qilamiz."
+        ]
+      },
+      {
+        "title": "Nima uchun ishlatiladi",
+        "body": [
+          "Arizangizga javob berish, ro'yxatdan o'tkazish, natija va sertifikatlarni berish, testlarni baholash uchun. Ma'lumotlar reklama uchun ishlatilmaydi, sotilmaydi va uchinchi shaxslarga berilmaydi."
+        ]
+      },
+      {
+        "title": "Cookie va kuzatuv",
+        "body": [
+          "Sayt cookie-fayllardan foydalanmaydi. Brauzer xotirasida faqat tanlangan mavzu (och/qorong'i), til va test jarayoni kabi qulaylik sozlamalari saqlanadi. Tashrif statistikasi shaxsni aniqlamaydigan, anonim sahifa ko'rishlari sifatida hisoblanadi."
+        ]
+      },
+      {
+        "title": "Bolalar ma'lumotlari",
+        "body": [
+          "Bolalar ma'lumotlari ota-ona yoki qonuniy vakil orqali yoki ularning ruxsati bilan yig'iladi. Biz faqat zarur minimumni so'raymiz. Psixologik test natijalari tashxis emas, ular faqat ma'lumot uchun va mutaxassis ruxsatisiz uchinchi shaxslarga ko'rsatilmaydi.",
+          "Ota-ona istalgan vaqtda bolasining ma'lumotlarini ko'rish, tuzatish yoki o'chirishni so'rashi mumkin."
+        ]
+      },
+      {
+        "title": "Saqlash va xavfsizlik",
+        "body": [
+          "Ma'lumotlar himoyalangan ma'lumotlar bazasida saqlanadi, kirish faqat vakolatli xodimlarga ochiq. Qabul arizalari haqida qabul bo'limiga xabar yuborilishi mumkin. Ma'lumotlar maqsad uchun zarur muddatdan ortiq saqlanmaydi."
+        ]
+      },
+      {
+        "title": "Sizning huquqlaringiz",
+        "body": [
+          "Ma'lumotlaringizga kirish, tuzatish, o'chirish va rozilikni qaytarib olish huquqiga egasiz. So'rov uchun «Aloqa» sahifasidagi elektron pochta yoki telefon orqali murojaat qiling."
+        ]
+      }
+    ]
+  }
+}

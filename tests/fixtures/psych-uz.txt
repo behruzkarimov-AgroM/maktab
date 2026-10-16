@@ -1,0 +1,27 @@
+Maktab xavotirligi darajasi
+Mavzu: Emotsional holat
+Auditoriya: O'smirlar
+Tavsif: O'quvchining maktabga munosabatini aniqlaydi.
+Yo'riqnoma:
+Har bir savolga o'ylamasdan javob bering.
+To'g'ri yoki noto'g'ri javob yo'q.
+
+1. Test oldidan uxlay olmaysizmi?
+A) Ha, doim (2)
+B) Ba'zan (1)
+C) Hech qachon (0)
+
+2. Doskaga chiqishdan qo'rqasizmi?
+A) Ha, doim [2]
+B) Ba'zan [1]
+C) Hech qachon [0]
+
+3. Maktabga borishni xohlamaysizmi?
+A) Ha, doim - 2 ball
+B) Ba'zan - 1 ball
+C) Hech qachon - 0 ball
+
+Natijalar:
+0-1 ball: Past xavotir — O'quvchi maktabda o'zini erkin his qiladi. | Tavsiya: Qo'llab-quvvatlashda davom eting.
+2-4 ball: O'rta xavotir — Ba'zi vaziyatlarda xavotir sezilishi mumkin. | Tavsiya: Farzandingiz bilan ochiq suhbatlashing.
+5-6 ball: Yuqori xavotir — Psixolog bilan maslahatlashish tavsiya etiladi. | Tavsiya: Maktab psixologiga murojaat qiling.

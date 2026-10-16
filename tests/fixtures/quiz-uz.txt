@@ -1,0 +1,32 @@
+Matematika: kasrlar testi
+Fan: Matematika
+Sinf: 5-sinf
+Qiyinlik: O'rta
+Vaqt: 25 daqiqa
+O'tish bali: 70%
+
+1. 1/2 + 1/4 nechaga teng? (2 ball)
+A) 3/4
+B) 2/6
+C) 1/6
+D) 1/8
+Javob: A
+Izoh: Maxrajni 4 ga keltiramiz: 2/4 + 1/4 = 3/4.
+
+2. 2/3 ning 9 dan qismi nechaga teng?
+A. 3
+B. 6
+C. 9
+D. 12
+To'g'ri javob: B
+
+Savol 3: Qaysi kasr eng katta?
+A) 1/3  B) 1/2  C) 3/4  D) 2/5
+Javob: C
+Tushuntirish: 3/4 = 0,75 — eng katta qiymat.
+
+4) 5/10 kasrni qisqartiring
+*A) 1/5
+B) 1/2
+C) 2/5
+D) 5/2
