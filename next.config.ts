@@ -49,6 +49,7 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   poweredByHeader: false,
   // document import: native / worker-thread packages must stay outside the server bundle (OCR, legacy .doc, canvas)
   serverExternalPackages: ["tesseract.js", "@napi-rs/canvas", "word-extractor", "mammoth", "unpdf", "jszip"],
