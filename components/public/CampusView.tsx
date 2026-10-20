@@ -35,10 +35,14 @@ function Tile({ item, locale, big }: { item: GalleryItem; locale: "uz" | "ru" | 
 export function CampusView({ sections, tourUrl }: { sections: CampusSectionData[]; tourUrl: string | null }) {
   const { locale, t } = usePublic();
   const by = (k: string) => sections.find((s) => s.section_key === k);
-  const schedule = ((by("schedule")?.extra_data?.items as { time: string; title: LocalizedText }[] | undefined) ?? DEMO_SCHEDULE);
-  const menu = (by("kitchen")?.extra_data?.menu as { day: LocalizedText; items: LocalizedText }[] | undefined) ?? [];
-  const points = (by("security")?.extra_data?.points as LocalizedText[] | undefined) ?? [];
-  const routes = (by("transport")?.extra_data?.routes as LocalizedText[] | undefined) ?? [];
+  // extra_data is free-form JSON edited in the CMS (and the SQL seed stores e.g. routes as a count): only lists are rendered
+  const list = <T,>(v: unknown): T[] => (Array.isArray(v) ? (v as T[]) : []);
+  const scheduleRows = list<{ time: string; title?: LocalizedText; label?: LocalizedText }>(by("schedule")?.extra_data?.items)
+    .map((r) => ({ time: r.time, title: (r.title ?? r.label) as LocalizedText }));
+  const schedule = scheduleRows.length ? scheduleRows : DEMO_SCHEDULE;
+  const menu = list<{ day: LocalizedText; items: LocalizedText }>(by("kitchen")?.extra_data?.menu);
+  const points = list<LocalizedText>(by("security")?.extra_data?.points);
+  const routes = list<LocalizedText>(by("transport")?.extra_data?.routes);
 
   const urls = sections.flatMap((s) => s.gallery_urls ?? []);
   const gallery: GalleryItem[] = urls.length
