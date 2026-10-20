@@ -3,9 +3,9 @@ import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
 import { DEMO_ACCOUNTS, DEMO_COOKIE, DEMO_SESSION_MS, jsonError, signDemoCookie } from "@/lib/admin/auth";
 import { parseBody, rejectCrossOrigin } from "@/lib/api";
-import { demoAllowed, getServiceClient, getUserClient } from "@/lib/admin/supabase";
-import { ADMIN_ROLES, type AdminRole } from "@/lib/admin/types";
+import { demoAllowed } from "@/lib/admin/supabase";
 import { localEnabled } from "@/lib/localdb/server";
+import { signInWithPassword } from "@/lib/school/auth";
 import { enforceRateLimit } from "@/lib/rate-limit";
 
 const schema = z.object({ email: z.string().trim().toLowerCase().max(320), password: z.string().max(200) });
@@ -34,22 +34,17 @@ export async function POST(req: NextRequest) {
   if (!body.ok) return jsonError("Invalid credentials", 401);
 
   if (local) {
-    const client = await getUserClient();
-    const { data, error } = await client.auth.signInWithPassword({ email: body.data.email, password: body.data.password });
-    if (error || !data.user) return jsonError("Invalid credentials", 401);
-    const { data: p } = await getServiceClient()!.from("profiles").select("role,is_active").eq("id", data.user.id).maybeSingle();
-    if (!p || !p.is_active || !ADMIN_ROLES.includes(p.role as AdminRole)) {
-      await client.auth.signOut(); // a portal account (teacher, parent, ...) must not keep a session from the admin login
-      return jsonError("Forbidden", 403, { code: "forbidden" });
-    }
-    return NextResponse.json({ ok: true, role: p.role }, { headers: { "Cache-Control": "no-store" } });
+    // one sign-in for everybody: admins open the admin panel, students / parents / teachers / the director their portal
+    const r = await signInWithPassword(body.data.email, body.data.password, "admin");
+    if (!r) return jsonError("Invalid credentials", 401);
+    return NextResponse.json({ ok: true, role: r.role, redirect: r.home }, { headers: { "Cache-Control": "no-store" } });
   }
 
   // always compare against every account so the response time does not reveal which e-mails exist
   let acc: (typeof DEMO_ACCOUNTS)[number] | undefined;
   for (const a of DEMO_ACCOUNTS) if (same(a.email, body.data.email) && same(a.password, body.data.password)) acc = a;
   if (!acc) return jsonError("Invalid credentials", 401);
-  const res = NextResponse.json({ ok: true, role: acc.role }, { headers: { "Cache-Control": "no-store" } });
+  const res = NextResponse.json({ ok: true, role: acc.role, redirect: "/admin" }, { headers: { "Cache-Control": "no-store" } });
   res.cookies.set(DEMO_COOKIE, signDemoCookie(acc.email), { httpOnly: true, sameSite: "lax", path: "/", maxAge: DEMO_SESSION_MS / 1000, secure: process.env.NODE_ENV === "production" });
   return res;
 }

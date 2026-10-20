@@ -4,9 +4,11 @@
 import { createHmac, randomBytes, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 import { demoAllowed, getServiceClient, getUserClient, isConfigured } from "@/lib/admin/supabase";
+import { ADMIN_ROLES, type AdminRole } from "@/lib/admin/types";
 import { DEMO_ACCOUNTS } from "./demo-data";
 import { getDemoStore } from "./demo-store";
 import { SchoolError } from "./errors";
+import { homeFor } from "./nav";
 import { SCHOOL_ROLES, type SchoolRole, type SchoolSession } from "./types";
 
 export const SCHOOL_DEMO_COOKIE = "school_demo_session";
@@ -146,18 +148,38 @@ export async function requireSession(roles?: SchoolRole[]): Promise<SchoolSessio
   return s;
 }
 
-/** Supabase mode: password sign-in on the server (sets the auth cookies). Returns the role (+ the temp-password flag) or null. */
-export async function signInWithPassword(email: string, password: string): Promise<{ role: SchoolRole; mustChangePassword: boolean } | null> {
+/** where a signed-in account belongs: the school portal (with its home page) or the site admin panel */
+export type SignInResult = { role: string; mustChangePassword: boolean; home: string };
+
+/**
+ * The page an active account lands on after signing in, whichever login page it used:
+ * school roles -> their portal home (or the change-password screen while the password is temporary),
+ * methodist / psychologist -> the admin panel. Super admin: the caller decides (admin login -> /admin, portal login -> director area).
+ */
+export function landingFor(role: string, mustChangePassword: boolean, prefer: "school" | "admin"): string | null {
+  const school = SCHOOL_ROLES.includes(role as SchoolRole);
+  const admin = ADMIN_ROLES.includes(role as AdminRole);
+  if (admin && (prefer === "admin" || !school)) return "/admin";
+  if (school) return mustChangePassword ? "/school/change-password" : homeFor(role as SchoolRole);
+  return null;
+}
+
+/**
+ * Database mode (Supabase or self-hosted): password sign-in on the server (sets the session cookie).
+ * Any active account is accepted and told where to go (landingFor); an unknown role or an inactive profile signs out again -> null.
+ */
+export async function signInWithPassword(email: string, password: string, prefer: "school" | "admin" = "school"): Promise<SignInResult | null> {
   const client = await getUserClient();
   const { data, error } = await client.auth.signInWithPassword({ email, password });
   if (error || !data.user) return null;
   const db = getServiceClient();
   const { data: p } = await db!.from("profiles").select("role,is_active,must_change_password").eq("id", data.user.id).maybeSingle();
-  if (!p || !p.is_active || !SCHOOL_ROLES.includes(p.role as SchoolRole)) {
+  const home = p?.is_active ? landingFor(p.role, !!p.must_change_password, prefer) : null;
+  if (!p || !home) {
     await client.auth.signOut();
     return null;
   }
-  return { role: p.role as SchoolRole, mustChangePassword: !!p.must_change_password };
+  return { role: p.role, mustChangePassword: !!p.must_change_password, home };
 }
 
 export async function signOutSchool(): Promise<void> {

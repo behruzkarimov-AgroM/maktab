@@ -42,13 +42,15 @@ function Inner({ mode }: { mode: LoginMode }) {
     setBusy(true);
     setError(null);
     try {
-      // demo and self-hosted mode: the server checks the password and sets the session cookie
-      if (mode !== "supabase") await api.demoLogin(email, password);
+      // demo and self-hosted mode: the server checks the password, sets the session cookie and says where this account belongs
+      // (students, parents, teachers and the director go to their school portal). Supabase mode: the /admin guard does that.
+      let to = "/admin";
+      if (mode !== "supabase") to = (await api.demoLogin(email, password)).redirect ?? "/admin";
       else {
         const { error: err } = await (await loadAdminClient()).auth.signInWithPassword({ email, password });
         if (err) throw err;
       }
-      router.replace("/admin");
+      router.replace(to);
       router.refresh();
     } catch (e) {
       setError(e instanceof ApiError && e.status === 403 ? "forbidden" : "failed");

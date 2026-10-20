@@ -14,7 +14,9 @@ export const dynamic = "force-dynamic";
  */
 export default async function PanelLayout({ children }: { children: ReactNode }) {
   const session = await getSession();
-  if (!session) redirect((await hasNonAdminUser()) ? "/admin/login?error=forbidden" : "/admin/login");
+  // signed in, but not an admin (student, parent, teacher, director): their own portal instead of an error; /school then
+  // routes by role (or back to the login when the account is inactive)
+  if (!session) redirect((await hasNonAdminUser()) ? "/school" : "/admin/login");
   return (
     <AdminProvider session={session}>
       <AdminShell session={session}>{children}</AdminShell>

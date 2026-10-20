@@ -25,9 +25,11 @@ export async function POST(req: Request): Promise<NextResponse> {
     });
     if (perAccount) return perAccount;
     if (b === "supabase") {
-      const r = await signInWithPassword(email, password);
+      // any active account may sign in here; methodist / psychologist are sent on to the admin panel
+      const r = await signInWithPassword(email, password, "school");
       if (!r) return apiError("invalid_credentials", 401);
-      return apiOk({ role: r.role, home: homeFor(r.role), must_change_password: r.mustChangePassword });
+      const toAdmin = r.home === "/admin";
+      return apiOk({ role: r.role, home: r.home, must_change_password: toAdmin ? false : r.mustChangePassword });
     }
     if (!demoModeActive()) return apiError("not_configured", 501);
     const s = demoSessionFor(email, password);

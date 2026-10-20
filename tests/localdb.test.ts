@@ -85,7 +85,7 @@ describe("gateway auth", () => {
 });
 
 describe("admin sign-in (POST /api/admin/auth/login)", () => {
-  it("super admin: session cookie -> getSession; tampered cookie is ignored; portal accounts are refused with 403", async () => {
+  it("super admin: session cookie -> getSession; tampered cookie is ignored; portal accounts are sent to their portal", async () => {
     await user("boss@school.uz", "Boss-pass-123", "super_admin");
     await user("teacher1@school.uz", "Teach-pass-123", "teacher");
     const login = await import("@/app/api/admin/auth/login/route");
@@ -95,16 +95,51 @@ describe("admin sign-in (POST /api/admin/auth/login)", () => {
     expect(jar.size).toBe(0);
     const ok = await login.POST(post("/api/admin/auth/login", { email: "boss@school.uz", password: "Boss-pass-123" }) as any);
     expect(ok.status).toBe(200);
+    expect((await ok.json()).redirect).toBe("/admin");
     expect(jar.get("ca_session")).toMatch(/^[0-9a-f-]{36}\.\d+\.[\w-]+$/);
     expect(await getSession()).toMatchObject({ email: "boss@school.uz", role: "super_admin", demo: false });
 
     jar.set("ca_session", jar.get("ca_session")!.replace(/.$/, (c) => (c === "A" ? "B" : "A")));
     expect(await getSession()).toBeNull();
 
+    // a teacher using the admin login is signed in and sent to the teacher portal; the CMS itself stays closed to them
     jar.clear();
     const t = await login.POST(post("/api/admin/auth/login", { email: "teacher1@school.uz", password: "Teach-pass-123" }) as any);
-    expect(t.status).toBe(403);
-    expect(jar.has("ca_session")).toBe(false);
+    expect(t.status).toBe(200);
+    expect((await t.json()).redirect).toBe("/school/teacher");
+    expect(jar.has("ca_session")).toBe(true);
+    expect(await getSession()).toBeNull();
+    const programs = await import("@/app/api/admin/[resource]/route");
+    const { NextRequest } = await import("next/server");
+    expect((await programs.GET(new NextRequest(req("/api/admin/programs")) as any, { params: Promise.resolve({ resource: "programs" }) } as any)).status).toBe(401);
+    const me = await import("@/app/api/school/me/route");
+    expect((await (await me.GET(req("/api/school/me"))).json()).user.role).toBe("teacher");
+  });
+
+  it("students and parents can use either login page; methodist / psychologist are sent to the admin panel", async () => {
+    await user("kid@school.uz", "Kid-pass-12345", "student");
+    await user("mum@school.uz", "Mum-pass-12345", "parent");
+    await user("psy2@school.uz", "Psy2-pass-12345", "psychologist");
+    const { localService } = await import("@/lib/localdb/server");
+    const kidId = (await gw.raw((x) => x("select id from auth.users where email = 'kid@school.uz'"))).rows[0].id;
+    await localService().from("profiles").update({ must_change_password: true }).eq("id", kidId);
+    const adminLogin = await import("@/app/api/admin/auth/login/route");
+    const schoolLogin = await import("@/app/api/school/auth/login/route");
+
+    jar.clear();
+    const kid = await (await adminLogin.POST(post("/api/admin/auth/login", { email: "kid@school.uz", password: "Kid-pass-12345" }) as any)).json();
+    expect(kid.redirect).toBe("/school/change-password"); // temporary password first
+    jar.clear();
+    const mum = await (await adminLogin.POST(post("/api/admin/auth/login", { email: "mum@school.uz", password: "Mum-pass-12345" }) as any)).json();
+    expect(mum.redirect).toBe("/school/family");
+    jar.clear();
+    const psy = await schoolLogin.POST(post("/api/school/auth/login", { email: "psy2@school.uz", password: "Psy2-pass-12345" }) as any);
+    expect(psy.status).toBe(200);
+    expect(await psy.json()).toMatchObject({ home: "/admin", must_change_password: false });
+    const { getSession } = await import("@/lib/admin/auth");
+    expect(await getSession()).toMatchObject({ role: "psychologist" });
+    jar.clear();
+    expect((await schoolLogin.POST(post("/api/school/auth/login", { email: "mum@school.uz", password: "nope" }) as any)).status).toBe(401);
   });
 
   it("the admin login page offers the server-side sign-in", async () => {

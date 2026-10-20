@@ -56,6 +56,7 @@ export const api = {
     call<{ deleted: number }>(`/api/admin/${resource}?${field}=${encodeURIComponent(value)}`, { method: "DELETE" }),
   dashboard: () => call<import("./dashboard").DashData>(`/api/admin/dashboard`),
   logout: () => call<{ ok: true }>(`/api/admin/auth/logout`, { method: "POST" }),
+  /** server-side sign-in (self-hosted database or demo); `redirect` = where this account belongs (admin panel or school portal) */
   demoLogin: (email: string, password: string) =>
-    call<{ ok: true }>(`/api/admin/auth/login`, { method: "POST", body: JSON.stringify({ email, password }) }),
+    call<{ ok: true; role: string; redirect?: string }>(`/api/admin/auth/login`, { method: "POST", body: JSON.stringify({ email, password }) }),
 };
