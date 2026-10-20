@@ -12,6 +12,8 @@ function onPasswordChangeRequired(): void {
   if (typeof window === "undefined") return;
   const here = window.location.pathname;
   if (here === "/school/change-password" || here.startsWith("/school/reset-password")) return;
+  // full page load on purpose: called outside React (no router), and the portal must not keep state of the locked session
+  // eslint-disable-next-line @next/next/no-location-assign-relative-destination
   window.location.href = "/school/change-password";
 }
 

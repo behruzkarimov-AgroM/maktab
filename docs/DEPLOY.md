@@ -29,7 +29,7 @@ Tezkor yo'l: **1) Supabase -> 2) env -> 3) Vercel -> 4) domen -> 5) birinchi adm
 | `NEXT_PUBLIC_SITE_URL` | tavsiya | - | `https://maktab2.uz` (oxirida `/`siz). Sitemap, OG, QR uchun. |
 | `TELEGRAM_BOT_TOKEN` | ixtiyoriy | @BotFather | Qabul arizalari haqida xabar. `CHAT_ID` bilan birga. |
 | `TELEGRAM_CHAT_ID` | ixtiyoriy | 6-bo'lim | Guruh/shaxsiy chat ID (guruh uchun `-100...`). |
-| `ALLOW_ADMIN_DEMO` | **yo'q** | - | Production'da **bermang**. `true` bo'lsa va Supabase yo'q bo'lsa demo admin (`admin@demo.uz`) ochiladi. |
+| `ALLOW_ADMIN_DEMO` | **yo'q** | - | **Bermang**. Demo hisoblar sukut bo'yicha yopiq (dev'da ham); faqat `true` bo'lsa va Supabase yo'q bo'lsa ochiladi (testlar uchun). |
 | `SMS_PROVIDER`, `SMS_API_URL`, `SMS_API_TOKEN`, `SMS_SENDER` | ixtiyoriy | - | Rezerv (hozircha ulanmagan). Eskiz.uz uchun `ESKIZ_EMAIL`, `ESKIZ_PASSWORD`. |
 
 Namuna: `.env.example` -> `.env.local`. Tekshirish: `GET /api/health` -> `{"ok":true}` (503 `{"ok":false}` when config/DB is broken)

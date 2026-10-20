@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { test, expect } from "@playwright/test";
+import { adminLogin } from "./admin-helpers";
 
 // Content-driven games in DEMO mode (seed sets from components/games/content-seed.json).
 type L = { uz: string; ru: string; en: string };
@@ -124,11 +125,7 @@ test.describe("content games (demo mode)", () => {
 
 test.describe("content sets admin (demo login)", () => {
   test("list shows seed sets; an invalid set is rejected, a valid matching set can be created and then played", async ({ page }) => {
-    await page.goto("/admin/login");
-    await page.waitForLoadState("networkidle");
-    await page.locator("#email").fill("metodist@demo.uz");
-    await page.locator("#password").fill("demo1234");
-    await Promise.all([page.waitForResponse((r) => r.url().includes("/api/admin/auth/login")), page.locator("form button[type=submit]").last().click()]);
+    await adminLogin(page, "metodist@demo.uz");
     await page.goto("/admin/game_content_sets");
     await expect(page.getByText(gk.title.uz).first()).toBeVisible({ timeout: 20_000 });
 

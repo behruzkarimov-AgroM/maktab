@@ -5,6 +5,8 @@ export default defineConfig({
   resolve: { alias: { "@": path.resolve(__dirname) } },
   test: {
     environment: "node",
+    // demo accounts are off unless explicitly enabled; the unit tests exercise demo mode on purpose
+    env: { ALLOW_ADMIN_DEMO: "true" },
     include: ["tests/**/*.test.ts"],
     coverage: {
       provider: "v8",

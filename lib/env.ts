@@ -29,6 +29,9 @@ const serverSchema = z.object({
   TELEGRAM_BOT_TOKEN: opt(z.string().regex(/^\d+:[\w-]{20,}$/, "expected format 123456:ABC-DEF...")),
   TELEGRAM_CHAT_ID: opt(z.string().regex(/^-?\d+$/, "expected a numeric chat id")),
   ALLOW_ADMIN_DEMO: opt(z.enum(["true", "false"])),
+  // Telegram bot (separate project): shared secret for its API calls and its @username for the portal link
+  BOT_API_SECRET: opt(z.string().min(32, "must be at least 32 characters (the bot API stays off otherwise)")),
+  TELEGRAM_BOT_USERNAME: opt(z.string().regex(/^@?[A-Za-z0-9_]{5,32}$/, "expected the bot's username, e.g. maktab_bot")),
   SMS_PROVIDER: opt(z.string().max(40)),
   SMS_API_URL: opt(z.url()),
   SMS_API_TOKEN: opt(z.string().min(8)),
@@ -61,6 +64,8 @@ function rawServer() {
     TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN,
     TELEGRAM_CHAT_ID: process.env.TELEGRAM_CHAT_ID,
     ALLOW_ADMIN_DEMO: process.env.ALLOW_ADMIN_DEMO,
+    BOT_API_SECRET: process.env.BOT_API_SECRET,
+    TELEGRAM_BOT_USERNAME: process.env.TELEGRAM_BOT_USERNAME,
     SMS_PROVIDER: process.env.SMS_PROVIDER,
     SMS_API_URL: process.env.SMS_API_URL,
     SMS_API_TOKEN: process.env.SMS_API_TOKEN,

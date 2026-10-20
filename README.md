@@ -82,19 +82,23 @@ proxy.ts vercel.json   locale routing; headerlar va region
 
 ```bash
 npm install
-npm run dev            # http://localhost:3000  (DEMO mode, env kerak emas)
+npm run dev            # http://localhost:3000
 ```
 
-### Demo hisoblar (faqat DEMO mode: Supabase env yo'q)
+### Hisoblar
 
-| Email | Parol | Rol |
-|---|---|---|
-| `admin@demo.uz` | `demo1234` | Super admin |
-| `metodist@demo.uz` | `demo1234` | Metodist |
-| `psixolog@demo.uz` | `demo1234` | Psixolog |
+Haqiqiy hisoblar faqat Supabase'da yaratiladi (`docs/SUPABASE-GO-LIVE.md`):
 
-`next start` (production build) da demo admin faqat `ALLOW_ADMIN_DEMO=true` bo'lsa ishlaydi. Haqiqiy deploy'da **bermang**.
-Demo ticketlar: `GET /api/olympiad` javobidagi `demoTickets`.
+1. `.env.local`: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, ixtiyoriy `SCHOOL_EMAIL_DOMAIN`.
+2. `supabase/schema.sql` ni Supabase SQL Editor'da bajaring.
+3. `npm run accounts:create`: har rol uchun bitta login (super admin, direktor, metodist, psixolog, o'qituvchi, o'quvchi, ota-ona)
+   yaratadi va loginlar bilan parollarni **`HISOBLAR.local.md`** fayliga yozadi (gitga tushmaydi). `-- --reset` mavjud hisoblarga yangi parol beradi.
+4. Yangi o'quvchi + ota-ona: super admin `/admin/enroll` ("Ro'yxatdan o'tkazish") sahifasida kiritadi; ikkalasiga hisob avtomatik
+   yaratiladi, vaqtincha parol bir marta ko'rsatiladi (birinchi kirishda almashtiriladi).
+
+**Demo hisoblar yopiq.** `admin@demo.uz` / `director@demo.uz` va boshqalar faqat Supabase ulanmagan **va** `ALLOW_ADMIN_DEMO=true`
+aniq berilganda ishlaydi (testlar va lokal namoyish uchun; Vercel'da hech qachon). Masalan:
+`ALLOW_ADMIN_DEMO=true npm run dev`, keyin parol `demo1234`. Demo ticketlar: `GET /api/olympiad` javobidagi `demoTickets`.
 
 ## Scriptlar
 
@@ -107,6 +111,7 @@ Demo ticketlar: `GET /api/olympiad` javobidagi `demoTickets`.
 | `npm run test:coverage` | vitest + coverage (v8) |
 | `npm run test:e2e:install` | Playwright chromium'ni o'rnatish (bir marta) |
 | `npm run test:e2e` | Playwright smoke (`next build` kerak; serverni o'zi ishga tushiradi, port 3100) |
+| `npm run accounts:create` | Supabase'da boshlang'ich hisoblar (har rol uchun bitta) -> `HISOBLAR.local.md` |
 | `npm run db:check` | PGlite'da `schema.sql` + RLS/RPC tekshiruvi (Supabase akkauntisiz) |
 | `npm run db:refs` | koddagi barcha Supabase murojaatlari (jadval, ustun, enum, RPC argumentlari, tiplar) haqiqiy sxemaga mosligini statik tekshiradi |
 | `npm run smoke` | haqiqiy Supabase + deploy'ga qarshi go-live smoke test (`docs/SUPABASE-GO-LIVE.md`) |

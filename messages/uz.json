@@ -23,7 +23,13 @@
     "closeMenu": "Menyuni yopish",
     "main": "Asosiy navigatsiya",
     "skipToContent": "Asosiy kontentga o'tish",
-    "assessment": "Diagnostika"
+    "assessment": "Diagnostika",
+    "login": "Kirish",
+    "loginMenu": "Tizimga kirish",
+    "loginSchool": "Maktab portali",
+    "loginSchoolHint": "Direktor, o'qituvchi, ota-ona, o'quvchi",
+    "loginAdmin": "Admin panel",
+    "loginAdminHint": "Super admin, metodist, psixolog"
   },
   "common": {
     "apply": "Ariza qoldirish",

@@ -22,7 +22,6 @@ async function uploadFile(file: File, bucket: Bucket): Promise<{ url: string; lo
 const isPdf = (u: string) => /\.pdf($|\?)/i.test(u);
 
 function Preview({ url, className }: { url: string; className?: string }) {
-  // eslint-disable-next-line @next/next/no-img-element
   return isPdf(url) ? (
     <div className={cn("flex items-center justify-center bg-slate-100 text-slate-400 dark:bg-slate-800", className)}>
       <FileText className="size-6" />

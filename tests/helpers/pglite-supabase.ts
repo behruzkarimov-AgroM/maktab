@@ -408,6 +408,11 @@ export class FakeSupabase {
           gw.users.set(id, { id, email, password });
           return { data: { user: userOf(id) }, error: null };
         },
+        getUserById: async (id: string) => (gw.users.has(id) ? { data: { user: userOf(id) }, error: null } : { data: { user: null }, error: { message: "User not found" } }),
+        listUsers: async ({ page = 1, perPage = 50 }: { page?: number; perPage?: number } = {}) => ({
+          data: { users: [...gw.users.values()].slice((page - 1) * perPage, page * perPage).map((u) => ({ id: u.id, email: u.email })) },
+          error: null,
+        }),
         updateUserById: async (id: string, patch: { password?: string }) => {
           const u = gw.users.get(id);
           if (!u) return { data: { user: null }, error: { message: "User not found" } };

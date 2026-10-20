@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { useTheme as useSiteTheme } from "@/components/layout/ThemeProvider";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -24,10 +24,12 @@ export function AdminShell({ session, children }: { session: AdminSession; child
   // one theme store for the whole site (key "maktab-theme"), same as the public pages and the school portal
   const { resolvedTheme, toggleTheme: toggle } = useSiteTheme();
   const dark = resolvedTheme === "dark";
-  const [open, setOpen] = useState(false);
+  // the mobile menu remembers the path it was opened on: navigating closes it without a state reset in an effect
+  const [openAt, setOpenAt] = useState<string | null>(null);
+  const open = openAt === pathname;
+  const setOpen = useCallback((v: boolean) => setOpenAt(v ? pathname : null), [pathname]);
   const menuBtnRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
@@ -39,7 +41,7 @@ export function AdminShell({ session, children }: { session: AdminSession; child
       document.removeEventListener("keydown", onKey);
       btn?.focus();
     };
-  }, [open]);
+  }, [open, setOpen]);
 
   // keep the Supabase session cookie fresh (server components cannot write cookies)
   useEffect(() => {
@@ -96,6 +98,7 @@ export function AdminShell({ session, children }: { session: AdminSession; child
     <nav className="flex-1 space-y-5 overflow-y-auto px-3 py-4" aria-label={t("adminNavLabel")}>
       <div className="space-y-0.5">
         {link("/admin", t("dashboard"), LayoutDashboard, pathname === "/admin")}
+        {session.role === "super_admin" && link("/admin/enroll", t("en_nav"), ICONS.UserPlus, pathname === "/admin/enroll")}
         {link("/admin/import", t("imp_nav"), ICONS.FileUp, pathname === "/admin/import")}
         {(session.role === "super_admin" || session.role === "methodist") && link("/admin/scan", t("scan"), ICONS.ScanLine, pathname === "/admin/scan")}
       </div>

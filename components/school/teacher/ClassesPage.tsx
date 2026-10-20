@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Bar, BarChart, CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
@@ -150,10 +150,12 @@ function StudentDrawer({ b, id, onClose }: { b: Base; id: string | null; onClose
   const perf = useApi<{ performance: StudentPerformance }>(id ? `/reports/student-performance?student_id=${id}` : null);
   const hist = useApi<{ history: { days: { date: string; status: AttendanceStatus }[]; summary: { percent: number | null; streak: number } } }>(id ? `/attendance?student_id=${id}&from=${addDays(b.me.today, -55)}` : null);
   const notes = useApi<{ notes: BehaviorNote[] }>(id ? `/teacher/notes?student_id=${id}` : null);
-  const [text, setText] = useState("");
+  // the note draft belongs to one student: opening another student shows an empty field (no reset effect needed)
+  const [draft, setDraft] = useState<{ id: string | null; text: string }>({ id, text: "" });
+  const text = draft.id === id ? draft.text : "";
+  const setText = (v: string) => setDraft({ id, text: v });
   const [kind, setKind] = useState<"positive" | "negative" | "neutral">("neutral");
   const [busy, setBusy] = useState(false);
-  useEffect(() => setText(""), [id]);
   const s = st.data?.student;
   const p = perf.data?.performance;
   const days = new Map((hist.data?.history.days ?? []).map((d) => [d.date, d.status]));

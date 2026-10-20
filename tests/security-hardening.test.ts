@@ -64,7 +64,7 @@ describe("rate limiter", () => {
     expect(__memorySize()).toBeGreaterThan(5000); // evicted the oldest half, did not clear everything
     const last = await rateLimit(req({}), { key: "k", max: 1, windowSec: 3600, identity: "id-20999" });
     expect(last.allowed).toBe(false); // the newest bucket survived (already used once)
-  });
+  }, 30_000); // 21k sequential awaits: slow when the whole suite runs in parallel
   it("failClosed: a DB error denies single-use burns instead of falling back to the per-instance counter", async () => {
     vi.resetModules();
     vi.doMock("@/lib/supabase/admin", () => ({ getAdminClient: () => ({ rpc: async () => ({ data: null, error: { message: "boom" } }) }) }));

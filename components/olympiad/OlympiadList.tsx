@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { downloadIcs } from "./ics";
 import { CalendarDays, CalendarPlus, ChevronLeft, ChevronRight, List, MapPin, Clock } from "lucide-react";
 import { tr, type Locale } from "@/lib/types";
@@ -147,20 +147,21 @@ export function OlympiadList({ olympiads, locale, t, now, onRegister, onCheck }:
           })}
         </ul>
       ) : (
-        <CalendarView olympiads={olympiads} locale={locale} t={t} />
+        <CalendarView olympiads={olympiads} locale={locale} t={t} now={now} />
       )}
     </div>
   );
 }
 
-function CalendarView({ olympiads, locale, t }: { olympiads: Olympiad[]; locale: Locale; t: OlympiadStrings }) {
-  const first = useMemo(() => {
+/** `now` comes from the page clock (null before mount): no Date.now() during render, so server and client markup agree. */
+function CalendarView({ olympiads, locale, t, now }: { olympiads: Olympiad[]; locale: Locale; t: OlympiadStrings; now: number | null }) {
+  // opens on the month of the next olympiad (only the initial month: later the user moves the cursor)
+  const [cursor, setCursor] = useState(() => {
     const dates = olympiads.map((o) => new Date(o.eventDate).getTime()).sort((a, b) => a - b);
-    const upcoming = dates.find((d) => d >= Date.now() - 86400000) ?? dates[0] ?? Date.now();
+    const upcoming = (now !== null ? dates.find((d) => d >= now - 86400000) : undefined) ?? dates[0] ?? now ?? 0;
     const d = new Date(upcoming + 5 * 3600000); // Tashkent calendar month, same shift as the day keys below
     return { y: d.getUTCFullYear(), m: d.getUTCMonth() };
-  }, [olympiads]);
-  const [cursor, setCursor] = useState(first);
+  });
 
   const monthName = fmtMonthYear(locale, cursor.y, cursor.m);
   const offset = (new Date(Date.UTC(cursor.y, cursor.m, 1)).getUTCDay() + 6) % 7; // Monday first

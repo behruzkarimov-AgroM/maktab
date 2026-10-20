@@ -11,7 +11,9 @@ async function call<T>(url: string, init?: RequestInit): Promise<T> {
   const r = await fetch(url, { ...init, headers: { "content-type": "application/json", ...(init?.headers ?? {}) }, cache: "no-store" });
   const body = await r.json().catch(() => ({}));
   if (!r.ok) {
-    // expired session -> login page; but never for the login call itself (keep its error message)
+    // expired session -> login page; but never for the login call itself (keep its error message). A full page load on purpose:
+    // this helper runs outside React (no router) and every piece of client state of the old session must be dropped.
+    // eslint-disable-next-line @next/next/no-location-assign-relative-destination
     if (r.status === 401 && typeof window !== "undefined" && !url.includes("/auth/login")) window.location.assign("/admin/login");
     throw new ApiError((body as { error?: string }).error ?? r.statusText, r.status, (body as { issues?: { path: string; message: string }[] }).issues);
   }

@@ -31,11 +31,7 @@ export function AnimatedCounter({
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    if (!inView) return;
-    if (reduce) {
-      setCurrent(value);
-      return;
-    }
+    if (!inView || reduce) return;
     const controls = animate(0, value, {
       duration,
       ease: [0.16, 1, 0.3, 1],
@@ -44,7 +40,9 @@ export function AnimatedCounter({
     return () => controls.stop();
   }, [inView, value, duration, reduce]);
 
-  const formatted = formatNumber(locale, current, {
+  // reduced motion: jump straight to the final number once visible (derived, no animation state)
+  const shown = reduce && inView ? value : current;
+  const formatted = formatNumber(locale, shown, {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals,
   });

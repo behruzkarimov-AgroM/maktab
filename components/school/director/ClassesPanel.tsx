@@ -175,7 +175,7 @@ export function ClassesPanel() {
       <Async state={cl} empty={!!cl.data && cl.classes.length === 0}>
         <TableWrap>
           <table className={tableCls}>
-            <thead><tr><th className={thCls}>{t("class")}</th><th className={thCls}>{t("d_homeroom")}</th><th className={thCls}>{t("d_room")}</th><th className={thCls}>{t("d_students_count")}</th><th className={thCls}><span className="sr-only">{t("d_actions")}</span></th></tr></thead>
+            <thead><tr><th className={thCls}>{t("class")}</th><th className={thCls}>{t("d_homeroom")}</th><th className={thCls}>{t("d_room")}</th><th className={thCls}>{t("d_students_count")}</th><th className={`${thCls} relative`}><span className="sr-only">{t("d_actions")}</span></th></tr></thead>
             <tbody>
               {cl.classes.map((c) => (
                 <tr key={c.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/40">

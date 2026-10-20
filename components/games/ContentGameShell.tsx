@@ -39,8 +39,9 @@ export function ContentGameShell({ meta, Game, onBack }: Props) {
   const [level, setLevel] = useState("");
   const [picked, setPicked] = useState("");
   const runRef = useRef(0);
-  const sessionRef = useRef("");
-  const playedRef = useRef<ContentSetSummary | null>(null);
+  // server-signed run token, tagged with its run so a late answer for an earlier run is ignored
+  const [session, setSession] = useState({ run: 0, token: "" });
+  const [played, setPlayed] = useState<ContentSetSummary | null>(null);
 
   useEffect(() => {
     const ctrl = new AbortController();
@@ -73,20 +74,18 @@ export function ContentGameShell({ meta, Game, onBack }: Props) {
   function start(set: ContentSetSummary) {
     unlockAudio();
     playSound("start");
-    runRef.current += 1;
-    playedRef.current = set;
-    sessionRef.current = "";
+    const run = (runRef.current += 1);
+    setPlayed(set);
+    setSession({ run, token: "" });
     fetch("/api/games/session", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ game: meta.slug, difficulty }),
     })
       .then((r) => r.json())
-      .then((j: { token?: string }) => {
-        sessionRef.current = j.token ?? "";
-      })
+      .then((j: { token?: string }) => setSession((s) => (s.run === run ? { run, token: j.token ?? "" } : s)))
       .catch(() => {});
-    setPhase({ name: "playing", run: runRef.current, set });
+    setPhase({ name: "playing", run, set });
   }
 
   const cfg = meta.config[difficulty];
@@ -253,11 +252,11 @@ export function ContentGameShell({ meta, Game, onBack }: Props) {
         {phase.name === "result" && (
           <ResultPanel
             result={phase.result}
-            onAgain={() => playedRef.current && start(playedRef.current)}
+            onAgain={() => played && start(played)}
             onChange={() => setPhase({ name: "select" })}
             save={
               phase.result.score > 0 ? (
-                <SaveScoreForm slug={meta.slug} difficulty={difficulty} result={phase.result} session={sessionRef.current} onSaved={() => setLbKey((k) => k + 1)} />
+                <SaveScoreForm slug={meta.slug} difficulty={difficulty} result={phase.result} session={session.token} onSaved={() => setLbKey((k) => k + 1)} />
               ) : null
             }
           />

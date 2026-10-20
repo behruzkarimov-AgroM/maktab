@@ -6,6 +6,7 @@ import { cn } from "@/lib/admin/cn";
 import { UI, type UIKey } from "@/lib/admin/ui-i18n";
 import type { AdminSession, L } from "@/lib/admin/types";
 import type { Locale } from "@/lib/types";
+import { useLocalStorage } from "@/lib/use-local-storage";
 
 type ToastKind = "success" | "error" | "info";
 interface Toast {
@@ -33,30 +34,13 @@ export function useAdmin(): Ctx {
 }
 
 export function AdminProvider({ children, session }: { children: ReactNode; session: AdminSession | null }) {
-  const [lang, setLangState] = useState<Locale>("uz");
+  const [saved, setLang] = useLocalStorage("admin_lang") as [string | null, (l: Locale) => void];
+  const lang: Locale = saved === "ru" || saved === "en" ? saved : "uz";
   const [toasts, setToasts] = useState<Toast[]>([]);
-
-  useEffect(() => {
-    try {
-      const saved = localStorage.getItem("admin_lang");
-      if (saved === "uz" || saved === "ru" || saved === "en") setLangState(saved);
-    } catch {
-      /* ignore */
-    }
-  }, []);
 
   useEffect(() => {
     document.documentElement.lang = lang;
   }, [lang]);
-
-  const setLang = useCallback((l: Locale) => {
-    setLangState(l);
-    try {
-      localStorage.setItem("admin_lang", l);
-    } catch {
-      /* ignore */
-    }
-  }, []);
 
   const toast = useCallback((text: string, kind: ToastKind = "success") => {
     const id = Date.now() + Math.random();

@@ -216,7 +216,7 @@ Verified by `npm run db:check` (RLS per role, anon nothing, bulk validation, loc
 
 ## 7. Demo mode and credentials
 
-Available when Supabase is not configured and (`NODE_ENV != production` or `ALLOW_ADMIN_DEMO=true`) and not on Vercel. HMAC-signed httpOnly cookie `school_demo_session`.
+**Closed by default.** Available only when Supabase is not configured AND `ALLOW_ADMIN_DEMO=true` is set explicitly (also in development), and never on Vercel. Real accounts: `npm run accounts:create` (one per role) and `/admin/enroll` (student + parent). HMAC-signed httpOnly cookie `school_demo_session`.
 Data lives in `globalThis` (resets on server restart); `lib/school/demo-store.ts` mirrors the SQL rules (unique attendance, locked terms, ownership, audit).
 Generated deterministically (hash based): 1 year, 4 terms, 14 classes (1A 1B 2A 2B 3A 3B 4A 5A 6A 7A 8A 9A 10A 11A), 12 subjects, 25 teachers, 300 students, ~450 guardians, schedule, 8 weeks of daily attendance (~93% present, chronic absentees, sick blocks, 6 students with a fresh absence streak), ~15k grades (3-5 mostly, per-student ability and per-subject affinity), confirmed term grades for finished terms (locked), announcements, notifications.
 **Today is intentionally not pre-marked** so teachers can demo marking.

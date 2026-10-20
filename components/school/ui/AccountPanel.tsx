@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { BellRing, KeyRound } from "lucide-react";
-import { sget, sput } from "@/lib/school/client";
+import { BellRing, KeyRound, Send } from "lucide-react";
+import { sdelete, sget, spost, sput } from "@/lib/school/client";
 import type { UiKey } from "@/lib/school/i18n";
 import { Badge, Card, cn } from "./kit";
 import { ChangePasswordForm, errorMessage } from "./PasswordForm";
@@ -121,10 +121,81 @@ export function PasswordCard() {
   );
 }
 
+/** Connect / disconnect the Telegram bot: a one-time deep link (GET/POST/DELETE /api/school/telegram). */
+export function TelegramCard() {
+  const { t } = useSchool();
+  const [state, setState] = useState<{ linked: boolean; username: string | null; bot: string | null } | null>(null);
+  const [code, setCode] = useState<{ code: string; url: string } | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let live = true;
+    sget<{ linked: boolean; username: string | null; bot: string | null }>("/telegram")
+      .then((r) => live && setState(r))
+      .catch((e) => live && setError(errorMessage(e, t)));
+    return () => {
+      live = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  async function run(fn: () => Promise<void>) {
+    setBusy(true);
+    setError(null);
+    try {
+      await fn();
+    } catch (e) {
+      setError(errorMessage(e, t));
+    } finally {
+      setBusy(false);
+    }
+  }
+  const connect = () => run(async () => setCode(await spost<{ code: string; url: string }>("/telegram")));
+  const disconnect = () =>
+    run(async () => {
+      await sdelete("/telegram");
+      setState((s) => (s ? { ...s, linked: false, username: null } : s));
+      setCode(null);
+    });
+
+  const btn = "inline-flex min-h-11 items-center gap-2 rounded-lg px-4 text-sm font-semibold disabled:opacity-50";
+  return (
+    <Card>
+      <h2 className="mb-1 flex items-center gap-2 text-sm font-semibold"><Send className="size-4" aria-hidden />{t("a_tg_title")}</h2>
+      <p className="mb-3 text-xs text-slate-600 dark:text-slate-400">{t("a_tg_help")}</p>
+      {error && <p role="alert" className="mb-3 rounded-lg bg-red-50 px-3 py-2 text-sm text-red-800 dark:bg-red-950/60 dark:text-red-200">{error}</p>}
+      {!state && !error ? (
+        <div className="h-11 animate-pulse rounded-xl bg-slate-100 dark:bg-slate-800" />
+      ) : state && !state.bot ? (
+        <p className="text-sm text-slate-600 dark:text-slate-300">{t("a_tg_off")}</p>
+      ) : state?.linked ? (
+        <div className="flex flex-wrap items-center gap-3">
+          <Badge tone="green">{t("a_tg_linked")}{state.username ? ` · @${state.username}` : ""}</Badge>
+          <button type="button" disabled={busy} onClick={() => void disconnect()} className={cn(btn, "border border-slate-300 dark:border-slate-700")}>{t("a_tg_disconnect")}</button>
+        </div>
+      ) : code ? (
+        <div className="space-y-3">
+          <a href={code.url} target="_blank" rel="noopener noreferrer" className={cn(btn, "bg-sky-600 text-white hover:bg-sky-500")}>
+            <Send className="size-4" aria-hidden />{t("a_tg_open")}
+          </a>
+          <p className="text-xs text-slate-600 dark:text-slate-400">{t("a_tg_code_help")}</p>
+          <p className="font-mono text-lg font-bold tracking-widest" aria-label={code.code.split("").join(" ")}>/start {code.code}</p>
+        </div>
+      ) : (
+        <button type="button" disabled={busy} onClick={() => void connect()} className={cn(btn, "bg-sky-600 text-white hover:bg-sky-500")}>
+          <Send className="size-4" aria-hidden />{t("a_tg_connect")}
+        </button>
+      )}
+    </Card>
+  );
+}
+
 /** Security + notification settings block shared by the director settings page, the teacher account page and the family profile. */
 export function AccountPanel() {
   return (
     <div className="space-y-4">
+      <TelegramCard />
       <NotifPrefsCard />
       <PasswordCard />
     </div>

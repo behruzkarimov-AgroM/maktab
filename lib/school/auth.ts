@@ -79,34 +79,39 @@ function buildDemoSession(email: string | null): SchoolSession | null {
   };
 }
 
+/** Supabase mode: the school session of a known user id (profile role + is_active, teacher / children links). */
+async function supabaseSession(userId: string, email: string): Promise<SchoolSession | null> {
+  const db = getServiceClient();
+  if (!db) return null;
+  const { data: p } = await db.from("profiles").select("role,is_active,full_name,must_change_password").eq("id", userId).maybeSingle();
+  if (!p || !p.is_active || !SCHOOL_ROLES.includes(p.role as SchoolRole)) return null;
+  const role = p.role as SchoolRole;
+  let teacherId: string | null = null;
+  let studentIds: string[] = [];
+  if (role === "teacher") {
+    const { data } = await db.from("teachers").select("id").eq("user_id", userId).eq("status", "active").maybeSingle();
+    teacherId = data?.id ?? null;
+  } else if (role === "parent") {
+    const { data: gs } = await db.from("guardians").select("id").eq("user_id", userId);
+    const ids = (gs ?? []).map((x) => x.id);
+    if (ids.length) {
+      const { data } = await db.from("student_guardians").select("student_id").in("guardian_id", ids);
+      studentIds = (data ?? []).map((x) => x.student_id);
+    }
+  } else if (role === "student") {
+    const { data } = await db.from("students").select("id").eq("user_id", userId);
+    studentIds = (data ?? []).map((x) => x.id);
+  }
+  return { id: userId, email, name: p.full_name || email || "User", role, demo: false, teacherId, studentIds, mustChangePassword: !!p.must_change_password };
+}
+
 /** Resolves the signed-in school user, or null. Verifies role AND is_active. */
 export async function getSchoolSession(): Promise<SchoolSession | null> {
   if (isConfigured()) {
     try {
       const user = (await (await getUserClient()).auth.getUser()).data.user;
       if (!user) return null;
-      const db = getServiceClient();
-      if (!db) return null;
-      const { data: p } = await db.from("profiles").select("role,is_active,full_name,must_change_password").eq("id", user.id).maybeSingle();
-      if (!p || !p.is_active || !SCHOOL_ROLES.includes(p.role as SchoolRole)) return null;
-      const role = p.role as SchoolRole;
-      let teacherId: string | null = null;
-      let studentIds: string[] = [];
-      if (role === "teacher") {
-        const { data } = await db.from("teachers").select("id").eq("user_id", user.id).eq("status", "active").maybeSingle();
-        teacherId = data?.id ?? null;
-      } else if (role === "parent") {
-        const { data: gs } = await db.from("guardians").select("id").eq("user_id", user.id);
-        const ids = (gs ?? []).map((x) => x.id);
-        if (ids.length) {
-          const { data } = await db.from("student_guardians").select("student_id").in("guardian_id", ids);
-          studentIds = (data ?? []).map((x) => x.student_id);
-        }
-      } else if (role === "student") {
-        const { data } = await db.from("students").select("id").eq("user_id", user.id);
-        studentIds = (data ?? []).map((x) => x.id);
-      }
-      return { id: user.id, email: user.email ?? "", name: p.full_name || user.email || "User", role, demo: false, teacherId, studentIds, mustChangePassword: !!p.must_change_password };
+      return await supabaseSession(user.id, user.email ?? "");
     } catch {
       return null;
     }
@@ -114,6 +119,23 @@ export async function getSchoolSession(): Promise<SchoolSession | null> {
   if (!demoAllowed()) return null;
   const jar = await cookies();
   return buildDemoSession(verifyDemoCookie(jar.get(SCHOOL_DEMO_COOKIE)?.value));
+}
+
+/**
+ * The session of a user identified WITHOUT a cookie (a Telegram chat linked to that user, see lib/telegram-links.ts).
+ * Same checks as a cookie login: active profile with a school role; demo accounts only while demo mode is allowed.
+ */
+export async function sessionForUserId(userId: string): Promise<SchoolSession | null> {
+  if (isConfigured()) {
+    try {
+      const { data } = (await getServiceClient()?.auth.admin.getUserById(userId)) ?? { data: null };
+      return await supabaseSession(userId, data?.user?.email ?? "");
+    } catch {
+      return null;
+    }
+  }
+  if (!demoAllowed()) return null;
+  return buildDemoSession(DEMO_ACCOUNTS.find((a) => a.id === userId)?.email ?? null);
 }
 
 /** Throws unauthorized / forbidden. `roles` omitted = any school role. */

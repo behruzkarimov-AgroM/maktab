@@ -40,7 +40,7 @@ export function CalendarPanel() {
           {terms.length === 0 ? <EmptyState /> : (
             <TableWrap>
               <table className={tableCls}>
-                <thead><tr><th className={thCls}>#</th><th className={thCls}>{t("d_name")}</th><th className={thCls}>{t("d_from")}</th><th className={thCls}>{t("d_to")}</th><th className={thCls}>{t("d_status")}</th><th className={thCls}><span className="sr-only">{t("d_actions")}</span></th></tr></thead>
+                <thead><tr><th className={thCls}>#</th><th className={thCls}>{t("d_name")}</th><th className={thCls}>{t("d_from")}</th><th className={thCls}>{t("d_to")}</th><th className={thCls}>{t("d_status")}</th><th className={`${thCls} relative`}><span className="sr-only">{t("d_actions")}</span></th></tr></thead>
                 <tbody>
                   {terms.map((x) => (
                     <tr key={x.id}>

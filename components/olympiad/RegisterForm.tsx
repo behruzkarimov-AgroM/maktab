@@ -59,7 +59,6 @@ export function RegisterForm({ olympiads, selectedId, onSelect, locale, t, now, 
       if (!fieldErr[f]) fieldErr[f] = i.message === "Invalid input" ? "phone" : i.message;
     }
   }
-  const valid = parsed.success;
 
   const touch = (k: string) => setTouched((s) => ({ ...s, [k]: true }));
   const showErr = (k: string) => (touched[k] && fieldErr[k] ? (t.errors[fieldErr[k]] ?? t.errors.invalid) : null);

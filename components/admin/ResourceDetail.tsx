@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, BarChart3 } from "lucide-react";
@@ -21,27 +21,26 @@ export function ResourceDetail({ resKey, id }: { resKey: string; id: string }) {
   const { t, L, lang, session, toast } = useAdmin();
   const router = useRouter();
   const [row, setRow] = useState<Row | null>(null);
-  const [loading, setLoading] = useState(id !== "new");
   const [tab, setTab] = useState<"details" | "children">("details");
   const writable = !!session && canWrite(res, session.role);
   const creating = id === "new";
-
-  const load = useCallback(async () => {
-    if (creating) return;
-    setLoading(true);
-    try {
-      setRow(await api.get(resKey, id));
-    } catch (e) {
-      toast(e instanceof Error ? e.message : t("networkError"), "error");
-    } finally {
-      setLoading(false);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [resKey, id, creating]);
+  // loading is derived: true from the moment the requested record changes until its response has arrived
+  const reqKey = `${resKey}\u0000${id}`;
+  const [doneKey, setDoneKey] = useState<string | null>(null);
+  const loading = !creating && doneKey !== reqKey;
 
   useEffect(() => {
-    load();
-  }, [load]);
+    if (creating) return;
+    let live = true;
+    api
+      .get(resKey, id)
+      .then((r) => live && setRow(r), (e) => live && toast(e instanceof Error ? e.message : t("networkError"), "error"))
+      .finally(() => live && setDoneKey(reqKey));
+    return () => {
+      live = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [reqKey, creating]);
 
   const childLabel = res.detail === "olympiad" ? t("registrations") : res.detail === "psych" ? `${t("questions")} / ${t("scales")}` : t("questions");
   const heading = creating ? `${t("create")}: ${L(res.singular)}` : tr(row?.[res.titleField] as never, lang) || L(res.singular);

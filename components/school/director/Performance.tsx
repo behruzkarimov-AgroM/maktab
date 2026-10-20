@@ -171,7 +171,7 @@ function RiskList({ grades }: { grades: number[] }) {
       <Async state={res} empty={!!res.data && rows.length === 0}>
         <TableWrap>
           <table className={tableCls}>
-            <thead><tr><th className={thCls}>{t("d_full_name")}</th><th className={thCls}>{t("class")}</th><th className={thCls}>{t("d_risk")}</th><th className={thCls}>%</th><th className={thCls}>{t("average")}</th><th className={thCls}>{t("d_streak")}</th><th className={thCls}><span className="sr-only">{t("d_actions")}</span></th></tr></thead>
+            <thead><tr><th className={thCls}>{t("d_full_name")}</th><th className={thCls}>{t("class")}</th><th className={thCls}>{t("d_risk")}</th><th className={thCls}>%</th><th className={thCls}>{t("average")}</th><th className={thCls}>{t("d_streak")}</th><th className={`${thCls} relative`}><span className="sr-only">{t("d_actions")}</span></th></tr></thead>
             <tbody>
               {rows.map((r) => (
                 <tr key={r.student_id}>

@@ -160,7 +160,24 @@ export const ACCOUNT_UI = {
 
   // ---- a11y ----
   a_skip: l("Asosiy tarkibga o'tish", "Перейти к содержимому", "Skip to content"),
-  a_menu: l("Menyu", "Меню", "Menu"),
+  // ---- Telegram bot link ----
+  a_tg_title: l("Telegram bot", "Telegram-бот", "Telegram bot"),
+  a_tg_help: l(
+    "Botni ulasangiz baholar, davomat, dars jadvali va e'lonlarni Telegram'da ko'rasiz, kelmagan kun haqida xabar olasiz.",
+    "Подключив бота, вы увидите оценки, посещаемость, расписание и объявления в Telegram и получите сообщение о пропуске.",
+    "Connect the bot to see grades, attendance, the timetable and announcements in Telegram and to get absence notices.",
+  ),
+  a_tg_connect: l("Telegram'ni ulash", "Подключить Telegram", "Connect Telegram"),
+  a_tg_open: l("Telegram'da ochish", "Открыть в Telegram", "Open in Telegram"),
+  a_tg_code_help: l(
+    "Havolani bosing va botda «Start» ni bosing. Havola 10 daqiqa amal qiladi va faqat bir marta ishlaydi. Yoki botga kodni yuboring:",
+    "Нажмите ссылку и затем «Start» в боте. Ссылка действует 10 минут и только один раз. Или отправьте боту код:",
+    "Tap the link, then «Start» in the bot. The link works for 10 minutes and only once. Or send the bot this code:",
+  ),
+  a_tg_linked: l("Ulangan", "Подключено", "Connected"),
+  a_tg_disconnect: l("Uzish", "Отключить", "Disconnect"),
+  a_tg_off: l("Bot hali sozlanmagan (TELEGRAM_BOT_USERNAME)", "Бот ещё не настроен (TELEGRAM_BOT_USERNAME)", "The bot is not set up yet (TELEGRAM_BOT_USERNAME)"),
+  a_menu: l("Menyu","Меню", "Menu"),
 } as const;
 
 export type AccountKey = keyof typeof ACCOUNT_UI;

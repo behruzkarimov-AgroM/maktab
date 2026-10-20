@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { AnimatePresence, m as motion } from "framer-motion";
 import { tr } from "@/lib/types";
 import { MAX_TEXT_ANSWER, ROLE_HINTS, type Answers, type AnswerValue, type PublicSurvey, type PublicSurveyQuestion, type RoleHint } from "@/lib/surveys/types";
@@ -10,7 +10,9 @@ import { getRespondentToken, isSurveyDone, markSurveyDone } from "./token";
 
 type Stage = "intro" | "questions" | "submitting" | "done" | "already" | "closed" | "error";
 
-const AUDIENCE_ROLE: Record<string, RoleHint | undefined> = { parents: "parent", students: "student", teachers: "teacher" };
+const noSubscribe = () => () => {};
+
+const AUDIENCE_ROLE:Record<string, RoleHint | undefined> = { parents: "parent", students: "student", teachers: "teacher" };
 
 const inputCls =
   "w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-900 outline-none focus:ring-2 focus:ring-indigo-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100";
@@ -20,7 +22,14 @@ const isAnswered = (v: AnswerValue | undefined) => v !== undefined && !(typeof v
 export function SurveyRunner({ survey }: { survey: PublicSurvey }) {
   const { t, locale } = useSurveyT();
   const questions = survey.questions ?? [];
-  const [stage, setStage] = useState<Stage>("intro");
+  const [stageState, setStage] = useState<Stage>("intro");
+  // a survey already answered on this device (localStorage) opens on the "already" screen; read during render, server says "no"
+  const alreadyDone = useSyncExternalStore(
+    noSubscribe,
+    () => !survey.allow_multiple_responses && isSurveyDone(survey.id),
+    () => false,
+  );
+  const stage: Stage = stageState === "intro" && alreadyDone ? "already" : stageState;
   const [index, setIndex] = useState(0);
   const [dir, setDir] = useState(1);
   const [answers, setAnswers] = useState<Answers>({});
@@ -32,9 +41,8 @@ export function SurveyRunner({ survey }: { survey: PublicSurvey }) {
 
   useEffect(() => {
     startedAt.current = Date.now();
-    if (!survey.allow_multiple_responses && isSurveyDone(survey.id)) setStage("already");
     return () => abortRef.current?.abort();
-  }, [survey.id, survey.allow_multiple_responses]);
+  }, [survey.id]);
 
   const total = questions.length;
   const question = questions[index];

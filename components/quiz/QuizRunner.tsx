@@ -153,7 +153,7 @@ export default function QuizRunner({ quizId }: { quizId: string }) {
         setPhase("running");
       }
     },
-    [data, quizId, name, grade, phoneVal],
+    [data, quizId, name, grade, phoneVal, locale],
   );
 
   // countdown driven by wall clock so background-tab throttling can't stretch the quiz

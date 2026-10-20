@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { BarChart3, Columns3, Download, Eraser, ExternalLink, FileUp, Pencil, Plus, Search, Table2, Trash2 } from "lucide-react";
@@ -41,7 +41,6 @@ export function ResourceList({ res, fixed, embedded, extraActions }: Props) {
   const [page, setPage] = useState(1);
   const [filters, setFilters] = useState<Record<string, string>>({});
   const [data, setData] = useState<{ rows: Row[]; total: number }>({ rows: [], total: 0 });
-  const [loading, setLoading] = useState(true);
   const [view, setView] = useState<"table" | "kanban">("table");
   const [editing, setEditing] = useState<Row | "new" | null>(null);
   const [deleting, setDeleting] = useState<Row | null>(null);
@@ -49,7 +48,6 @@ export function ResourceList({ res, fixed, embedded, extraActions }: Props) {
   const [clearOpen, setClearOpen] = useState(false);
   const [importOpen, setImportOpen] = useState(false);
   const [refs, setRefs] = useState<Record<string, Record<string, string>>>({});
-  const reqId = useRef(0);
 
   const fixedKey = JSON.stringify(fixed ?? {});
 
@@ -78,30 +76,32 @@ export function ResourceList({ res, fixed, embedded, extraActions }: Props) {
     });
   }, [res, lang]);
 
-  const load = useCallback(async () => {
-    const id = ++reqId.current;
-    setLoading(true);
-    try {
-      const out = await api.list(res.key, {
+  // `load()` (after a save / delete) bumps the nonce; any change of the query re-runs the effect below. loading is derived: it stays
+  // true from the moment the query changes until the response for exactly that query has arrived (stale responses are dropped).
+  const [nonce, setNonce] = useState(0);
+  const load = useCallback(() => setNonce((n) => n + 1), []);
+  const reqKey = JSON.stringify([res.key, dq, sort, dir, page, pageSize, filters, fixedKey, view, nonce]);
+  const [doneKey, setDoneKey] = useState<string | null>(null);
+  const loading = doneKey !== reqKey;
+
+  useEffect(() => {
+    let live = true;
+    api
+      .list(res.key, {
         q: dq,
         sort,
         dir,
         page: view === "kanban" ? 1 : page,
         pageSize: view === "kanban" ? 200 : pageSize,
-        filters: { ...filters, ...(fixed ?? {}) },
-      });
-      if (id === reqId.current) setData(out);
-    } catch (e) {
-      if (id === reqId.current) toast(e instanceof Error ? e.message : t("networkError"), "error");
-    } finally {
-      if (id === reqId.current) setLoading(false);
-    }
+        filters: { ...filters, ...(JSON.parse(fixedKey) as Record<string, string>) },
+      })
+      .then((out) => live && setData(out), (e) => live && toast(e instanceof Error ? e.message : t("networkError"), "error"))
+      .finally(() => live && setDoneKey(reqKey));
+    return () => {
+      live = false;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [res.key, dq, sort, dir, page, pageSize, filters, fixedKey, view]);
-
-  useEffect(() => {
-    load();
-  }, [load]);
+  }, [reqKey]);
 
   const fieldOf = (name: string) => res.fields.find((f) => f.name === name);
   const optionsOf = (name: string): Option[] | undefined => fieldOf(name)?.options ?? res.filters?.find((f) => f.name === name)?.options;

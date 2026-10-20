@@ -1,6 +1,7 @@
 "use client";
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useSyncExternalStore, type ReactNode } from "react";
+import { useLocalStorage } from "@/lib/use-local-storage";
 
 export type Theme = "light" | "dark" | "system";
 const STORAGE_KEY = "maktab-theme";
@@ -26,39 +27,33 @@ function apply(theme: Theme): "light" | "dark" {
   return dark ? "dark" : "light";
 }
 
-function readStored(): Theme {
-  try {
-    const v = localStorage.getItem(STORAGE_KEY);
-    if (v === "light" || v === "dark" || v === "system") return v;
-  } catch {}
-  return "system";
+const DARK_QUERY = "(prefers-color-scheme: dark)";
+function subscribeSystem(cb: () => void): () => void {
+  const mq = window.matchMedia(DARK_QUERY);
+  mq.addEventListener("change", cb);
+  return () => mq.removeEventListener("change", cb);
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("system");
-  const [resolvedTheme, setResolved] = useState<"light" | "dark">("light");
-
-  useEffect(() => {
-    const stored = readStored();
-    setThemeState(stored);
-    setResolved(apply(stored));
-  }, []);
+  // stored choice and OS preference are external stores: no mount effect, the server render uses "system" / light.
+  // The <html> class itself is set before first paint by themeInitScript, and afterwards only by setTheme / an OS change.
+  const [stored, store] = useLocalStorage(STORAGE_KEY);
+  const theme: Theme = stored === "light" || stored === "dark" || stored === "system" ? stored : "system";
+  const systemDark = useSyncExternalStore(subscribeSystem, () => window.matchMedia(DARK_QUERY).matches, () => false);
+  const resolvedTheme: "light" | "dark" = theme === "dark" || (theme === "system" && systemDark) ? "dark" : "light";
 
   useEffect(() => {
     if (theme !== "system") return;
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    const onChange = () => setResolved(apply("system"));
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
+    return subscribeSystem(() => apply("system"));
   }, [theme]);
 
-  const setTheme = useCallback((t: Theme) => {
-    setThemeState(t);
-    try {
-      localStorage.setItem(STORAGE_KEY, t);
-    } catch {}
-    setResolved(apply(t));
-  }, []);
+  const setTheme = useCallback(
+    (t: Theme) => {
+      store(t);
+      apply(t);
+    },
+    [store],
+  );
 
   const toggleTheme = useCallback(() => {
     const isDark = document.documentElement.classList.contains("dark");

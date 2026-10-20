@@ -25,7 +25,9 @@ test.describe("learn & play flows (demo mode)", () => {
     await page.goto("/en/olympiads");
     await page.locator("#oly-tab-register").click();
     const sel = page.locator("#oly-select");
-    const open = await sel.locator("option").evaluateAll((os) => os.map((o) => (o as HTMLOptionElement).value).filter(Boolean));
+    // the list is filled after hydration: wait for a real option before reading them
+    await expect(sel.locator("option:not([value=''])").first()).toBeAttached();
+    const open =await sel.locator("option").evaluateAll((os) => os.map((o) => (o as HTMLOptionElement).value).filter(Boolean));
     await sel.selectOption(open[0]);
     await page.locator("#oly-name").fill("Test Student");
     await page.locator("#oly-birth").fill("2013-03-15");

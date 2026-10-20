@@ -3,8 +3,10 @@
 import { NextResponse } from "next/server";
 import type { z } from "zod";
 import { apiError, apiOk, logError, parseBody, parseQuery, rejectCrossOrigin } from "@/lib/api";
+import { botRequest } from "@/lib/bot-auth";
 import { enforceRateLimit } from "@/lib/rate-limit";
-import { getSchoolSession } from "./auth";
+import { userForChat } from "@/lib/telegram-links";
+import { getSchoolSession, sessionForUserId } from "./auth";
 import { isSchoolError, SchoolError } from "./errors";
 import { loadCtx, type Ctx } from "./svc-core";
 import type { SchoolRole, SchoolSession } from "./types";
@@ -55,8 +57,11 @@ export function api(opts: ApiOptions, handler: (a: HandlerArgs) => Promise<Handl
           if (hasBody && !/^application\/json/i.test(ct)) return apiError("unsupported", 415);
         }
       }
-      const s = await getSchoolSession();
-      if (!s) return apiError("unauthorized", 401);
+      // a verified Telegram bot request acts as the portal user linked to its chat; everything below (roles, temp-password lock,
+      // rate limit, scoping, audit) applies to it exactly as to a cookie session
+      const bot = botRequest(req);
+      const s = bot ? await botSession(bot.chatId) : await getSchoolSession();
+      if (!s) return apiError(bot ? "not_linked" : "unauthorized", 401);
       if (s.mustChangePassword && !opts.allowMustChange) return apiError("password_change_required", 403);
       if (opts.roles && !opts.roles.includes(s.role)) return apiError("forbidden", 403);
       const limit = opts.rate ?? (opts.mutate ? WRITE_LIMIT : READ_LIMIT);
@@ -73,6 +78,12 @@ export function api(opts: ApiOptions, handler: (a: HandlerArgs) => Promise<Handl
       return failResponse(e);
     }
   };
+}
+
+/** session of the portal user linked to a Telegram chat (null: not linked, or the account is no longer active) */
+async function botSession(chatId: string): Promise<SchoolSession | null> {
+  const userId = await userForChat(chatId);
+  return userId ? sessionForUserId(userId) : null;
 }
 
 export function failResponse(e: unknown): NextResponse {

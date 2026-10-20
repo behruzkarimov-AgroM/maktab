@@ -1,7 +1,8 @@
 "use client";
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useMemo, type ReactNode } from "react";
 import { SCHOOL_LANG_KEY, UI, type T3, type UiKey } from "@/lib/school/i18n";
+import { useLocalStorage } from "@/lib/use-local-storage";
 import type { SchoolRole } from "@/lib/school/types";
 import { LOCALES, type Locale } from "@/lib/types";
 
@@ -29,26 +30,11 @@ const SchoolCtx = createContext<Ctx | null>(null);
 
 /** Wraps every /school page: current user, UZ/RU/EN switch (persisted in localStorage), string lookup. */
 export function SchoolProvider({ session, children }: { session: ClientSession | null; children: ReactNode }) {
-  const [lang, setLangState] = useState<Locale>("uz");
-  useEffect(() => {
-    try {
-      const v = localStorage.getItem(SCHOOL_LANG_KEY);
-      if (v && (LOCALES as string[]).includes(v)) setLangState(v as Locale);
-    } catch {
-      /* ignore */
-    }
-  }, []);
+  const [stored, setLang] = useLocalStorage(SCHOOL_LANG_KEY) as [string | null, (l: Locale) => void];
+  const lang: Locale = stored && (LOCALES as string[]).includes(stored) ? (stored as Locale) : "uz";
   useEffect(() => {
     document.documentElement.lang = lang;
   }, [lang]);
-  const setLang = useCallback((l: Locale) => {
-    setLangState(l);
-    try {
-      localStorage.setItem(SCHOOL_LANG_KEY, l);
-    } catch {
-      /* ignore */
-    }
-  }, []);
   const value = useMemo<Ctx>(
     () => ({
       session, lang, setLang,

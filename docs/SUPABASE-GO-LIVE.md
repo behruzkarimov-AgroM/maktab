@@ -122,6 +122,15 @@ Qoidalar:
 
 ## 7. Birinchi super admin va direktor
 
+**Tez yo'l:** `.env.local` to'ldirilgach `npm run accounts:create`. Skript har rol uchun bitta login yaratadi (`admin@`, `direktor@`,
+`metodist@`, `psixolog@`, `oqituvchi@`, `oquvchi@`, `ota-ona@` + `SCHOOL_EMAIL_DOMAIN`), o'qituvchi/o'quvchi/ota-ona uchun "Namuna"
+yozuvlarini bog'laydi va hammasini `HISOBLAR.local.md` ga yozadi (gitga tushmaydi). Qayta ishga tushirish xavfsiz: mavjud hisoblar
+o'zgarmaydi (`-- --reset` yangi parol beradi). Quyidagi qo'lda yo'l ham ishlaydi.
+
+**O'quvchi + ota-ona:** super admin `/admin/enroll` sahifasida kiritadi; ikkalasiga hisob avtomatik yaratiladi (login maktab
+domenida, masalan `karimov.sardor@...`; band bo'lsa `karimov.sardor2@...`). Ota-ona telefoni bazada bo'lsa (aka-uka), yangi ota-ona
+yaratilmaydi: bola mavjud ota-onaga bog'lanadi.
+
 1. **Authentication -> Users -> Add user** (email + parol, *Auto Confirm User*). Trigger `profiles` qatorini (`role = student`) o'zi yaratadi.
 2. **SQL Editor**:
    ```sql

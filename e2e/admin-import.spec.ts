@@ -1,23 +1,12 @@
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 import JSZip from "jszip";
 import { createCanvas } from "@napi-rs/canvas";
 import * as XLSX from "xlsx";
 import { SURVEY, GAME } from "../lib/admin/import/template-data-extra";
 import { UZ_QUIZ_LINES, docxFromLines, docxFromParts, table } from "../tests/fixtures/build-docx";
+import { adminLogin } from "./admin-helpers";
 
 const DOCX = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
-
-async function adminLogin(page: Page, email = "admin@demo.uz") {
-  await page.goto("/admin/login");
-  await page.waitForLoadState("networkidle"); // wait for hydration, otherwise the form submits natively
-  await page.locator("#email").fill(email);
-  await page.locator("#password").fill("demo1234");
-  const [resp] = await Promise.all([
-    page.waitForResponse((r) => r.url().includes("/api/admin/auth/login")),
-    page.locator("form button[type=submit]").last().click(),
-  ]);
-  expect(resp.status()).toBe(200);
-}
 
 test.describe("admin: import quizzes / psych tests from Word", () => {
   test("upload docx -> preview -> create draft -> detail page -> listed", async ({ page }) => {
@@ -307,6 +296,8 @@ test.describe("admin: import quizzes / psych tests from Word", () => {
     for (const name of [`Excel testi ${stamp}`, `Slayd testi ${stamp}`]) {
       await expect.poll(async () => (await (await page.request.get(`/api/admin/academic_quizzes?q=${encodeURIComponent(name)}`)).json()).total, { timeout: 20_000 }).toBe(1);
     }
-    const all = await (await page.request.get("/api/admin/academic_quizzes?sort=created_at&dir=desc&pageSize=10")).json();
-    expect(JSON.stringify(all)).toContain("Picture quiz");
+    // the drafts are saved one after another: wait for the third (OCR) one too instead of reading the list once
+    await expect
+      .poll(async () => JSON.stringify(await (await page.request.get("/api/admin/academic_quizzes?sort=created_at&dir=desc&pageSize=10")).json()), { timeout: 20_000 })
+      .toContain("Picture quiz");
   });});

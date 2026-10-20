@@ -16,7 +16,8 @@
     "db:check": "node scripts/db/check.mjs",
     "db:refs": "node scripts/db/check-refs.mjs",
     "smoke": "node scripts/supabase-smoke.mjs",
-    "db:split": "node scripts/db/split.mjs"
+    "db:split": "node scripts/db/split.mjs",
+    "accounts:create": "node scripts/create-accounts.mjs"
   },
   "dependencies": {
     "@napi-rs/canvas": "^1.0.11",

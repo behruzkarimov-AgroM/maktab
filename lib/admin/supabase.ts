@@ -6,9 +6,11 @@ import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 export const isConfigured = () =>
   !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-/** Demo login is available when Supabase is not configured (and in production only if explicitly allowed). */
-export const demoAllowed = () =>
-  !isConfigured() && !process.env.VERCEL_ENV && (process.env.NODE_ENV !== "production" || process.env.ALLOW_ADMIN_DEMO === "true");
+/**
+ * The demo accounts (admin@demo.uz, director@demo.uz, ...) are CLOSED by default, also in development: they only work when Supabase is
+ * not configured AND ALLOW_ADMIN_DEMO=true is set explicitly (tests and local demos), and never on Vercel.
+ */
+export const demoAllowed = () => !isConfigured() && !process.env.VERCEL_ENV && process.env.ALLOW_ADMIN_DEMO === "true";
 
 export const MAX_SESSION_COOKIE_SECONDS = 14 * 24 * 3600;
 /** Normalises Supabase auth cookie options (removal cookies with maxAge 0 are kept as they are). */

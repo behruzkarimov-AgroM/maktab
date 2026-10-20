@@ -106,7 +106,7 @@ export function AttendanceOverview({ initialClass }: { initialClass?: string }) 
             {d.dates.length > 1 && <SectionCard title={t("d_absence_reasons")}><Reasons d={d} /></SectionCard>}
             <TableWrap>
               <table className={tableCls}>
-                <thead><tr><th className={thCls}>{t("class")}</th><th className={thCls}>%</th>{ATTENDANCE_STATUSES.map((s) => <th key={s} className={`${thCls} hidden sm:table-cell`}>{t(ATTENDANCE_LABEL[s])}</th>)}<th className={thCls}><span className="sr-only">{t("d_actions")}</span></th></tr></thead>
+                <thead><tr><th className={thCls}>{t("class")}</th><th className={thCls}>%</th>{ATTENDANCE_STATUSES.map((s) => <th key={s} className={`${thCls} hidden sm:table-cell`}>{t(ATTENDANCE_LABEL[s])}</th>)}<th className={`${thCls} relative`}><span className="sr-only">{t("d_actions")}</span></th></tr></thead>
                 <tbody>
                   {d.classes.map((c) => (
                     <tr key={c.class_id} className={cn("hover:bg-slate-50 dark:hover:bg-slate-800/40", drill === c.class_id && "bg-indigo-50 dark:bg-indigo-900/20")}>

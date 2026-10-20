@@ -537,7 +537,8 @@ await test("submit stores a valid response; only a hash of the token is kept", a
 await test("submit validation: required, option ids, types, lengths, token", async () => {
   const base = okAnswers();
   const tok = (n) => `tok-validation-${String(n).padStart(4, "0")}`;
-  const { [id(415)]: _drop, ...noRequired } = base;
+  const noRequired = { ...base };
+  delete noRequired[id(415)];
   await fails(/required_missing/, () => submitSvy(SVY_P, noRequired, tok(1)));
   await fails(/required_missing/, () => submitSvy(SVY_P, { ...base, [id(412)]: "   " }, tok(2)));
   await fails(/invalid_answer/, () => submitSvy(SVY_P, { ...base, [id(412)]: "Z" }, tok(3)));

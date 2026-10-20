@@ -7,6 +7,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { LoginMenu } from "./LoginMenu";
 import { Logo } from "./Logo";
 import { MobileNav } from "./MobileNav";
 import { PRIMARY_NAV, SECONDARY_NAV, isActivePath } from "./nav";
@@ -19,7 +20,10 @@ export function Header() {
   const navId = useId();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [moreOpen, setMoreOpen] = useState(false);
+  // the "more" menu remembers the path it was opened on, so navigating closes it without a state reset in an effect
+  const [moreOpenAt, setMoreOpenAt] = useState<string | null>(null);
+  const moreOpen = moreOpenAt === pathname;
+  const setMoreOpen = useCallback((v: boolean) => setMoreOpenAt(v ? pathname : null), [pathname]);
   const moreRef = useRef<HTMLLIElement>(null);
 
   const closeMobile = useCallback(() => setMobileOpen(false), []);
@@ -43,11 +47,7 @@ export function Header() {
       document.removeEventListener("mousedown", onDown);
       document.removeEventListener("keydown", onKey);
     };
-  }, [moreOpen]);
-
-  useEffect(() => {
-    setMoreOpen(false);
-  }, [pathname]);
+  }, [moreOpen, setMoreOpen]);
 
   const secondaryActive = SECONDARY_NAV.some((i) => isActivePath(pathname, i.href));
 
@@ -95,7 +95,7 @@ export function Header() {
                   aria-haspopup="true"
                   aria-expanded={moreOpen}
                   aria-controls={`${navId}-more`}
-                  onClick={() => setMoreOpen((v) => !v)}
+                  onClick={() => setMoreOpen(!moreOpen)}
                   className={cn(
                     "inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold transition-colors",
                     secondaryActive || moreOpen
@@ -140,6 +140,7 @@ export function Header() {
           <div className="flex items-center gap-2">
             <LanguageSwitcher className="hidden sm:inline-flex" />
             <ThemeToggle className="hidden sm:inline-flex" />
+            <LoginMenu className="hidden sm:block" />
             <Button href="/contact" size="sm" className="hidden md:inline-flex">
               {tc("apply")}
             </Button>

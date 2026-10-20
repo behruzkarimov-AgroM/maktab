@@ -73,7 +73,7 @@ export function Dashboard() {
           label={t("visits30")}
           value={formatNumber(lang, d.cards.visits30)}
           hint={
-            <span className={`inline-flex items-center gap-1 ${trend >= 0 ? "text-emerald-600" : "text-rose-600"}`}>
+            <span className={`inline-flex items-center gap-1 ${trend >= 0 ? "text-emerald-700 dark:text-emerald-400" : "text-rose-700 dark:text-rose-400"}`}>
               {trend >= 0 ? <TrendingUp className="size-3.5" /> : <TrendingDown className="size-3.5" />} {trend > 0 ? "+" : ""}
               {trend}% <span className="text-slate-500">{t("vsPrev")}</span>
             </span>

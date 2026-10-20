@@ -60,6 +60,19 @@ function QuizBoard({ questions, token, config, onFinish }: { questions: QuizQues
   );
 }
 
+function LifelineButton({ label, disabled, onClick }: { label: string; disabled: boolean; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      className="rounded-full border-2 border-amber-400 bg-amber-50 px-4 py-1.5 text-sm font-bold text-amber-800 transition hover:bg-amber-100 disabled:border-slate-200 disabled:bg-slate-100 disabled:text-slate-400 dark:bg-amber-950 dark:text-amber-200 dark:disabled:border-slate-700 dark:disabled:bg-slate-800"
+    >
+      {label}
+    </button>
+  );
+}
+
 type View =
   | { phase: "answering" }
   | { phase: "checking"; chosen: string }
@@ -163,16 +176,7 @@ function QuestionView({
 
   const revealed = view.phase === "revealed" ? view : null;
   const score = s.score + (revealed ? revealed.points : 0);
-  const lifelineBtn = (kind: Lifeline, label: string, onClick: () => void) => (
-    <button
-      type="button"
-      onClick={onClick}
-      disabled={s.lifelines[kind] || view.phase !== "answering"}
-      className="rounded-full border-2 border-amber-400 bg-amber-50 px-4 py-1.5 text-sm font-bold text-amber-800 transition hover:bg-amber-100 disabled:border-slate-200 disabled:bg-slate-100 disabled:text-slate-400 dark:bg-amber-950 dark:text-amber-200 dark:disabled:border-slate-700 dark:disabled:bg-slate-800"
-    >
-      {label}
-    </button>
-  );
+  const lifelineOff = (kind: Lifeline) => s.lifelines[kind] || view.phase !== "answering";
 
   return (
     <div>
@@ -195,9 +199,9 @@ function QuestionView({
       </div>
 
       <div className="mb-3 flex flex-wrap items-center justify-center gap-2" role="group" aria-label={t.lifelines}>
-        {lifelineBtn("fifty", t.fifty, () => void doFifty())}
-        {lifelineBtn("skip", t.skipQ, doSkip)}
-        {lifelineBtn("time", t.plusTime, doTime)}
+        <LifelineButton label={t.fifty} disabled={lifelineOff("fifty")} onClick={() => void doFifty()} />
+        <LifelineButton label={t.skipQ} disabled={lifelineOff("skip")} onClick={doSkip} />
+        <LifelineButton label={t.plusTime} disabled={lifelineOff("time")} onClick={doTime} />
       </div>
 
       <ul className="mx-auto grid max-w-xl gap-2 sm:grid-cols-2">

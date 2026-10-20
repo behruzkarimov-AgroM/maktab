@@ -167,7 +167,7 @@ function TeacherDetail({ teacher, onClose, onChanged }: { teacher: TeacherRow; o
             <Async state={asg} rows={3} empty={!!asg.data && asg.data.assignments.length === 0}>
               <TableWrap>
                 <table className={tableCls}>
-                  <thead><tr><th className={thCls}>{t("class")}</th><th className={thCls}>{t("subject")}</th><th className={thCls}>{t("d_hours_week")}</th><th className={thCls}><span className="sr-only">{t("d_actions")}</span></th></tr></thead>
+                  <thead><tr><th className={thCls}>{t("class")}</th><th className={thCls}>{t("subject")}</th><th className={thCls}>{t("d_hours_week")}</th><th className={`${thCls} relative`}><span className="sr-only">{t("d_actions")}</span></th></tr></thead>
                   <tbody>
                     {asg.data?.assignments.map((a) => (
                       <tr key={a.id}>
@@ -248,7 +248,7 @@ export function TeachersPanel() {
       <Async state={res} empty={!!res.data && rows.length === 0}>
         <TableWrap>
           <table className={tableCls}>
-            <thead><tr><th className={thCls}>{t("d_full_name")}</th><th className={`${thCls} hidden md:table-cell`}>{t("navSubjects")}</th><th className={thCls}>{t("navClasses")}</th><th className={thCls}>{t("d_workload")}</th><th className={thCls}>{t("d_status")}</th><th className={thCls}><span className="sr-only">{t("d_actions")}</span></th></tr></thead>
+            <thead><tr><th className={thCls}>{t("d_full_name")}</th><th className={`${thCls} hidden md:table-cell`}>{t("navSubjects")}</th><th className={thCls}>{t("navClasses")}</th><th className={thCls}>{t("d_workload")}</th><th className={thCls}>{t("d_status")}</th><th className={`${thCls} relative`}><span className="sr-only">{t("d_actions")}</span></th></tr></thead>
             <tbody>
               {rows.map((x) => (
                 <tr key={x.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/40">

@@ -23,7 +23,13 @@
     "closeMenu": "Close menu",
     "main": "Main navigation",
     "skipToContent": "Skip to main content",
-    "assessment": "Assessment"
+    "assessment": "Assessment",
+    "login": "Sign in",
+    "loginMenu": "Sign in to",
+    "loginSchool": "School portal",
+    "loginSchoolHint": "Director, teacher, parent, student",
+    "loginAdmin": "Admin panel",
+    "loginAdminHint": "Super admin, methodologist, psychologist"
   },
   "common": {
     "apply": "Apply now",

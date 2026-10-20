@@ -16,11 +16,14 @@ const DEMO = [
   { email: "psixolog@demo.uz", role: "Psixolog" },
 ];
 
-function Inner() {
+/** "supabase": real accounts; "demo": local demo accounts (only with ALLOW_ADMIN_DEMO=true); "off": neither is available */
+export type LoginMode = "supabase" | "demo" | "off";
+
+function Inner({ mode }: { mode: LoginMode }) {
   const { t, lang, setLang } = useAdmin();
   const router = useRouter();
   const params = useSearchParams();
-  const demo = !supabaseConfigured();
+  const demo = mode === "demo";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
@@ -68,6 +71,12 @@ function Inner() {
               <p className="text-xs text-slate-600 dark:text-slate-400">{t("appName")}</p>
             </div>
           </div>
+
+          {mode === "off" && (
+            <p role="status" className="mb-5 flex gap-2 rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-800 dark:bg-amber-950/60 dark:text-amber-200">
+              <ShieldAlert className="mt-0.5 size-4 shrink-0" /> {t("authOff")}
+            </p>
+          )}
 
           {demo && (
             <div className="mb-5 rounded-xl border border-amber-300 bg-amber-50 p-3 text-xs text-amber-900 dark:border-amber-800 dark:bg-amber-950/60 dark:text-amber-200">
@@ -117,7 +126,7 @@ function Inner() {
                 {error === "forbidden" ? t("forbidden") : t("loginFailed")}
               </p>
             )}
-            <Button type="submit" variant="primary" loading={busy} className="w-full py-2.5">
+            <Button type="submit" variant="primary" loading={busy} disabled={mode === "off"} className="w-full py-2.5">
               {t("signIn")}
             </Button>
           </form>
@@ -127,10 +136,10 @@ function Inner() {
   );
 }
 
-export function LoginForm() {
+export function LoginForm({ mode }: { mode: LoginMode }) {
   return (
     <AdminProvider session={null}>
-      <Inner />
+      <Inner mode={mode} />
     </AdminProvider>
   );
 }

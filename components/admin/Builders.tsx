@@ -39,23 +39,28 @@ export function ChildEditor({ resKey, parentId, summary, onItems, actions, addLa
     cb.current = onItems;
   });
 
-  const reload = useCallback(async () => {
-    try {
-      const out = await api.list(resKey, { all: true, filters: { [res.parent!.field]: String(parentId) } });
-      const rows = out.rows;
-      setItems(rows);
-      cb.current?.(rows);
-    } catch (e) {
-      toast(e instanceof Error ? e.message : t("networkError"), "error");
-    } finally {
-      setLoading(false);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [resKey, parentId]);
+  // reload() only bumps the nonce; the effect below does the fetch (the spinner is shown for the first load only)
+  const [nonce, setNonce] = useState(0);
+  const reload = useCallback(() => setNonce((n) => n + 1), []);
 
   useEffect(() => {
-    reload();
-  }, [reload, reloadKey]);
+    let live = true;
+    api
+      .list(resKey, { all: true, filters: { [res.parent!.field]: String(parentId) } })
+      .then(
+        (out) => {
+          if (!live) return;
+          setItems(out.rows);
+          cb.current?.(out.rows);
+        },
+        (e) => live && toast(e instanceof Error ? e.message : t("networkError"), "error"),
+      )
+      .finally(() => live && setLoading(false));
+    return () => {
+      live = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [resKey, parentId, reloadKey, nonce]);
 
   const dragIdx = useRef<number | null>(null);
   const [overIdx, setOverIdx] = useState<number | null>(null);

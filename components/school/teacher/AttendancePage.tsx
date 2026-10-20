@@ -163,7 +163,7 @@ function AttendanceInner({ b }: { b: Base }) {
       ) : (
         <Sheet
           key={`${classId}|${date}|${lesson}|${ver}`}
-          b={b} cls={cls} day={day.data!.day} date={date} lesson={lesson} userId={session?.id ?? ""}
+          cls={cls} day={day.data!.day} date={date} lesson={lesson} userId={session?.id ?? ""}
           sheet={sheet.data?.sheet ?? null} toasts={toasts} onSaved={() => b.reloadOverview()}
         />
       )}
@@ -173,9 +173,8 @@ function AttendanceInner({ b }: { b: Base }) {
 }
 
 function Sheet({
-  b, cls, day, date, lesson, userId, sheet, toasts, onSaved,
+  cls, day, date, lesson, userId, sheet, toasts, onSaved,
 }: {
-  b: Base;
   cls: TClass;
   day: AttendanceDay;
   date: string;

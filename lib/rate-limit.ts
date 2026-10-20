@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import type { NextResponse } from "next/server";
 import { apiError, clientIp, logError } from "@/lib/api";
+import { botRequest } from "@/lib/bot-auth";
 import { getAdminClient } from "@/lib/supabase/admin";
 
 /**
@@ -79,7 +80,9 @@ function memoryHit(key: string, max: number, windowSec: number): RateLimitResult
 }
 
 export async function rateLimit(req: Request, opts: RateLimitOptions): Promise<RateLimitResult> {
-  const who = opts.identity ?? clientIp(req);
+  // all bot traffic comes from one server IP: a verified bot request is limited per Telegram chat instead
+  const bot = opts.identity ? null : botRequest(req);
+  const who = opts.identity ?? (bot ? `tg:${bot.chatId}` : clientIp(req));
   const key = `${opts.key}:${createHash("sha256").update(who).digest("hex").slice(0, 32)}`.slice(0, 200);
   const retryAfterSec = Math.max(1, Math.min(opts.windowSec, 86400));
 

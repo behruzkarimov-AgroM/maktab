@@ -25,6 +25,12 @@ export const MIGRATIONS = [
     title: "0002_hardening: security, integrity and performance hardening for databases created from an older 0001_init.sql.",
     footer: "-- Policy helper is only needed while this file runs.\ndrop function if exists public._mk_policies(text, text, text);\n",
   },
+  {
+    tag: "0003",
+    file: "supabase/migrations/0003_telegram_bot.sql",
+    title: "0003_telegram_bot: Telegram account links + one-time link codes (server / service role only).",
+    footer: "",
+  },
 ];
 
 export function extractRegions(schemaPart, tag) {

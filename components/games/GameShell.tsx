@@ -31,7 +31,8 @@ export function GameShell({ meta, Game, onBack }: Props) {
   const [phase, setPhase] = useState<Phase>({ name: "select" });
   const [lbKey, setLbKey] = useState(0);
   const runRef = useRef(0);
-  const sessionRef = useRef("");
+  // server-signed run token, tagged with its run so a late answer for an earlier run is ignored
+  const [session, setSession] = useState({ run: 0, token: "" });
 
   const finish = useCallback((result: GameResult) => {
     setPhase({ name: "result", result });
@@ -47,20 +48,18 @@ export function GameShell({ meta, Game, onBack }: Props) {
   function start() {
     unlockAudio();
     playSound("start");
-    runRef.current += 1;
+    const run = (runRef.current += 1);
     // server-signed run token (needed to save a score); best effort, the form shows an error without it
-    sessionRef.current = "";
+    setSession({ run, token: "" });
     fetch("/api/games/session", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ game: meta.slug, difficulty }),
     })
       .then((r) => r.json())
-      .then((j: { token?: string }) => {
-        sessionRef.current = j.token ?? "";
-      })
+      .then((j: { token?: string }) => setSession((s) => (s.run === run ? { run, token: j.token ?? "" } : s)))
       .catch(() => {});
-    setPhase({ name: "playing", run: runRef.current });
+    setPhase({ name: "playing", run });
   }
 
   const cfg = meta.config[difficulty];
@@ -138,7 +137,7 @@ export function GameShell({ meta, Game, onBack }: Props) {
             onChange={() => setPhase({ name: "select" })}
             save={
               phase.result.score > 0 ? (
-                <SaveScoreForm slug={meta.slug} difficulty={difficulty} result={phase.result} session={sessionRef.current} onSaved={() => setLbKey((k) => k + 1)} />
+                <SaveScoreForm slug={meta.slug} difficulty={difficulty} result={phase.result} session={session.token} onSaved={() => setLbKey((k) => k + 1)} />
               ) : null
             }
           />

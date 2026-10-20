@@ -1,15 +1,8 @@
 ﻿import { test, expect, type Page } from "@playwright/test";
+import { adminLogin as login } from "./admin-helpers";
 
 async function adminLogin(page: Page, email = "admin@demo.uz") {
-  await page.goto("/admin/login");
-  await page.waitForLoadState("networkidle"); // wait for hydration, otherwise the form submits natively
-  await page.locator("#email").fill(email);
-  await page.locator("#password").fill("demo1234");
-  const [resp] = await Promise.all([
-    page.waitForResponse((r) => r.url().includes("/api/admin/auth/login")),
-    page.locator("form button[type=submit]").last().click(),
-  ]);
-  expect(resp.status()).toBe(200);
+  await login(page, email);
   // Land on a page that works regardless of the /admin dashboard bug below.
   await page.goto("/admin/programs");
 }
@@ -92,6 +85,30 @@ test.describe("admin (demo login)", () => {
     await adminLogin(page, "psixolog@demo.uz");
     const r = await page.request.post("/api/admin/programs", { data: { title: { uz: "x", ru: "", en: "" }, category: "primary" } });
     expect(r.status()).toBe(403);
+  });
+});
+
+test.describe("enrolment (super admin)", () => {
+  test("student + parent form creates both logins and shows them once", async ({ page }) => {
+    await login(page);
+    await page.goto("/admin/enroll");
+    await page.waitForLoadState("networkidle");
+    const stamp = Date.now().toString().slice(-5);
+    await page.locator("#en-last").fill(`Sinov${stamp}`);
+    await page.locator("#en-first").fill("Bola");
+    await page.locator("#en-class").selectOption({ index: 1 });
+    await page.locator("#en-gname").fill(`Sinov${stamp} Ona`);
+    await page.locator("#en-phone").fill(`+998 90 1${stamp.slice(0, 2)} ${stamp.slice(2)} 00`);
+    await page.getByRole("button", { name: "Ro'yxatdan o'tkazish va hisob yaratish" }).click();
+    await expect(page.getByRole("heading", { name: "Ro'yxatdan o'tkazildi" })).toBeVisible();
+    await expect(page.getByText(`sinov${stamp}.bola@`)).toBeVisible();
+    await expect(page.getByText(`sinov${stamp}.ona@`)).toBeVisible();
+  });
+
+  test("only the super admin sees the page and may call the API", async ({ page }) => {
+    await login(page, "metodist@demo.uz");
+    expect((await page.goto("/admin/enroll"))?.status()).toBe(404);
+    expect((await page.request.get("/api/admin/enroll")).status()).toBe(403);
   });
 });
 

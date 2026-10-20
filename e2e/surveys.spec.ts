@@ -1,16 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
-
-async function adminLogin(page: Page, email = "admin@demo.uz") {
-  await page.goto("/admin/login");
-  await page.waitForLoadState("networkidle"); // wait for hydration, otherwise the form submits natively
-  await page.locator("#email").fill(email);
-  await page.locator("#password").fill("demo1234");
-  const [resp] = await Promise.all([
-    page.waitForResponse((r) => r.url().includes("/api/admin/auth/login")),
-    page.locator("form button[type=submit]").last().click(),
-  ]);
-  expect(resp.status()).toBe(200);
-}
+import { adminLogin } from "./admin-helpers";
 
 async function responseCount(page: Page, id: string): Promise<number> {
   await page.goto(`/admin/surveys/${id}/results`);

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
@@ -25,8 +25,10 @@ export function PortalShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
   const { resolvedTheme, toggleTheme } = useTheme();
-  const [open, setOpen] = useState(false);
-  useEffect(() => setOpen(false), [pathname]);
+  // the mobile menu remembers the path it was opened on: navigating closes it without a state reset in an effect
+  const [openAt, setOpenAt] = useState<string | null>(null);
+  const open = openAt === pathname;
+  const setOpen = useCallback((v: boolean) => setOpenAt(v ? pathname : null), [pathname]);
   const closeRef = useRef<HTMLButtonElement>(null);
   const menuBtnRef = useRef<HTMLButtonElement>(null);
   useEffect(() => {
@@ -41,7 +43,7 @@ export function PortalShell({ children }: { children: ReactNode }) {
       document.removeEventListener("keydown", onKey);
       btn?.focus();
     };
-  }, [open]);
+  }, [open, setOpen]);
   if (!session) return <>{children}</>;
   const items = navFor(session.role);
   const active = (href: string) => (href === items[0].href ? pathname === href : pathname === href || pathname.startsWith(`${href}/`));

@@ -3,11 +3,13 @@
 import { AnimatePresence, m as motion } from "framer-motion";
 import { X } from "lucide-react";
 import { useTranslations } from "next-intl";
+import NextLink from "next/link";
 import { useEffect, useRef } from "react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { LOGIN_TARGETS } from "./LoginMenu";
 import { Logo } from "./Logo";
 import { NAV_ITEMS, isActivePath } from "./nav";
 import { ThemeToggle } from "./ThemeToggle";
@@ -143,6 +145,25 @@ export function MobileNav({ open, onClose, id }: MobileNavProps) {
             </ul>
 
             <div className="mt-auto flex flex-col gap-4 pt-2">
+              <div className="flex flex-col gap-2">
+                <p className="px-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("loginMenu")}</p>
+                {LOGIN_TARGETS.map(({ href, label, hint, Icon }) => (
+                  <NextLink
+                    key={href}
+                    href={href}
+                    prefetch={false}
+                    rel="nofollow"
+                    onClick={onClose}
+                    className="glass flex items-center gap-3 rounded-xl px-4 py-3 transition-colors hover:bg-muted"
+                  >
+                    <Icon className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+                    <span className="min-w-0">
+                      <span className="block text-base font-semibold">{t(label)}</span>
+                      <span className="block text-xs text-muted-foreground">{t(hint)}</span>
+                    </span>
+                  </NextLink>
+                ))}
+              </div>
               <Button href="/contact" size="lg" className="w-full">
                 {tc("apply")}
               </Button>

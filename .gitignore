@@ -34,6 +34,9 @@ yarn-error.log*
 .env*
 !.env.example
 
+# generated credentials (npm run accounts:create) - never commit
+*.local.md
+
 # marketing / video generation scratch
 brag-output/
 

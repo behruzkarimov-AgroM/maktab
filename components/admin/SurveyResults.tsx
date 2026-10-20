@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Download, Pencil } from "lucide-react";
 import { legendFormatter } from "@/components/layout/chart-legend";
@@ -80,6 +80,8 @@ async function fetchResults(id: string, from: string, to: string, rows: boolean)
   if (rows) p.set("rows", "1");
   const r = await fetch(`/api/admin/surveys/${encodeURIComponent(id)}/results?${p}`, { cache: "no-store" });
   if (r.status === 401) {
+    // expired session: full page load on purpose (module-level helper, no router; drops the old session's client state)
+    // eslint-disable-next-line @next/next/no-location-assign-relative-destination
     window.location.assign("/admin/login");
     throw new Error("Unauthorized");
   }
@@ -93,26 +95,28 @@ export function SurveyResults({ id }: { id: string }) {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [data, setData] = useState<ResultsPayload | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  // the error belongs to one query: a new date range hides the previous error, and loading lasts until that query has answered
+  const reqKey = `${id}\u0000${from}\u0000${to}`;
+  const [done, setDone] = useState<{ key: string; error: string | null } | null>(null);
+  const loading = done?.key !== reqKey;
+  const error = loading ? null : done.error;
   const writable = !!session && canWrite(RESOURCE_MAP.surveys, session.role);
 
-  const load = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      setData(await fetchResults(id, from, to, false));
-    } catch (e) {
-      setError(e instanceof Error ? e.message : t("networkError"));
-    } finally {
-      setLoading(false);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id, from, to]);
-
   useEffect(() => {
-    void load();
-  }, [load]);
+    let live = true;
+    fetchResults(id, from, to, false).then(
+      (d) => {
+        if (!live) return;
+        setData(d);
+        setDone({ key: reqKey, error: null });
+      },
+      (e) => live && setDone({ key: reqKey, error: e instanceof Error ? e.message : t("networkError") }),
+    );
+    return () => {
+      live = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [reqKey]);
 
   const rangeInvalid = !!from && !!to && from > to;
   const title = data ? tr(data.survey.title as never, lang) : "";

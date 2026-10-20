@@ -60,7 +60,7 @@ export function SubjectsPanel() {
       <Async state={res} empty={!!res.data && res.subjects.length === 0}>
         <TableWrap>
           <table className={tableCls}>
-            <thead><tr><th className={thCls}>{t("d_sort")}</th><th className={thCls}>{t("d_name")}</th><th className={thCls}>{t("d_short")}</th><th className={`${thCls} hidden md:table-cell`}>UZ / RU / EN</th><th className={thCls}><span className="sr-only">{t("d_actions")}</span></th></tr></thead>
+            <thead><tr><th className={thCls}>{t("d_sort")}</th><th className={thCls}>{t("d_name")}</th><th className={thCls}>{t("d_short")}</th><th className={`${thCls} hidden md:table-cell`}>UZ / RU / EN</th><th className={`${thCls} relative`}><span className="sr-only">{t("d_actions")}</span></th></tr></thead>
             <tbody>
               {res.subjects.map((s) => (
                 <tr key={s.id}>

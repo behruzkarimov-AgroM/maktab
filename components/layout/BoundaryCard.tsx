@@ -1,7 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import type { Locale } from "@/lib/types";
+
+const noSubscribe = () => () => {};
 
 const TEXT = {
   errorTitle: { uz: "Nimadir xato ketdi", ru: "Что-то пошло не так", en: "Something went wrong" },
@@ -48,8 +50,8 @@ export function BoundaryCard({
   asMain?: boolean;
 }) {
   const Wrapper = asMain ? "main" : "div";
-  const [lang, setLang] = useState<Locale>("uz");
-  useEffect(() => setLang(detectLang()), []);
+  // read once on the client (server markup is Uzbek); URL and storage do not change while the card is shown
+  const lang = useSyncExternalStore(noSubscribe, detectLang, () => "uz" as Locale);
   useEffect(() => {
     if (error) console.error(error);
   }, [error]);
