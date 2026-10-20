@@ -1,6 +1,8 @@
 import { after, type NextRequest } from "next/server";
 import { z } from "zod";
 import { apiError, apiOk, isBotSubmission, logError, parseBody, rejectCrossOrigin } from "@/lib/api";
+import { botRequest } from "@/lib/bot-auth";
+import { normPhone, phoneCodesEnabled, verifyPhoneToken } from "@/lib/phone-auth";
 import { enforceRateLimit } from "@/lib/rate-limit";
 import { escapeHtml, sendTelegram } from "@/lib/telegram";
 import { getAdminClient } from "@/lib/supabase/admin";
@@ -19,6 +21,7 @@ const schema = z.object({
   message: z.string().trim().max(1000).optional().default(""),
   website: z.string().max(200).optional().default(""), // honeypot (humans leave it empty)
   formStartedAt: z.number(), // time trap: Date.now() when the form was rendered (required)
+  phoneToken: z.string().max(300).optional(), // proof the phone was verified with a code from the Telegram bot
 });
 
 const TYPE_LABEL = { admission: "Qabul arizasi", campus_tour: "Ekskursiya", callback: "Qayta qo'ng'iroq" } as const;
@@ -35,6 +38,10 @@ export async function POST(req: NextRequest) {
 
   // Bots: pretend success so they do not adapt.
   if (isBotSubmission(d, { requireTimestamp: true })) return apiOk();
+  // once the school's Telegram bot can deliver codes, the phone must be verified (the bot itself talks to us with its secret)
+  if (phoneCodesEnabled() && !botRequest(req) && verifyPhoneToken(d.phoneToken, "verify") !== normPhone(d.phone)) {
+    return apiError("phone_unverified", 400);
+  }
 
   const row = {
     application_type: d.application_type,

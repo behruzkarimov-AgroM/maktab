@@ -29,7 +29,9 @@
     "loginSchool": "School portal",
     "loginSchoolHint": "Director, teacher, parent, student",
     "loginAdmin": "Admin panel",
-    "loginAdminHint": "Super admin, methodologist, psychologist"
+    "loginAdminHint": "Super admin, methodologist, psychologist",
+    "loginRegister": "Register",
+    "loginRegisterHint": "For parents: the phone is confirmed through the Telegram bot"
   },
   "common": {
     "apply": "Apply now",

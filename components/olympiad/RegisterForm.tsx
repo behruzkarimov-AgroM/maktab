@@ -6,6 +6,7 @@ import { tr, type Locale } from "@/lib/types";
 import type { OlympiadStrings } from "./i18n";
 import { olympiadState } from "./OlympiadList";
 import { maskPhone, phoneValue, registrationSchema, type IssuedTicket, type Olympiad } from "./types";
+import { PhoneVerify, phoneRequiredText } from "@/components/public/PhoneVerify";
 
 interface Props {
   olympiads: Olympiad[];
@@ -28,6 +29,9 @@ export function RegisterForm({ olympiads, selectedId, onSelect, locale, t, now, 
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // parent's phone confirmed with a code from the school's Telegram bot (required by the server once the bot is set up)
+  const [phoneToken, setPhoneToken] = useState<string | null>(null);
+  const [phoneRequired, setPhoneRequired] = useState(false);
 
   const grade = oly && oly.eligibleGrades.includes(Number(v.grade)) ? v.grade : "";
   const subject = oly && oly.subjects.some((s) => s.key === v.subject) ? v.subject : "";
@@ -71,17 +75,22 @@ export function RegisterForm({ olympiads, selectedId, onSelect, locale, t, now, 
     e.preventDefault();
     setTouched({ olympiad: true, name: true, birth: true, school: true, grade: true, subject: true, phone: true, extra: true });
     if (!parsed.success || submitting) return;
+    if (phoneRequired && !phoneToken) {
+      setError(phoneRequiredText(locale));
+      return;
+    }
     setSubmitting(true);
     setError(null);
     try {
       const res = await fetch("/api/olympiad/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(parsed.data),
+        body: JSON.stringify({ ...parsed.data, ...(phoneToken ? { phoneToken } : {}) }),
       });
       const json = await res.json().catch(() => ({}));
       if (!res.ok) {
-        setError(t.errors[json?.error as string] ?? t.errors.server);
+        if (json?.error === "phone_unverified") setPhoneToken(null);
+        setError(json?.error === "phone_unverified" ? phoneRequiredText(locale) : (t.errors[json?.error as string] ?? t.errors.server));
         return;
       }
       onDone(json.ticket as IssuedTicket);
@@ -257,7 +266,10 @@ export function RegisterForm({ olympiads, selectedId, onSelect, locale, t, now, 
             autoComplete="tel"
             className={cls("phone")}
             value={v.phone}
-            onChange={(e) => setV({ ...v, phone: maskPhone(e.target.value) })}
+            onChange={(e) => {
+              setV({ ...v, phone: maskPhone(e.target.value) });
+              setPhoneToken(null);
+            }}
             onBlur={() => touch("phone")}
             aria-invalid={!!showErr("phone")}
             aria-describedby={showErr("phone") ? "oly-phone-err" : undefined}
@@ -282,6 +294,7 @@ export function RegisterForm({ olympiads, selectedId, onSelect, locale, t, now, 
           "extra",
         )}
       </div>
+      <PhoneVerify phone={v.phone} lang={locale} onToken={setPhoneToken} onRequired={setPhoneRequired} inputClass={`${inputCls} border-slate-300 dark:border-white/15`} />
 
       {error && (
         <div role="alert" className="flex items-start gap-2 rounded-xl border border-red-300 bg-red-50 p-3 text-sm text-red-800 dark:border-red-500/30 dark:bg-red-500/10 dark:text-red-300">

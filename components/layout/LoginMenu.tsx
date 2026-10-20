@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown, GraduationCap, LogIn, ShieldCheck } from "lucide-react";
+import { ChevronDown, GraduationCap, LogIn, ShieldCheck, UserPlus } from "lucide-react";
 import { useTranslations } from "next-intl";
 import NextLink from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 export const LOGIN_TARGETS = [
   { href: "/school/login", label: "loginSchool", hint: "loginSchoolHint", Icon: GraduationCap },
   { href: "/admin/login", label: "loginAdmin", hint: "loginAdminHint", Icon: ShieldCheck },
+  { href: "/school/register", label: "loginRegister", hint: "loginRegisterHint", Icon: UserPlus },
 ] as const;
 
 /** Header "Sign in" button with a small menu: school portal / admin panel. */

@@ -1,6 +1,8 @@
 import { NextResponse, after } from "next/server";
 import { listOlympiads, registerForOlympiad } from "../_lib";
 import { legacyError, readJson, rejectCrossOrigin } from "@/lib/api";
+import { botRequest } from "@/lib/bot-auth";
+import { normPhone, phoneCodesEnabled, verifyPhoneToken } from "@/lib/phone-auth";
 import { enforceRateLimit } from "@/lib/rate-limit";
 import { notifyRegistration } from "@/lib/notify";
 import { registrationSchema } from "@/components/olympiad/types";
@@ -19,6 +21,11 @@ export async function POST(req: Request) {
     const fields: Record<string, string> = {};
     for (const i of parsed.error.issues) fields[String(i.path[0] ?? "form")] = String(i.message);
     return legacyError("invalid", 400, { fields });
+  }
+  // once the Telegram bot can deliver codes, the parent's phone must be verified (the bot's own requests are trusted)
+  const phoneToken = (raw.data as { phoneToken?: unknown })?.phoneToken;
+  if (phoneCodesEnabled() && !botRequest(req) && verifyPhoneToken(phoneToken, "verify") !== normPhone(parsed.data.parentPhone)) {
+    return legacyError("phone_unverified", 400);
   }
   try {
     const res = await registerForOlympiad(parsed.data);

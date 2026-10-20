@@ -6,6 +6,7 @@ import { useId, useState, type FormEvent, type ReactNode } from "react";
 import { maskPhone, phoneValue } from "@/components/olympiad/phone";
 import { Link } from "@/i18n/navigation";
 import { DICT } from "./i18n";
+import { PhoneVerify, phoneRequiredText } from "./PhoneVerify";
 import { btnGhost, btnPrimary, Modal, usePublic } from "./ui";
 
 export type ApplicationType = "admission" | "campus_tour" | "callback";
@@ -19,6 +20,9 @@ export function AdmissionForm({ initialType = "admission", onDone, compact }: { 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error" | "rate">("idle");
   const [phone, setPhone] = useState("+998");
+  // phone confirmed with a code from the school's Telegram bot (required by the server once the bot is set up)
+  const [phoneToken, setPhoneToken] = useState<string | null>(null);
+  const [phoneRequired, setPhoneRequired] = useState(false);
   const uid = useId();
   const eid = (k: string) => `${uid}-${k}-err`;
   const [startedAt, setStartedAt] = useState(() => Date.now());
@@ -54,6 +58,7 @@ export function AdmissionForm({ initialType = "admission", onDone, compact }: { 
     const form = e.currentTarget;
     const fd = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
     const { errs, data: d } = validate(fd);
+    if (!errs.phone && phoneRequired && !phoneToken) errs.phone = phoneRequiredText(locale);
     if (Object.keys(errs).length) {
       setErrors(errs);
       const firstKey = ["parent_name", "phone", "target_grade"].find((k) => errs[k]);
@@ -66,13 +71,19 @@ export function AdmissionForm({ initialType = "admission", onDone, compact }: { 
       const res = await fetch("/api/applications", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...d, phone: phoneValue(d.phone), target_grade: d.target_grade === "" ? null : d.target_grade, application_type: type, formStartedAt: startedAt }),
+        body: JSON.stringify({
+          ...d, phone: phoneValue(d.phone), target_grade: d.target_grade === "" ? null : d.target_grade, application_type: type, formStartedAt: startedAt,
+          ...(phoneToken ? { phoneToken } : {}),
+        }),
       });
       if (res.ok) {
         setStatus("ok");
         setStartedAt(Date.now());
-      }
-      else setStatus(res.status === 429 ? "rate" : "error");
+      } else if (res.status === 400 && (await res.json().catch(() => ({}))).error === "phone_unverified") {
+        setPhoneToken(null);
+        setErrors({ phone: phoneRequiredText(locale) });
+        setStatus("idle");
+      } else setStatus(res.status === 429 ? "rate" : "error");
     } catch {
       setStatus("error");
     }
@@ -120,8 +131,9 @@ export function AdmissionForm({ initialType = "admission", onDone, compact }: { 
         </div>
         <div>
           <label className={label} htmlFor="ad-phone">{t("phone")}</label>
-          <input id="ad-phone" name="phone" type="tel" inputMode="tel" autoComplete="tel" placeholder="+998 90 123 45 67" className={input} value={phone} onChange={(e) => setPhone(maskPhone(e.target.value))} {...a11y("phone")} />
+          <input id="ad-phone" name="phone" type="tel" inputMode="tel" autoComplete="tel" placeholder="+998 90 123 45 67" className={input} value={phone} onChange={(e) => { setPhone(maskPhone(e.target.value)); setPhoneToken(null); }} {...a11y("phone")} />
           {err("phone")}
+          <PhoneVerify phone={phone} lang={locale} onToken={setPhoneToken} onRequired={setPhoneRequired} inputClass={input} />
         </div>
         <div>
           <label className={label} htmlFor="ad-child">{t("childName")} <span className="font-normal opacity-60">({t("optional")})</span></label>

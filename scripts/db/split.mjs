@@ -31,6 +31,12 @@ export const MIGRATIONS = [
     title: "0003_telegram_bot: Telegram account links + one-time link codes (server / service role only).",
     footer: "",
   },
+  {
+    tag: "0004",
+    file: "supabase/migrations/0004_phone_codes.sql",
+    title: "0004_phone_codes: phones shared with the Telegram bot + one-time codes sent through it (server / service role only).",
+    footer: "",
+  },
 ];
 
 export function extractRegions(schemaPart, tag) {

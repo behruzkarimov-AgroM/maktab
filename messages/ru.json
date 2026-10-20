@@ -29,7 +29,9 @@
     "loginSchool": "Школьный портал",
     "loginSchoolHint": "Директор, учитель, родитель, ученик",
     "loginAdmin": "Админ-панель",
-    "loginAdminHint": "Суперадмин, методист, психолог"
+    "loginAdminHint": "Суперадмин, методист, психолог",
+    "loginRegister": "Регистрация",
+    "loginRegisterHint": "Для родителей: номер подтверждается через Telegram-бот"
   },
   "common": {
     "apply": "Оставить заявку",

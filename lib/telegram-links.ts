@@ -74,21 +74,34 @@ export async function redeemLinkCode(code: string, chatId: string, username: str
     if (error) throw new SchoolError("db_error");
     if (!data?.length) throw new SchoolError("invalid_token", 422);
     userId = data[0].user_id as string;
-    await db.from("telegram_links").delete().eq("chat_id", chatId);
-    await db.from("telegram_links").delete().eq("user_id", userId);
-    const ins = await db.from("telegram_links").insert({ chat_id: chatId, user_id: userId, username: username?.slice(0, 64) ?? null });
-    if (ins.error) throw new SchoolError("db_error");
   } else {
     const d = demoLinks();
     const row = d.codes.get(hash(c));
     if (!row || row.used || row.expires_at <= now) throw new SchoolError("invalid_token", 422);
     row.used = true;
     userId = row.user_id;
+  }
+  await linkChatToUser(chatId, userId, username);
+  return userId;
+}
+
+/**
+ * Links a chat to a user (replacing any previous link of either side). Callers prove the right to it first: a one-time portal code,
+ * or a phone number shared with the bot that matches the account's own records (lib/phone-auth.ts).
+ */
+export async function linkChatToUser(chatId: string, userId: string, username: string | null): Promise<void> {
+  if (isConfigured()) {
+    const db = svc();
+    await db.from("telegram_links").delete().eq("chat_id", chatId);
+    await db.from("telegram_links").delete().eq("user_id", userId);
+    const ins = await db.from("telegram_links").insert({ chat_id: chatId, user_id: userId, username: username?.slice(0, 64) ?? null });
+    if (ins.error) throw new SchoolError("db_error");
+  } else {
+    const d = demoLinks();
     for (const [k, v] of d.links) if (k === chatId || v.user_id === userId) d.links.delete(k);
     d.links.set(chatId, { user_id: userId, username: username?.slice(0, 64) ?? null });
   }
   await syncGuardianChat(userId, chatId);
-  return userId;
 }
 
 /** the portal user linked to this chat, or null */

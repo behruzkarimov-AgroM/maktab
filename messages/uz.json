@@ -29,7 +29,9 @@
     "loginSchool": "Maktab portali",
     "loginSchoolHint": "Direktor, o'qituvchi, ota-ona, o'quvchi",
     "loginAdmin": "Admin panel",
-    "loginAdminHint": "Super admin, metodist, psixolog"
+    "loginAdminHint": "Super admin, metodist, psixolog",
+    "loginRegister": "Ro'yxatdan o'tish",
+    "loginRegisterHint": "Ota-onalar uchun: telefon Telegram bot orqali tasdiqlanadi"
   },
   "common": {
     "apply": "Ariza qoldirish",

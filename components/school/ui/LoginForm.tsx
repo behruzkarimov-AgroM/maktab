@@ -9,6 +9,7 @@ import { ROLE_LABEL } from "@/lib/school/i18n";
 import type { SchoolRole } from "@/lib/school/types";
 import { LOCALES } from "@/lib/types";
 import { Button, cn, inputCls } from "./kit";
+import { PhoneCodeForm, type PhoneConfig } from "./PhoneAuth";
 import { SchoolProvider, useSchool } from "./SchoolProvider";
 
 export interface DemoHint {
@@ -17,9 +18,10 @@ export interface DemoHint {
   name: string;
 }
 
-function Inner({ demo }: { demo: DemoHint[] }) {
+function Inner({ demo, phone, initialTab }: { demo: DemoHint[]; phone: PhoneConfig; initialTab: "password" | "phone" }) {
   const { t, lang, setLang } = useSchool();
   const router = useRouter();
+  const [tab, setTab] = useState<"password" | "phone">(phone.login ? initialTab : "password");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
@@ -84,6 +86,20 @@ function Inner({ demo }: { demo: DemoHint[] }) {
             </div>
           )}
 
+          {phone.login && (
+            <div className="mb-5 grid grid-cols-2 gap-1 rounded-xl bg-slate-100 p-1 dark:bg-slate-800" role="tablist" aria-label={t("loginTitle")}>
+              {(["password", "phone"] as const).map((k) => (
+                <button key={k} type="button" role="tab" aria-selected={tab === k} onClick={() => setTab(k)}
+                  className={cn("min-h-10 rounded-lg text-sm font-semibold transition", tab === k ? "bg-white text-indigo-700 shadow dark:bg-slate-900 dark:text-indigo-300" : "text-slate-600 dark:text-slate-300")}>
+                  {t(k === "password" ? "a_ph_tab_password" : "a_ph_tab_phone")}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {tab === "phone" ? (
+            <PhoneCodeForm purpose="login" bot={phone.bot} submitLabel={t("a_ph_login")} onDone={(r) => { router.replace(r.redirect ?? "/school"); router.refresh(); }} />
+          ) : (
           <form onSubmit={submit} className="space-y-4">
             <div>
               <label htmlFor="email" className="mb-1.5 block text-sm font-medium">{t("email")}</label>
@@ -111,16 +127,23 @@ function Inner({ demo }: { demo: DemoHint[] }) {
               {t("a_forgot_link")}
             </Link>
           </form>
+          )}
+          {phone.signup && (
+            <p className="mt-4 border-t border-slate-200 pt-4 text-center text-sm text-slate-600 dark:border-slate-800 dark:text-slate-300">
+              {t("a_ph_no_account_q")}{" "}
+              <Link href="/school/register" className="font-semibold text-indigo-700 hover:underline dark:text-indigo-300">{t("a_reg_title")}</Link>
+            </p>
+          )}
         </div>
       </div>
     </main>
   );
 }
 
-export function LoginForm({ demo }: { demo: DemoHint[] }) {
+export function LoginForm({ demo, phone, initialTab = "password" }: { demo: DemoHint[]; phone: PhoneConfig; initialTab?: "password" | "phone" }) {
   return (
     <SchoolProvider session={null}>
-      <Inner demo={demo} />
+      <Inner demo={demo} phone={phone} initialTab={initialTab} />
     </SchoolProvider>
   );
 }

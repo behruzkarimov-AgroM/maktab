@@ -61,6 +61,14 @@ export const localService = (): LocalClient => gateway().client("service_role");
 /** anonymous visitor (RLS as role anon) */
 export const localAnon = (): LocalClient => gateway().client("anon");
 
+/** starts a session for a user whose identity was proven another way (a code delivered to their verified phone) */
+export async function startSession(userId: string): Promise<void> {
+  const jar = await cookies();
+  jar.set(SESSION_COOKIE, signSession(userId), {
+    httpOnly: true, sameSite: "lax", path: "/", maxAge: SESSION_MAX_AGE_S, secure: process.env.NODE_ENV === "production",
+  });
+}
+
 /** the visitor bound to the session cookie (role authenticated when signed in, else anon); sign-in / sign-out write the cookie */
 export async function localUser(): Promise<LocalClient> {
   const jar = await cookies();
