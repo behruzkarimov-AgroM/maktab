@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { LockKeyhole, Mail, ShieldAlert } from "lucide-react";
-import { api } from "@/lib/admin/api";
+import { api, ApiError } from "@/lib/admin/api";
 import { cn } from "@/lib/admin/cn";
 import { loadAdminClient, supabaseConfigured } from "./supabase-lazy";
 import { LOCALES } from "@/lib/types";
@@ -16,8 +16,11 @@ const DEMO = [
   { email: "psixolog@demo.uz", role: "Psixolog" },
 ];
 
-/** "supabase": real accounts; "demo": local demo accounts (only with ALLOW_ADMIN_DEMO=true); "off": neither is available */
-export type LoginMode = "supabase" | "demo" | "off";
+/**
+ * "supabase": Supabase Auth in the browser; "local": self-hosted database, the server checks the password (POST /api/admin/auth/login);
+ * "demo": the fixed demo accounts (only with ALLOW_ADMIN_DEMO=true); "off": no way to sign in
+ */
+export type LoginMode = "supabase" | "local" | "demo" | "off";
 
 function Inner({ mode }: { mode: LoginMode }) {
   const { t, lang, setLang } = useAdmin();
@@ -39,15 +42,16 @@ function Inner({ mode }: { mode: LoginMode }) {
     setBusy(true);
     setError(null);
     try {
-      if (demo) await api.demoLogin(email, password);
+      // demo and self-hosted mode: the server checks the password and sets the session cookie
+      if (mode !== "supabase") await api.demoLogin(email, password);
       else {
         const { error: err } = await (await loadAdminClient()).auth.signInWithPassword({ email, password });
         if (err) throw err;
       }
       router.replace("/admin");
       router.refresh();
-    } catch {
-      setError("failed");
+    } catch (e) {
+      setError(e instanceof ApiError && e.status === 403 ? "forbidden" : "failed");
       setBusy(false);
     }
   }

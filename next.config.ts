@@ -52,7 +52,8 @@ const nextConfig: NextConfig = {
   output: "standalone",
   poweredByHeader: false,
   // document import: native / worker-thread packages must stay outside the server bundle (OCR, legacy .doc, canvas)
-  serverExternalPackages: ["tesseract.js", "@napi-rs/canvas", "word-extractor", "mammoth", "unpdf", "jszip"],
+  // pg: node-postgres for the self-hosted database (lib/localdb), kept external (optional native bindings)
+  serverExternalPackages: ["tesseract.js", "@napi-rs/canvas", "word-extractor", "mammoth", "unpdf", "jszip", "pg"],
   // keep OCR language data in serverless traces (only used when IMPORT_OCR is on)
   outputFileTracingIncludes: { "/api/admin/import": ["./node_modules/@tesseract.js-data/**/*"] },
   turbopack: {

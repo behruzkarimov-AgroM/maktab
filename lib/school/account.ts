@@ -3,6 +3,7 @@
 // Server only.
 import { createClient } from "@supabase/supabase-js";
 import { getServiceClient, getUserClient, isConfigured } from "@/lib/admin/supabase";
+import { localAnon, localEnabled } from "@/lib/localdb/server";
 import { logError } from "@/lib/api";
 import { demoAuthState } from "./auth";
 import { DEMO_ACCOUNTS } from "./demo-data";
@@ -22,6 +23,11 @@ export function resetRedirectUrl(): string | undefined {
 
 /** Verifies the current password without touching the visitor's cookies (separate, session-less anon client). */
 async function verifyPassword(email: string, password: string): Promise<boolean> {
+  if (localEnabled()) {
+    // an anonymous client without a session port: checks the hash, never touches the visitor's cookie
+    const { data, error } = await localAnon().auth.signInWithPassword({ email, password });
+    return !error && !!data.user;
+  }
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   if (!url || !key) throw new SchoolError("not_configured", 501);

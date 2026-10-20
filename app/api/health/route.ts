@@ -15,7 +15,7 @@ export async function GET(req: Request) {
 
   const env = envReport();
   let db: "skipped" | "ok" | "error" = "skipped";
-  if (env.mode === "supabase" && env.valid) {
+  if (env.mode !== "demo" && env.valid) {
     try {
       const sb = getPublicClient(0);
       if (sb) {

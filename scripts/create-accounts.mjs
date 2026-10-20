@@ -22,11 +22,12 @@ for (const f of [".env.local", ".env"]) {
 const env = (k) => (process.env[k] ?? "").trim();
 const url = env("NEXT_PUBLIC_SUPABASE_URL").replace(/\/+$/, "");
 const key = env("SUPABASE_SERVICE_ROLE_KEY");
-if (!url || !key) {
+const databaseUrl = env("DATABASE_URL");
+if (!databaseUrl && (!url || !key)) {
   console.error(
-    "Supabase kalitlari topilmadi.\n" +
-      ".env.local fayliga NEXT_PUBLIC_SUPABASE_URL va SUPABASE_SERVICE_ROLE_KEY ni yozing (Supabase -> Project Settings -> API),\n" +
-      "supabase/schema.sql ni SQL Editor'da bajaring, keyin qayta ishga tushiring: npm run accounts:create",
+    "Baza topilmadi.\n" +
+      ".env.local fayliga DATABASE_URL (o'z PostgreSQL bazangiz, docs/SELF-HOSTED.md) yoki\n" +
+      "NEXT_PUBLIC_SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY (Supabase loyihasi) ni yozing, keyin: npm run accounts:create",
   );
   process.exit(1);
 }
@@ -36,14 +37,26 @@ const site = (env("NEXT_PUBLIC_SITE_URL") || "http://localhost:3000").replace(/\
 const reset = process.argv.includes("--reset");
 const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tashkent" }).format(new Date());
 
-const svc = createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
+// self-hosted PostgreSQL: the same gateway the app uses (run through tsx, which loads the TypeScript module)
+let svc;
+let pool = null;
+if (databaseUrl) {
+  const { LocalGateway } = await import("../lib/localdb/gateway.ts");
+  const pg = (await import("pg")).default;
+  pool = new pg.Pool({ connectionString: databaseUrl, max: 2 });
+  svc = new LocalGateway(() => pool.connect()).client("service_role");
+} else {
+  svc = createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
+}
 let rows;
 try {
   rows = await createInitialAccounts(svc, { domain, today, reset });
 } catch (e) {
   console.error(`Xato: ${e instanceof Error ? e.message : String(e)}`);
-  console.error("supabase/schema.sql bajarilganini va service_role kaliti to'g'riligini tekshiring.");
+  console.error("Bazada sxema (supabase/schema.sql) borligini va ulanish ma'lumotlari to'g'riligini tekshiring.");
   process.exit(1);
+} finally {
+  await pool?.end();
 }
 
 const file = join(root, "HISOBLAR.local.md");

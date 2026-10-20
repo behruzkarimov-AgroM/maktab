@@ -29,6 +29,10 @@ const serverSchema = z.object({
   TELEGRAM_BOT_TOKEN: opt(z.string().regex(/^\d+:[\w-]{20,}$/, "expected format 123456:ABC-DEF...")),
   TELEGRAM_CHAT_ID: opt(z.string().regex(/^-?\d+$/, "expected a numeric chat id")),
   ALLOW_ADMIN_DEMO: opt(z.enum(["true", "false"])),
+  // self-hosted database instead of Supabase (lib/localdb): connection string, session signing key, upload directory
+  DATABASE_URL: opt(z.string().regex(/^postgres(ql)?:\/\//, "expected postgres://user:password@host:5432/db")),
+  AUTH_SECRET: opt(z.string().min(32, "must be at least 32 characters")),
+  UPLOAD_DIR: opt(z.string().min(1)),
   // Telegram bot (separate project): shared secret for its API calls and its @username for the portal link
   BOT_API_SECRET: opt(z.string().min(32, "must be at least 32 characters (the bot API stays off otherwise)")),
   TELEGRAM_BOT_USERNAME: opt(z.string().regex(/^@?[A-Za-z0-9_]{5,32}$/, "expected the bot's username, e.g. maktab_bot")),
@@ -64,6 +68,9 @@ function rawServer() {
     TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN,
     TELEGRAM_CHAT_ID: process.env.TELEGRAM_CHAT_ID,
     ALLOW_ADMIN_DEMO: process.env.ALLOW_ADMIN_DEMO,
+    DATABASE_URL: process.env.DATABASE_URL,
+    AUTH_SECRET: process.env.AUTH_SECRET,
+    UPLOAD_DIR: process.env.UPLOAD_DIR,
     BOT_API_SECRET: process.env.BOT_API_SECRET,
     TELEGRAM_BOT_USERNAME: process.env.TELEGRAM_BOT_USERNAME,
     SMS_PROVIDER: process.env.SMS_PROVIDER,
@@ -84,8 +91,12 @@ function crossChecks(p: PublicEnv, s?: Partial<ServerEnv>): string[] {
   if (s?.SUPABASE_SERVICE_ROLE_KEY && !p.NEXT_PUBLIC_SUPABASE_URL) {
     issues.push("SUPABASE_SERVICE_ROLE_KEY is set but NEXT_PUBLIC_SUPABASE_URL is missing");
   }
-  if (Boolean(s?.TELEGRAM_BOT_TOKEN) !== Boolean(s?.TELEGRAM_CHAT_ID)) {
-    issues.push("TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID must be set together");
+  // the token alone is enough for the Telegram bot and guardian notices; the admin chat id needs the token
+  if (s?.TELEGRAM_CHAT_ID && !s?.TELEGRAM_BOT_TOKEN) {
+    issues.push("TELEGRAM_CHAT_ID is set but TELEGRAM_BOT_TOKEN is missing");
+  }
+  if (s?.DATABASE_URL && !s?.AUTH_SECRET) {
+    issues.push("DATABASE_URL needs AUTH_SECRET (32+ characters) to sign the session cookies");
   }
   return issues;
 }
@@ -119,7 +130,8 @@ export function isSupabaseEnvValid(): boolean {
 }
 
 export type EnvReport = {
-  mode: "demo" | "supabase";
+  /** local = the app's own PostgreSQL (DATABASE_URL), supabase = a Supabase project, demo = in-memory sample data */
+  mode: "demo" | "supabase" | "local";
   valid: boolean;
   problems: string[];
   features: { serviceRole: boolean; telegram: boolean; sms: boolean; siteUrl: boolean; adminDemo: boolean };
@@ -134,7 +146,7 @@ export function envReport(): EnvReport {
   const pd = p.success ? p.data : ({} as Partial<PublicEnv>);
   const sd = s.success ? s.data : ({} as Partial<ServerEnv>);
   return {
-    mode: pd.NEXT_PUBLIC_SUPABASE_URL && pd.NEXT_PUBLIC_SUPABASE_ANON_KEY ? "supabase" : "demo",
+    mode: sd.DATABASE_URL ? "local" : pd.NEXT_PUBLIC_SUPABASE_URL && pd.NEXT_PUBLIC_SUPABASE_ANON_KEY ? "supabase" : "demo",
     valid: problems.length === 0,
     problems,
     features: {

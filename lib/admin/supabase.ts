@@ -2,9 +2,11 @@
 import { cookies } from "next/headers";
 import { createServerClient } from "@supabase/ssr";
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { localEnabled, localService, localUser } from "@/lib/localdb/server";
 
+/** a database is available: a Supabase project, or the self-hosted PostgreSQL (DATABASE_URL, lib/localdb) */
 export const isConfigured = () =>
-  !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  localEnabled() || (!!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 
 /**
  * The demo accounts (admin@demo.uz, director@demo.uz, ...) are CLOSED by default, also in development: they only work when Supabase is
@@ -24,6 +26,7 @@ export function hardenCookie<T extends { maxAge?: number; sameSite?: boolean | "
 
 /** Client bound to the visitor's auth cookies (anon key + user JWT, RLS applies). */
 export async function getUserClient(): Promise<SupabaseClient> {
+  if (localEnabled()) return (await localUser()) as unknown as SupabaseClient;
   const jar = await cookies();
   return createServerClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, {
     cookies: {
@@ -43,6 +46,7 @@ export async function getUserClient(): Promise<SupabaseClient> {
 let service: SupabaseClient | null = null;
 /** Service-role client (bypasses RLS). Only ever used after the caller has been verified as an admin. */
 export function getServiceClient(): SupabaseClient | null {
+  if (localEnabled()) return localService() as unknown as SupabaseClient;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!key || !process.env.NEXT_PUBLIC_SUPABASE_URL) return null;
   service ??= createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, key, {

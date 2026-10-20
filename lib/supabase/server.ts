@@ -3,12 +3,14 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
 import type { Database } from "./database.types";
 import { isSupabaseConfigured } from "./config";
+import { localEnabled, localUser } from "@/lib/localdb/server";
 
 export { isSupabaseConfigured };
 
 /** Cookie-aware server Supabase client (anon key + user session). Null in DEMO mode. */
 export async function getServerClient(): Promise<SupabaseClient<Database> | null> {
   if (!isSupabaseConfigured()) return null;
+  if (localEnabled()) return (await localUser()) as unknown as SupabaseClient<Database>;
   const cookieStore = await cookies();
   return createServerClient<Database>(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
