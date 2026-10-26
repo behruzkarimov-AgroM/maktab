@@ -13,11 +13,14 @@
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
     "test:e2e:install": "playwright install chromium",
+    "content:extract": "node scripts/content/extract-docx.mjs",
     "db:check": "node scripts/db/check.mjs",
     "db:refs": "node scripts/db/check-refs.mjs",
     "smoke": "node scripts/supabase-smoke.mjs",
     "db:split": "node scripts/db/split.mjs",
-    "accounts:create": "tsx scripts/create-accounts.mjs"
+    "accounts:create": "tsx scripts/create-accounts.mjs",
+    "content:build": "node scripts/content/build-quizzes.mjs",
+    "content:verify": "node scripts/content/verify-grade-2.mjs && node scripts/content/verify-grade-3.mjs && node scripts/content/verify-grade-4.mjs && node scripts/content/verify-grade-5.mjs && node scripts/content/verify-grade-6.mjs"
   },
   "dependencies": {
     "@napi-rs/canvas": "^1.0.11",

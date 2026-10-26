@@ -86,3 +86,56 @@ export const DEMO_QUESTIONS: Record<string, DemoQuestion[]> = {
     q("p5", L("Erkin tushish tezlanishi taxminan?", "Ускорение свободного падения примерно?", "Free-fall acceleration is about?"), [N("1 m/s^2"), N("5 m/s^2"), N("9.8 m/s^2"), N("98 m/s^2")], 2, L("g ~ 9.8 m/s^2.", "g ~ 9,8 м/с^2.", "g ~ 9.8 m/s^2.")),
   ],
 };
+
+// ---------------------------------------------------------------------------------------------------------------------
+// School test bank for grades 2-6 (4 variants each), generated from content/quizzes/*.json by
+// scripts/content/build-quizzes.mjs. In production the same quizzes come from the database
+// (supabase/content/quizzes-grades-2-6.sql); this block makes them visible in DEMO mode as well.
+// ---------------------------------------------------------------------------------------------------------------------
+import schoolBank from "@/content/quizzes/bundle.json";
+
+interface BankQuestion {
+  id: string;
+  question_text: LocalizedText;
+  options: { id: string; text: LocalizedText }[];
+  correct_option_id: string;
+  explanation: LocalizedText | null;
+  points: number;
+}
+interface BankQuiz {
+  id: string;
+  grade: number;
+  variant: number;
+  title: LocalizedText;
+  description: LocalizedText | null;
+  subject_key: string;
+  subject_name: LocalizedText;
+  difficulty: QuizSummary["difficulty"];
+  duration_minutes: number;
+  passing_score_percent: number;
+  questions: BankQuestion[];
+}
+
+for (const b of schoolBank as unknown as BankQuiz[]) {
+  DEMO_QUIZZES.push({
+    id: b.id,
+    title: b.title,
+    description: b.description,
+    subjectKey: b.subject_key,
+    subjectName: b.subject_name,
+    grade: b.grade,
+    difficulty: b.difficulty,
+    durationMinutes: b.duration_minutes,
+    passingScorePercent: b.passing_score_percent,
+    questionCount: b.questions.length,
+  });
+  DEMO_QUESTIONS[b.id] = b.questions.map((x) => ({
+    id: x.id,
+    text: x.question_text,
+    imageUrl: null,
+    points: x.points,
+    options: x.options,
+    correctOptionId: x.correct_option_id,
+    explanation: x.explanation,
+  }));
+}

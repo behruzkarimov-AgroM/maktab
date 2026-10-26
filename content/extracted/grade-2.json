@@ -1,0 +1,664 @@
+{
+  "sourceFile": "2-sinf Toshkent 1.docx",
+  "grade": 2,
+  "counts": {
+    "total": 25,
+    "needsFigure": 0,
+    "withEquations": 0
+  },
+  "warnings": [],
+  "items": [
+    {
+      "no": 1,
+      "section": "math",
+      "stem": "Tushirib qoldirilgan sonlarni belgilang: 24, 23, 22, __, 20, 19, __ , 17, 16, 15,__,__,12,11",
+      "options": [
+        {
+          "id": "A",
+          "text": "21, 18, 14, 13"
+        },
+        {
+          "id": "B",
+          "text": "22, 23, 19, 17"
+        },
+        {
+          "id": "C",
+          "text": "15, 14, 13, 12"
+        },
+        {
+          "id": "D",
+          "text": "20, 18, 14, 13"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 2,
+      "section": "math",
+      "stem": "Sonlar ichidan eng kichik bir xonali sonni belgilang.",
+      "options": [
+        {
+          "id": "A",
+          "text": "9"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "13"
+        },
+        {
+          "id": "D",
+          "text": "17"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 3,
+      "section": "math",
+      "stem": "Avtobusda 8 ta o'g'il bola va 5 ta qiz bola bor edi. Bekatda ularda 4 tasi tushib qoldi. Avtobusda nechta bola qoldi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "17 ta"
+        },
+        {
+          "id": "B",
+          "text": "7 ta"
+        },
+        {
+          "id": "C",
+          "text": "9 ta"
+        },
+        {
+          "id": "D",
+          "text": "8 ta"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 4,
+      "section": "math",
+      "stem": "Uchta sonning yig'indisi 76 ga teng. Birinchi son 22, ikkinchi son 34 bo'lsa, uchinchi sonni belgilang.",
+      "options": [
+        {
+          "id": "A",
+          "text": "54"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "22"
+        },
+        {
+          "id": "D",
+          "text": "42"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 5,
+      "section": "math",
+      "stem": "48 sonining qo'shni sonlarini ayting.",
+      "options": [
+        {
+          "id": "A",
+          "text": "45,46"
+        },
+        {
+          "id": "B",
+          "text": "49, 50"
+        },
+        {
+          "id": "C",
+          "text": "49,51"
+        },
+        {
+          "id": "D",
+          "text": "47,49"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 6,
+      "section": "math",
+      "stem": "30 ni 17 ta ortirilgan javobni toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "37"
+        },
+        {
+          "id": "B",
+          "text": "13"
+        },
+        {
+          "id": "C",
+          "text": "47"
+        },
+        {
+          "id": "D",
+          "text": "17"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 7,
+      "section": "math",
+      "stem": "Sardor 16 ta jo'yakni, Maxmud esa 4 ta ortiq julyakni chopdi. Maxmud necha jo'yakni chopgan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 ta"
+        },
+        {
+          "id": "B",
+          "text": "64 ta"
+        },
+        {
+          "id": "C",
+          "text": "20 ta"
+        },
+        {
+          "id": "D",
+          "text": "8 ta"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 8,
+      "section": "math",
+      "stem": "Kamola hozir 9 yoshda 3 yildan keyin u necha yoshda bo'ladi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 yoshda"
+        },
+        {
+          "id": "B",
+          "text": "6 yoshda"
+        },
+        {
+          "id": "C",
+          "text": "9 yosh"
+        },
+        {
+          "id": "D",
+          "text": "13 yoshda"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 9,
+      "section": "math",
+      "stem": "O'ylangan sondan 70 ni ayirishdi 27 hosil bo'ldi. O'ylangan sonni belgilang.",
+      "options": [
+        {
+          "id": "A",
+          "text": "97"
+        },
+        {
+          "id": "B",
+          "text": "37"
+        },
+        {
+          "id": "C",
+          "text": "13"
+        },
+        {
+          "id": "D",
+          "text": "47"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 10,
+      "section": "math",
+      "stem": "Taqsimchada 3 ta nok va 4 ta olma bor edi. 2 ta xurmo qo'yildi. Mevalar soni nechta bo'ldi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7 ta"
+        },
+        {
+          "id": "B",
+          "text": "14 ta"
+        },
+        {
+          "id": "C",
+          "text": "87 ta"
+        },
+        {
+          "id": "D",
+          "text": "9 ta"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 11,
+      "section": "math",
+      "stem": "Bir to'pda 50 m, ikkinchi to'pda 28 m kam gazlama bor. Ikkala to'pda qancha gazlama bor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "78 m"
+        },
+        {
+          "id": "B",
+          "text": "28 m"
+        },
+        {
+          "id": "C",
+          "text": "72 m"
+        },
+        {
+          "id": "D",
+          "text": "22 m"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 12,
+      "section": "math",
+      "stem": "Qo'chqorning og'irligi 38 kg, buzoq undan 5 kg og'ir. Buzoqning og'irligini toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "42 kg"
+        },
+        {
+          "id": "B",
+          "text": "43 kg"
+        },
+        {
+          "id": "C",
+          "text": "38 kg"
+        },
+        {
+          "id": "D",
+          "text": "44 kg"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 13,
+      "section": "math",
+      "stem": "To'rtta quyonning har biriga 2 tadan sabzi berishdi. Quyonlarga hammasi bo'lib nechta sabzi berishgan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 ta"
+        },
+        {
+          "id": "B",
+          "text": "8 ta"
+        },
+        {
+          "id": "C",
+          "text": "2 ta"
+        },
+        {
+          "id": "D",
+          "text": "6 ta"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 14,
+      "section": "math",
+      "stem": "39 kg olma va 21 kg anor olib kelishdi. 24 kg mevani sarflashdi. Necha kilogram meva qolgan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "84 kg"
+        },
+        {
+          "id": "B",
+          "text": "60 kg"
+        },
+        {
+          "id": "C",
+          "text": "21 kg"
+        },
+        {
+          "id": "D",
+          "text": "36 kg"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 15,
+      "section": "math",
+      "stem": "Chizg'ich 10 so'm turadi. Shunday 3 ta chizg'ich qancha turadi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "13 so'm"
+        },
+        {
+          "id": "B",
+          "text": "30 so'm"
+        },
+        {
+          "id": "C",
+          "text": "10 so'm"
+        },
+        {
+          "id": "D",
+          "text": "7 so'm"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 16,
+      "section": "math",
+      "stem": "Javobida 2 chiqadigan misolni belgilang.",
+      "options": [
+        {
+          "id": "A",
+          "text": "(70-22):6"
+        },
+        {
+          "id": "B",
+          "text": "63:9+13"
+        },
+        {
+          "id": "C",
+          "text": "18-14+15"
+        },
+        {
+          "id": "D",
+          "text": "24+8-30"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 17,
+      "section": "math",
+      "stem": "Beshta shar 45 so'm turadi, 54 so'mga shunday sharlardan nechta sotib olish mumkin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8 ta"
+        },
+        {
+          "id": "B",
+          "text": "6 ta"
+        },
+        {
+          "id": "C",
+          "text": "5 ta"
+        },
+        {
+          "id": "D",
+          "text": "9 ta"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 18,
+      "section": "math",
+      "stem": "56 soni 8 dan necha marta katta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7 marta"
+        },
+        {
+          "id": "B",
+          "text": "64 marta"
+        },
+        {
+          "id": "C",
+          "text": "8 marta"
+        },
+        {
+          "id": "D",
+          "text": "48 marta"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 19,
+      "section": "math",
+      "stem": "Qaysi qatordagi sonlar 9 ga qoldiqsiz bo'linadi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "27, 36, 40, 54"
+        },
+        {
+          "id": "B",
+          "text": "9, 18, 24, 36"
+        },
+        {
+          "id": "C",
+          "text": "18, 27, 36, 45"
+        },
+        {
+          "id": "D",
+          "text": "18, 99, 56,90"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 20,
+      "section": "math",
+      "stem": "Nima og'ir yuz kilogramm paxtami yoki yuz kilogramm temirmi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "paxta"
+        },
+        {
+          "id": "B",
+          "text": "buyurtma"
+        },
+        {
+          "id": "C",
+          "text": "temir"
+        },
+        {
+          "id": "D",
+          "text": "bir xil"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 21,
+      "section": "math",
+      "stem": "12 ta qiz bola, qizlardan 3 marta kam o'g'il bola sayohatga chiqqan. Hammasi bo'lib qancha bola sayohatga chiqishdi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "16 ta"
+        },
+        {
+          "id": "B",
+          "text": "9 ta"
+        },
+        {
+          "id": "C",
+          "text": "10 ta"
+        },
+        {
+          "id": "D",
+          "text": "12 ta"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 22,
+      "section": "math",
+      "stem": "To'rtta shoxda 7 tadan behi bor. 7 ta behini terib oldilar Nechta behi qolgan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "28 ta"
+        },
+        {
+          "id": "B",
+          "text": "36 ta"
+        },
+        {
+          "id": "C",
+          "text": "15 ta"
+        },
+        {
+          "id": "D",
+          "text": "21 ta"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 23,
+      "section": "math",
+      "stem": "56 metrli arqondan 7 dan bir qismini qirqib olishdi. Necha metr arqon qolgan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "48"
+        },
+        {
+          "id": "B",
+          "text": "21"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "14"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 24,
+      "section": "math",
+      "stem": "O'quvchi 20 ta qizil va 8 ta oq atirgul sotib oldi. Ulardan 13 tasini o'qituvchisiga sovg'a qildi. O'quvchida nechta atirgul qoldi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "13"
+        },
+        {
+          "id": "D",
+          "text": "18"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 25,
+      "section": "math",
+      "stem": "Misollarning javobini kamayish tartibida joylashtiring.Qaysi so'z hosil bo'ladi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GENTRA"
+        },
+        {
+          "id": "B",
+          "text": "UBILAM"
+        },
+        {
+          "id": "C",
+          "text": "MALIBU"
+        },
+        {
+          "id": "D",
+          "text": "NOPIHE"
+        }
+      ],
+      "hasFigure": true,
+      "needsFigure": false,
+      "figureKind": "shape",
+      "figureText": "U 7∙3 || L 13∙5 || M 25∙4 || A 26∙3 || I 9∙6 || B 24∙2",
+      "warnings": []
+    }
+  ]
+}

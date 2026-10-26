@@ -1,0 +1,1593 @@
+{
+  "sourceFile": "4-sinf.docx",
+  "grade": 4,
+  "counts": {
+    "total": 60,
+    "needsFigure": 3,
+    "withEquations": 1
+  },
+  "warnings": [],
+  "items": [
+    {
+      "no": 1,
+      "section": "math",
+      "stem": "Do'konda 2 litrlik 3a ta idishlarda va 5 litrlik 2a ta idishlarda sut bor. Do'konda hammasi bo'lib necha litr sut bor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6a"
+        },
+        {
+          "id": "B",
+          "text": "10a"
+        },
+        {
+          "id": "C",
+          "text": "16a"
+        },
+        {
+          "id": "D",
+          "text": "4a"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 2,
+      "section": "math",
+      "stem": "Men yigirmadan kichik ikki xonali toq sonman. Mening raqamlarim yig'indisi 10 ga teng. Meni toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "17"
+        },
+        {
+          "id": "C",
+          "text": "15"
+        },
+        {
+          "id": "D",
+          "text": "19"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 3,
+      "section": "math",
+      "stem": "Agar 2-dekabr dushanba kuni bo'lsa, 25-dekabr haftaning qaysi kuni bo'lgan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Seshanba"
+        },
+        {
+          "id": "B",
+          "text": "Chorshanba"
+        },
+        {
+          "id": "C",
+          "text": "Payshanba"
+        },
+        {
+          "id": "D",
+          "text": "Juma"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 4,
+      "section": "math",
+      "stem": "Oshxonada kuniga 20 kg dan sabzi sarflanadi. Agar oshxonada 67 kg sabzi qolgan bo'lsa, 4 kunga yetishi uchun necha kg sabzi sotib olish kerak?",
+      "options": [
+        {
+          "id": "A",
+          "text": "80"
+        },
+        {
+          "id": "B",
+          "text": "63"
+        },
+        {
+          "id": "C",
+          "text": "26"
+        },
+        {
+          "id": "D",
+          "text": "13"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 5,
+      "section": "math",
+      "stem": "Tenglamani yeching: 14+21 - x = 18 - 6",
+      "options": [
+        {
+          "id": "A",
+          "text": "35"
+        },
+        {
+          "id": "B",
+          "text": "17"
+        },
+        {
+          "id": "C",
+          "text": "23"
+        },
+        {
+          "id": "D",
+          "text": "18"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 6,
+      "section": "math",
+      "stem": "To'g'ri to'rtburchakning eni 9 cm, bo'yi esa enidan 3 marta uzunroq. Shu to g'ri to'rtburchakning perimetrini toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "24 cm"
+        },
+        {
+          "id": "B",
+          "text": "27 cm"
+        },
+        {
+          "id": "C",
+          "text": "36 cm"
+        },
+        {
+          "id": "D",
+          "text": "72 cm"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 7,
+      "section": "math",
+      "stem": "4 ta kvadratlarning qaysi birida qora rangli qismi eng kattasi ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A"
+        },
+        {
+          "id": "B",
+          "text": "B"
+        },
+        {
+          "id": "C",
+          "text": "C"
+        },
+        {
+          "id": "D",
+          "text": "bir xil"
+        }
+      ],
+      "hasFigure": true,
+      "needsFigure": true,
+      "figureKind": "image",
+      "figureImage": "content/extracted/media/g4-q07.png",
+      "warnings": []
+    },
+    {
+      "no": 8,
+      "section": "math",
+      "stem": "Namuna asosida tushib qolgan sonlarni toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "521, 350"
+        },
+        {
+          "id": "B",
+          "text": "620, 521"
+        },
+        {
+          "id": "C",
+          "text": "800, 701"
+        },
+        {
+          "id": "D",
+          "text": "350, 503"
+        }
+      ],
+      "hasFigure": true,
+      "needsFigure": true,
+      "figureKind": "image",
+      "figureImage": "content/extracted/media/g4-q08.png",
+      "warnings": []
+    },
+    {
+      "no": 9,
+      "section": "math",
+      "stem": "19 soni raqamlarining o'rnini almashtiramiz. Hosil bo'lgan son qanchaga ortdi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "91"
+        },
+        {
+          "id": "B",
+          "text": "77"
+        },
+        {
+          "id": "C",
+          "text": "25"
+        },
+        {
+          "id": "D",
+          "text": "72"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 10,
+      "section": "math",
+      "stem": "Ifodaning qiymatini toping. (30y - 25) - ( 20y + 10), bunda y = 5 ga teng.",
+      "options": [
+        {
+          "id": "A",
+          "text": "235"
+        },
+        {
+          "id": "B",
+          "text": "175"
+        },
+        {
+          "id": "C",
+          "text": "25"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 11,
+      "section": "math",
+      "stem": "Duradgorda 9 ta yog'och bor edi. U bir nechta yog'ochning har birini 5 bo'lakka bo'lib arraladi. Shunda taxtalar soni 29 taga yetdi. Duradgor nechta yog'ochni bo'lak(taxtA)larga bo'lgan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 12,
+      "section": "math",
+      "stem": "Tenglamani yeching. 144 : (25 - x · x) = 9",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 13,
+      "section": "math",
+      "stem": "Uchta guldonda hammasi bo'lib 100 ta gul bor. Ikkinchi guldonda birinchi guldondagidan 2 marta ko'p, uchinchi guldondagidan 15 ta ko'p gul bor. Ikkinchi guldonda nechta gul bor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "17"
+        },
+        {
+          "id": "B",
+          "text": "46"
+        },
+        {
+          "id": "C",
+          "text": "32"
+        },
+        {
+          "id": "D",
+          "text": "25"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 14,
+      "section": "math",
+      "stem": "Do'konda 2 kg kartoshka va 3 kg piyozning umumiy narxi 19 dollar, 5 kg kartoshka va 6 kg piyozning umumiy narxi esa 43 dollar. Piyozning narxini toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 dollar"
+        },
+        {
+          "id": "B",
+          "text": "2 dollar"
+        },
+        {
+          "id": "C",
+          "text": "3 dollar"
+        },
+        {
+          "id": "D",
+          "text": "5 dollar"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 15,
+      "section": "math",
+      "stem": "3 ta tovuq 3 kunda 3 ta tuxum tug'sa, 12 ta tovuq 12 kunda nechta tuxum tug'adi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "48"
+        },
+        {
+          "id": "C",
+          "text": "36"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 16,
+      "section": "math",
+      "stem": "Ketma-ket kelgan uchta butun sonning yig'indisi 90 ga teng. Uchta butun sonning eng kattasi qaysi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "29"
+        },
+        {
+          "id": "C",
+          "text": "31"
+        },
+        {
+          "id": "D",
+          "text": "32"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 17,
+      "section": "math",
+      "stem": "Ikki xonali sonning o'ng tomoniga 0 raqami yozilsa, berilgan sonning yarmi bilan 323 ning yig' indisiga teng bo'lgan son hosil bo'ladi. Berilgan sonni toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "54"
+        },
+        {
+          "id": "B",
+          "text": "34"
+        },
+        {
+          "id": "C",
+          "text": "24"
+        },
+        {
+          "id": "D",
+          "text": "14"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 18,
+      "section": "math",
+      "stem": "Ota va onaning yoshlarini yig'indisi 84 ga teng. Agar 5 yil oldingi otaning yoshi 3 yil keyingi onaning yoshiga teng bo'lsa, hozir ota necha yoshda?",
+      "options": [
+        {
+          "id": "A",
+          "text": "46"
+        },
+        {
+          "id": "B",
+          "text": "38"
+        },
+        {
+          "id": "C",
+          "text": "42"
+        },
+        {
+          "id": "D",
+          "text": "44"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 19,
+      "section": "math",
+      "stem": "Doskadan eshikkacha borish uchun Botir 7 ta qadam bosdi, Qodir esa 6 qadam.Kimning qadami uzunroq?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Botir"
+        },
+        {
+          "id": "B",
+          "text": "Qodir"
+        },
+        {
+          "id": "C",
+          "text": "teng"
+        },
+        {
+          "id": "D",
+          "text": "aniqlab bo'lmaydi"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 20,
+      "section": "math",
+      "stem": "26 ta bola futbol va gandbol musobaqasiga qatnashishdi. 15 ta bola futbolga va 16 ta bola gandbol musobaqasiga qatnashdi. Nechta bola ikkala musobaqaga ham qatnashgan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "25"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 21,
+      "section": "math",
+      "stem": "8,18,28,… sonli qatorni qonuniyat bo'yicha davom ettirsak 68 nechanchi had bo'ladi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 22,
+      "section": "math",
+      "stem": "Qatorda yozilgan 5 ta sonning yig'indisi 27 ga teng. Dastlabki uchtasining yig'indisi 16 ga, oxirgi uchtasining yig'indisi 15 ga teng bo'lsa, qatorning o'rtasidagi sonning qiymatini toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 23,
+      "section": "math",
+      "stem": "O'ylangan uch xonali sondan 6 ni ayirsak, u 6 ga bo'linadi. 7 ni ayirsak, 7 ga bo'linadi. 8 ni ayirsak u 8 ga bo'linadi. 9 ni ayirsak, 9 ga bo'linadi. O'ylangan sonni toping?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3024"
+        },
+        {
+          "id": "B",
+          "text": "504"
+        },
+        {
+          "id": "C",
+          "text": "336"
+        },
+        {
+          "id": "D",
+          "text": "252"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 24,
+      "section": "math",
+      "stem": "Dilnozada 21 ta 100 so'mlik, 33 ta 50 so'mlik va bir nechta 25 so'mlik bor. Agar uning jami puli 4 775 so'm bo'lsa, Dilnozada nechta 25 so' mlik bo'lgan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "39"
+        },
+        {
+          "id": "B",
+          "text": "41"
+        },
+        {
+          "id": "C",
+          "text": "42"
+        },
+        {
+          "id": "D",
+          "text": "43"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 25,
+      "section": "math",
+      "stem": "Palov tayyorlash uchun guruch va sabzi teng solinadi. Go'sht guruchdan 2 marta kam, yog' guruchdan 4 marta kam, piyoz esa guruchdan 8 marta kam solinadi. Agar 8 kg guruchdan palov tayyorlamoqchi bo'lsak, jami necha kilogramm mahsulot sotib olishimiz kerak?",
+      "options": [
+        {
+          "id": "A",
+          "text": "24"
+        },
+        {
+          "id": "B",
+          "text": "23"
+        },
+        {
+          "id": "C",
+          "text": "22"
+        },
+        {
+          "id": "D",
+          "text": "15"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 26,
+      "section": "math",
+      "stem": "(5a401) soni 3 ga qoldiqsiz bo'linsa, a ning o'rnida bo'lishi mumkin bo'lgan juft raqamlar ko'paytmasini toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "80"
+        },
+        {
+          "id": "B",
+          "text": "16"
+        },
+        {
+          "id": "C",
+          "text": "32"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 27,
+      "section": "math",
+      "stem": "Har yili Ramazon hayitida Solihaning dadasi unga ayiqcha o'yinchog'ini olib kelib beradi.Dadasi unga 1 yoshligida bitta, 2 yoshligida ikkita va hokazo shu tartibda. Har yili olib bergan ayiqchalari soni oldingi yildagidan 1 taga ko'p edi. Soliha 6 yoshligida jami nechta ayiqchaga ega bo'ldi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "19"
+        },
+        {
+          "id": "B",
+          "text": "20"
+        },
+        {
+          "id": "C",
+          "text": "21"
+        },
+        {
+          "id": "D",
+          "text": "22"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 28,
+      "section": "math",
+      "stem": "Qutida 50 tadan kam pecheniye bor. Pecheniyelar 2, 3 yoki 4 bola o'rtasida teng taqsimlanishi mumkin. Lekin, ularni 7 nafar bolaga teng miqdorda bo'lib bo'lmaydi, sababi yana 6 ta pecheniye ortib qoladi. Qutida nechta pecheniye bor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "24"
+        },
+        {
+          "id": "C",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "48"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 29,
+      "section": "math",
+      "stem": "Bir kishi bozorga tuxum olib keldi. Birinchi xaridorga jami tuxumning yarmini va yana 1 dona tuxum, ikkinchi xaridorga qolgan tuxumlarning yarmini va yana 1 ta tuxum, uchinchi xaridorga qolgan tuxumlarning yarmini va yana 1 ta tuxum sotdi. Shundan so'ng uning savatida 10 dona tuxum qoldi. Kishi bozorga jami nechta tuxum olib kelgan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "63 ta"
+        },
+        {
+          "id": "B",
+          "text": "40 ta"
+        },
+        {
+          "id": "C",
+          "text": "88 ta"
+        },
+        {
+          "id": "D",
+          "text": "94 ta"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 30,
+      "section": "math",
+      "stem": "Alida 3 ta kulcha va 8 ta bir xil tanga, Valida 5 ta kulcha va 8 ta bir xil tanga bor. Solida bunday kulchalar yo'q, ammo unda 8 ta bir xil tanga bor. Uchala bola kulchalarni barobar bo'lib yeyishdi. Soli 8 ta tangani ularga \"Shirin kulchalar uchun rahmat\". — deb berdi. Bu tangalarni Ali va Vali qanday bo'lib olishlari kerak?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ali 3 tanga, Vali 5 tanga"
+        },
+        {
+          "id": "B",
+          "text": "Ali 2 tanga, Vali 6 tanga"
+        },
+        {
+          "id": "C",
+          "text": "Ali 1 tanga, Vali 7 tanga"
+        },
+        {
+          "id": "D",
+          "text": "Ali 5 tanga, Vali 3 tanga"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 31,
+      "section": "logic",
+      "stem": "Farhodda dunyodagi xoxlagan shaharni qidirib topish mumkin bo'lgan xarita bor. Farhod: “Agar menga bitta shaharning nomini aytsang, uning qaysi davlatda ekanligini aytishingiz shart emas. Men uni darhol xaritadan topib olaman.\" Quyidagi qaysi biri Farhodning gapi xato ekanligini ko'rsatadi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ba'zi shaharlarning nomlari o'zi joylashgan davlat nomlari bilan bir xil."
+        },
+        {
+          "id": "B",
+          "text": "Ba'zi shaharlarning nomlari bir xil."
+        },
+        {
+          "id": "C",
+          "text": "Ba'zi davlatlarda birorta ham shaharlar yo'q."
+        },
+        {
+          "id": "D",
+          "text": "Ba'zi shaharlar nomlari o'zgargan."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 32,
+      "section": "logic",
+      "stem": "Diyora va Yunus maktab koridorida turibdi. Diyora: “Hilola menga kurtkasini olib kelishimni iltimos qildi. Lekin men uni topa olmadim. Kurtka moviy rangda va qalpoqli edi.” Yunus: “Mana bu yerda moviy rangli qalpoqli kurtka bor. Bu Hilolaniki bo'lsa kerak.” Yunus bunday fikrlashda qanday xatolikka yo'l qo'ygan bo'lishi mumkin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hilola boshqacha kurtkani yoqtirishi mumkin."
+        },
+        {
+          "id": "B",
+          "text": "Diyora boshqa birovning kurtkasini qidirayotgan bo'lishi mumkin."
+        },
+        {
+          "id": "C",
+          "text": "Moviy rangdagi qalpoqli kurtkalar bir qancha bo'lishi mumkin. ."
+        },
+        {
+          "id": "D",
+          "text": "Kurtka moviy bo'lsa-da, unda qalpoq bo'lmasligi mumkin."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 33,
+      "section": "logic",
+      "stem": "Muattar ustoz: “Mening sinifimda 10 nafar qobiliyati pastroq o'quvchi bor. Bugun ertalab sinfimizda 7 nafar o'quvchi ko'zoynak taqib yurgandi. Demak, sinfimizda ba'zilar kontakt linza taqib yurgan bo'lishi kerak.\" Muattar ustoz bunday fikrlash orqali qanday xatollik yo'l qo'ygan bo'lishi mumkin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "U boshqa sinfdagi o'quvchilarni hisobga olmadi."
+        },
+        {
+          "id": "B",
+          "text": "U qaysi o'quvchi kontakt linza taqib yurganini aytmadi."
+        },
+        {
+          "id": "C",
+          "text": "Ba'zi ko'rish qobiliyati past o'quvchilar ko'zoynak ham, kontakt linza ham taqib yurmagan bo'lishi mumkin."
+        },
+        {
+          "id": "D",
+          "text": "Hozirda ko'rish qobiliyati past o'quvchilar kelajakda ko'zoynak taqib yurishga ehtiyojmand bo'lishi mumkin."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 34,
+      "section": "logic",
+      "stem": "Farhod: “Pianino imtihonidan o'tish uchun kuniga 15 minutdan haftada to'rt kun shug'ullanish kerak”. Sanjar: “Men har kuni 20 minutdan ko'proq shug'ullandim, shuning uchun imtihondan o'tishimga to'liq aminman.” Sanjar bunday fikrlash orqali qanday xatolikka yo'l qo'ygan bo'lishi mumkin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Imtihon topshirish, odatda, asabiy bo'ladi."
+        },
+        {
+          "id": "B",
+          "text": "Cholg'u asbobini yaxshi chalishni o'rganish ko'p yil talab qiladi."
+        },
+        {
+          "id": "C",
+          "text": "Yolg'iz shug'ullanish o'qituvchi bilan shug'ullanishdek samarali emas."
+        },
+        {
+          "id": "D",
+          "text": "Minimum talab qilinadigan darajada shug'ullanish imtihondan o'tishni kafolatlay olmasligi mumkin."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 35,
+      "section": "logic",
+      "stem": "Avtomobil ijaraga beruvchi: “Biz mashinalarimizga yangi moslama o'rnatamiz. U yo'nalishni o'zbek tilida tushuntirib boradi. Bizning bu loyihamiz, ayniqsa, chet eldan kelgan va shahrimizni bilmaydigan sayyohlar uchun juda foydali bo'ladi. Yuqoridagi rejada qanday xatolik mavjud?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bu moslamani ko'plab mashinalarga o'rnatish qimmatga tushadi."
+        },
+        {
+          "id": "B",
+          "text": "Shaharga keladigan sayyohlarning aksariyati o'zbek tilini bilmaydi."
+        },
+        {
+          "id": "C",
+          "text": "Shaharda qog'oz xaritalar juda arzon."
+        },
+        {
+          "id": "D",
+          "text": "Qurilmaning ovozi o'ta baland va bu haydovchilarni chalg'itadi."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 36,
+      "section": "logic",
+      "stem": "Guru mamlakati neft va gaz konlariga juda boy. Bu konlardan olinadigan energiya Guru aholising ehtiyojidan ham ortiqcha. Lekin Guru fuqarolari gaz va benzin tanqisligidan aziyat chekadi. Yuqoridagi ziddiyatli holatning sababini tushuntirib beradigan gapni toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Konlardan yil davomida bir xil miqdorda neft va gaz qazib olinmaydi."
+        },
+        {
+          "id": "B",
+          "text": "Guru mamlakatida odamlar elektr jihozlardan juda ko'p foydalanadilar."
+        },
+        {
+          "id": "C",
+          "text": "Guru mamlakati quyosh va shamol energiyasini rivojlantirmagan."
+        },
+        {
+          "id": "D",
+          "text": "Guruda ishlab chiqariladigan neft va gazning katta qismi boshqa mamlakatlarga sotiladi."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 37,
+      "section": "logic",
+      "stem": "Agar shahar ichiga 8 tonnadan og'irroq yuk moshinalarining kirishi cheklansa, yuk moshinalari shaharga kira olmaydi va bu shahardagi transport qatnovini keskin kamaytiradi. Quyidagi qaysi ma'lumot yuqoridagi taklifning samarasiz ekanligini bildiradi.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Shahar tashqarisidagi yo'llarning sifati juda yaxshi."
+        },
+        {
+          "id": "B",
+          "text": "Shahar tashqarisida moshina qatnovi juda kam."
+        },
+        {
+          "id": "C",
+          "text": "Shaharda harakatlanadigan yuk moshinalarining juda ozginasi 8 tonnadan og'irroq."
+        },
+        {
+          "id": "D",
+          "text": "Shaharda yengil moshinalar ko'pincha yuk moshinalar bilan to'qnashib ketadi."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 38,
+      "section": "logic",
+      "stem": "Ilhom: “Oxirgi 10 yilda kofening zararlari haqida juda ko'p maqolalar yozildi. Buning natijasida shu davrda kofe iste'moli keskin kamaydi.\" Quyidagi qaysi gap Ilhomning xulosasi xato ekanligini ko'rsatadi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Odamlar bugungi kunda 10 yil oldingiga qaraganda kofeni ikki barobar kam iste'mol qilishmoqda."
+        },
+        {
+          "id": "B",
+          "text": "Oddiy kofening bahosi pasayganligi tufayli maxsus sifatli kofening savdosi barqaror qoldi."
+        },
+        {
+          "id": "C",
+          "text": "So'nngi 10 yil ichida meva sharbatlari va choylarni iste'mol qilish oshdi."
+        },
+        {
+          "id": "D",
+          "text": "So'nggi 10 yil ichida qahva yetishtiradigan mamlakatlarda noodatiy qattiq sovuq tufayli kofe narxi doimiy oshdi."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 39,
+      "section": "logic",
+      "stem": "Maktabda adabiyot fanidan olimpiada o'tkazildi. Olimpiada natijalariga ko'ra, 4-“A\" sinfidagi Nodir ismli o'quvchi 1-o'rinni egallagan bo'lsa, Suhrob ismli o'quvchi eng oxirgi o'rinni egallaganligi ma'lum bo'ldi. Shundan keyin maktab direktori ushbu sinfda Nodir adabiyot fanini eng zo'r biladigan, Suhrob eng past bilimli o'quvchi ekan degan xulosaga keldi. Quyidagi gaplardan qaysi biri direktorning xulosasida mantiqiy xatolik bor ekanligini ko'rsatadi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bu yil o'tkazilgan adabiyot fani olimpiadasidagi savollarning qiyinlik darajasi oldingi yillardagidan ancha yuqori edi."
+        },
+        {
+          "id": "B",
+          "text": "4-,,A\" sinfiga adabiyot va ona tili fanlaridan boshqa-boshqa o'qituvchilar dars beradi."
+        },
+        {
+          "id": "C",
+          "text": "1-o'rinni egallagan Nodir nafaqat shu sinfda balki butun maktabda adabiyot fanini eng yaxshi biladigan o'quvchi."
+        },
+        {
+          "id": "D",
+          "text": "Olimpiada o'tkazilgan kuni 4-“A\" sinf o'quvchilarining yarmi hasharda edi."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 40,
+      "section": "logic",
+      "stem": "Husnora: “Nodir bu yil maktabni bitiradi va universitetga hujjat topshiradi. Lekin, afsuski, Nodir matematika va fizika fanlaridan umuman kitoblar o'qimadi va yetarlicha tayyorgarlik ko'rmadi. Shuning uchun men Nodir bu yil universitet imtihonlaridan o'ta oladi deb o'ylamayman\". Quyidagi gaplardan qaysi biri Husnoraning fikrlashidagi xatolikni ko'rsatadi.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Universitet imtihonlarida matematika va fizika fanlaridan qo'shimcha tarzda ona tili va adabiyot fanidan ham imtihon topshiradi."
+        },
+        {
+          "id": "B",
+          "text": "Nodir hujjat topshirgan universitetning kirish imtihonlarida matematika va fizika fanlari bo'yicha savollar bo'lmaydi."
+        },
+        {
+          "id": "C",
+          "text": "Nodirning oxirgi ikki chorakda matematika va fizika fanlari bo'yicha choraklik baholari 3 bo'lgan edi."
+        },
+        {
+          "id": "D",
+          "text": "Universitet kirish imtihonlarida tushadigan savollar yildan yilga qiyinlashib bormoqda."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 41,
+      "section": "english",
+      "stem": "Find antonyms: My dad is not short. He is ___ . My brother is not weak. He is ____ .",
+      "options": [
+        {
+          "id": "A",
+          "text": "plump / strong"
+        },
+        {
+          "id": "B",
+          "text": "thin / tall"
+        },
+        {
+          "id": "C",
+          "text": "tall / curly"
+        },
+        {
+          "id": "D",
+          "text": "tall / strong"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 42,
+      "section": "english",
+      "stem": "Robot has ( kvadrat ) head. It has also ( yumaloq – круглый) eyes. It is ( jigarrang - коричневого ) by colour.",
+      "options": [
+        {
+          "id": "A",
+          "text": "square / big / brown"
+        },
+        {
+          "id": "B",
+          "text": "round / square / purple"
+        },
+        {
+          "id": "C",
+          "text": "square / round / brown"
+        },
+        {
+          "id": "D",
+          "text": "straight / short / brown"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 43,
+      "section": "english",
+      "stem": "Choose the appropriate questions: I am from Uzbekistan/ I'm fine, thank you.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Where are you from? How are you?"
+        },
+        {
+          "id": "B",
+          "text": "When you were born? / Are OK?"
+        },
+        {
+          "id": "C",
+          "text": "Who are you?/how are you?"
+        },
+        {
+          "id": "D",
+          "text": "Where is? / How are you?"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 44,
+      "section": "english",
+      "stem": "What we call granny and grandad. Choose one appropriate word .",
+      "options": [
+        {
+          "id": "A",
+          "text": "parents"
+        },
+        {
+          "id": "B",
+          "text": "relatives"
+        },
+        {
+          "id": "C",
+          "text": "neigbour"
+        },
+        {
+          "id": "D",
+          "text": "grandparents"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 45,
+      "section": "english",
+      "stem": "A person, who helps to the director with letters and telephone answers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "a driver"
+        },
+        {
+          "id": "B",
+          "text": "secretary"
+        },
+        {
+          "id": "C",
+          "text": "teacher"
+        },
+        {
+          "id": "D",
+          "text": "pupil"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 46,
+      "section": "english",
+      "stem": "He goes to school ____bus. My friend lives near to school. He goes to school ___foot.",
+      "options": [
+        {
+          "id": "A",
+          "text": "by / on"
+        },
+        {
+          "id": "B",
+          "text": "by / by"
+        },
+        {
+          "id": "C",
+          "text": "in / with"
+        },
+        {
+          "id": "D",
+          "text": "in / on"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 47,
+      "section": "english",
+      "stem": "We _____ play with matches, We _____ get ready for the lessons. We____ write words in our books.",
+      "options": [
+        {
+          "id": "A",
+          "text": "must, must, must"
+        },
+        {
+          "id": "B",
+          "text": "mustn't, must, mustn't"
+        },
+        {
+          "id": "C",
+          "text": "mustn't, mustn't, mustn't"
+        },
+        {
+          "id": "D",
+          "text": "mustn't, mustn't, mustn't"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 48,
+      "section": "english",
+      "stem": "I like in winter.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Play snowballs"
+        },
+        {
+          "id": "B",
+          "text": "play hockey"
+        },
+        {
+          "id": "C",
+          "text": "take photos"
+        },
+        {
+          "id": "D",
+          "text": "make a snow man"
+        }
+      ],
+      "hasFigure": true,
+      "needsFigure": false,
+      "figureKind": "image",
+      "figureImage": "content/extracted/media/g4-q48.jpeg",
+      "warnings": [
+        "Rasm bor, lekin savol unga tayanmasligi mumkin (qo'lda tekshirish)"
+      ]
+    },
+    {
+      "no": 49,
+      "section": "english",
+      "stem": "Every time I have ………, my mum takes me to the ……..",
+      "options": [
+        {
+          "id": "A",
+          "text": "",
+          "figureImage": "content/extracted/media/g4-q49.jpeg"
+        },
+        {
+          "id": "B",
+          "text": "",
+          "figureImage": "content/extracted/media/g4-q49-2.jpeg"
+        },
+        {
+          "id": "C",
+          "text": "",
+          "figureImage": "content/extracted/media/g4-q49-3.jpeg"
+        },
+        {
+          "id": "D",
+          "text": "",
+          "figureImage": "content/extracted/media/g4-q49-4.jpeg"
+        }
+      ],
+      "hasFigure": true,
+      "needsFigure": true,
+      "figureKind": "image",
+      "figureImage": "content/extracted/media/g4-q49.jpeg",
+      "figureImages": [
+        "content/extracted/media/g4-q49.jpeg",
+        "content/extracted/media/g4-q49-2.jpeg",
+        "content/extracted/media/g4-q49-3.jpeg",
+        "content/extracted/media/g4-q49-4.jpeg"
+      ],
+      "warnings": []
+    },
+    {
+      "no": 50,
+      "section": "english",
+      "stem": "What is “librarian” in the state language.",
+      "options": [
+        {
+          "id": "A",
+          "text": "kutubhona"
+        },
+        {
+          "id": "B",
+          "text": "kitoblar"
+        },
+        {
+          "id": "C",
+          "text": "kutubhonachi"
+        },
+        {
+          "id": "D",
+          "text": "uchuvchi"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 51,
+      "section": "english",
+      "stem": "Find the correct answer : hamshira(медсестра),o't o'chiruvchi (пожарник),bog'bon ( садовник).",
+      "options": [
+        {
+          "id": "A",
+          "text": "pilot, chef, nurse."
+        },
+        {
+          "id": "B",
+          "text": "TV star, fireman, nurse."
+        },
+        {
+          "id": "C",
+          "text": "nurse, fireman, farmer."
+        },
+        {
+          "id": "D",
+          "text": "nurse, fireman, gardener."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 52,
+      "section": "english",
+      "stem": "Which question is not correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "What time you did arrived ?"
+        },
+        {
+          "id": "B",
+          "text": "Where do your parents meet?"
+        },
+        {
+          "id": "C",
+          "text": "Did you like the gift."
+        },
+        {
+          "id": "D",
+          "text": "Where did you go yesterday"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 53,
+      "section": "english",
+      "stem": "Find words about profession.",
+      "options": [
+        {
+          "id": "A",
+          "text": "doctor, TV star, gardener, subject."
+        },
+        {
+          "id": "B",
+          "text": "driver, engineer, housewife, pilot."
+        },
+        {
+          "id": "C",
+          "text": "director, sick, worker."
+        },
+        {
+          "id": "D",
+          "text": "chef, club, pilot, doctor"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 54,
+      "section": "english",
+      "stem": "Find true tralslation: guruch( рис), sabzi (морковь), sharbat (сок).",
+      "options": [
+        {
+          "id": "A",
+          "text": "rise, carrot, milk."
+        },
+        {
+          "id": "B",
+          "text": "rice, carrot, juice."
+        },
+        {
+          "id": "C",
+          "text": "rice, carrot, honey."
+        },
+        {
+          "id": "D",
+          "text": "bread, carrot, juice."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 55,
+      "section": "english",
+      "stem": "Find countable nouns:",
+      "options": [
+        {
+          "id": "A",
+          "text": "bread, biscuit, chocolate"
+        },
+        {
+          "id": "B",
+          "text": "oil, nut, egg"
+        },
+        {
+          "id": "C",
+          "text": "nut, apple, melon"
+        },
+        {
+          "id": "D",
+          "text": "oil, fat, peach"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 56,
+      "section": "english",
+      "stem": "Which nouns can be used after article a / an.",
+      "options": [
+        {
+          "id": "A",
+          "text": "peach, table, sister"
+        },
+        {
+          "id": "B",
+          "text": "oil, egg, desk,"
+        },
+        {
+          "id": "C",
+          "text": "nut, sand, sugar"
+        },
+        {
+          "id": "D",
+          "text": "mud, iron, floor"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 57,
+      "section": "english",
+      "stem": "…. works in restaurant. He cooks different kind of meals.",
+      "options": [
+        {
+          "id": "A",
+          "text": "a fireman"
+        },
+        {
+          "id": "B",
+          "text": "a chef"
+        },
+        {
+          "id": "C",
+          "text": "anarchitect"
+        },
+        {
+          "id": "D",
+          "text": "a pilot"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 58,
+      "section": "english",
+      "stem": "Find correct using sentence with “ many”.",
+      "options": [
+        {
+          "id": "A",
+          "text": "You have many money"
+        },
+        {
+          "id": "B",
+          "text": "We drink many water"
+        },
+        {
+          "id": "C",
+          "text": "They usually many swim"
+        },
+        {
+          "id": "D",
+          "text": "I am sociable, I have many friends."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 59,
+      "section": "english",
+      "stem": "Great Britain is divided into … parts",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "50"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 60,
+      "section": "english",
+      "stem": "- What are you doing now?",
+      "options": [
+        {
+          "id": "A",
+          "text": "- I was reading"
+        },
+        {
+          "id": "B",
+          "text": "- She was writing"
+        },
+        {
+          "id": "C",
+          "text": "- I am reading"
+        },
+        {
+          "id": "D",
+          "text": "– You are reading"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    }
+  ]
+}

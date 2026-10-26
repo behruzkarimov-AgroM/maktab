@@ -1,0 +1,796 @@
+{
+  "sourceFile": "3-sinf Toshkent 1.docx",
+  "grade": 3,
+  "counts": {
+    "total": 30,
+    "needsFigure": 1,
+    "withEquations": 3
+  },
+  "warnings": [],
+  "items": [
+    {
+      "no": 1,
+      "section": "math",
+      "stem": "Ikki sonning yig'indisi 103 ga teng bo'lsa ular quyidagilardan qaysi biriga teng bo'lishi mumkin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "46 va 67"
+        },
+        {
+          "id": "B",
+          "text": "28 va 95"
+        },
+        {
+          "id": "C",
+          "text": "21 va 98"
+        },
+        {
+          "id": "D",
+          "text": "78 va 25"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 2,
+      "section": "math",
+      "stem": "Hisoblang: 17 · (88 - 36 : 2 - 60)",
+      "options": [
+        {
+          "id": "A",
+          "text": "160"
+        },
+        {
+          "id": "B",
+          "text": "170"
+        },
+        {
+          "id": "C",
+          "text": "180"
+        },
+        {
+          "id": "D",
+          "text": "115"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 3,
+      "section": "math",
+      "stem": "Tenglamani yeching: 465 - 2a = 321",
+      "options": [
+        {
+          "id": "A",
+          "text": "144"
+        },
+        {
+          "id": "B",
+          "text": "78"
+        },
+        {
+          "id": "C",
+          "text": "72"
+        },
+        {
+          "id": "D",
+          "text": "156"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 4,
+      "section": "math",
+      "stem": "10 kg yog'ochdan 3 ta o'yinchoq yasash mumkin. 40 kg nechta o'yinchoq yasash mumkin",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 ta"
+        },
+        {
+          "id": "B",
+          "text": "14 ta"
+        },
+        {
+          "id": "C",
+          "text": "10 ta"
+        },
+        {
+          "id": "D",
+          "text": "18 ta"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 5,
+      "section": "math",
+      "stem": "Quyidagi harflarni davom ettiring: B,I,U,T,B,O….",
+      "options": [
+        {
+          "id": "A",
+          "text": "O,S"
+        },
+        {
+          "id": "B",
+          "text": "Y,S"
+        },
+        {
+          "id": "C",
+          "text": "O,Y"
+        },
+        {
+          "id": "D",
+          "text": "S,N"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 6,
+      "section": "math",
+      "stem": "Alining kitoblari soni Valining kitoblaridan 2 marta ko'p. Agar Valining 18 ta kitobi bo'lsa, Alining kitoblari nechta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "18ta"
+        },
+        {
+          "id": "B",
+          "text": "9ta"
+        },
+        {
+          "id": "C",
+          "text": "36ta"
+        },
+        {
+          "id": "D",
+          "text": "20ta"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 7,
+      "section": "math",
+      "stem": "Eng kichik to'rt xonali son va eng katta ikki xonali sonlar yig'indisi 900 dan qancha ortiq?",
+      "options": [
+        {
+          "id": "A",
+          "text": "99"
+        },
+        {
+          "id": "B",
+          "text": "110"
+        },
+        {
+          "id": "C",
+          "text": "199"
+        },
+        {
+          "id": "D",
+          "text": "222"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 8,
+      "section": "math",
+      "stem": "Hozir 2022-yil. Nodir 23 yil avval 4 yoshda edi. Nodir nechanchi yil tug'ilgan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2003"
+        },
+        {
+          "id": "B",
+          "text": "1997"
+        },
+        {
+          "id": "C",
+          "text": "1995"
+        },
+        {
+          "id": "D",
+          "text": "1996"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 9,
+      "section": "math",
+      "stem": "To'g'ri to'rtburchakning yuzi S = 132 sm^2 va bo'yi b = 12 sm ekani ma'lum. Uning perimetrini aniqlang.",
+      "options": [
+        {
+          "id": "A",
+          "text": "46sm"
+        },
+        {
+          "id": "B",
+          "text": "36sm"
+        },
+        {
+          "id": "C",
+          "text": "48sm"
+        },
+        {
+          "id": "D",
+          "text": "23sm"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 10,
+      "section": "math",
+      "stem": "Ushbu shaklda nechta kvadrat mavjud?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4ta"
+        },
+        {
+          "id": "B",
+          "text": "6ta"
+        },
+        {
+          "id": "C",
+          "text": "3ta"
+        },
+        {
+          "id": "D",
+          "text": "5ta"
+        }
+      ],
+      "hasFigure": true,
+      "needsFigure": true,
+      "figureKind": "shape",
+      "warnings": []
+    },
+    {
+      "no": 11,
+      "section": "math",
+      "stem": "4 raqami bilan tugaydigan ikki xonali sonlar nechta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "9 ta"
+        },
+        {
+          "id": "B",
+          "text": "18 ta"
+        },
+        {
+          "id": "C",
+          "text": "10 ta"
+        },
+        {
+          "id": "D",
+          "text": "19 ta"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 12,
+      "section": "math",
+      "stem": "2 hafta 72 soat 4320 minut necha sutka?",
+      "options": [
+        {
+          "id": "A",
+          "text": "17"
+        },
+        {
+          "id": "B",
+          "text": "21"
+        },
+        {
+          "id": "C",
+          "text": "20"
+        },
+        {
+          "id": "D",
+          "text": "19"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 13,
+      "section": "math",
+      "stem": "Nozima Charosdan 8 yoshga, Shoiradan 5 yoshga katta. Muslima 14 yoshda bo'lib, u Charosdan 3 yoshga kichik. Shoiraning yoshini aniqlang.",
+      "options": [
+        {
+          "id": "A",
+          "text": "30"
+        },
+        {
+          "id": "B",
+          "text": "25"
+        },
+        {
+          "id": "C",
+          "text": "20"
+        },
+        {
+          "id": "D",
+          "text": "23"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 14,
+      "section": "math",
+      "stem": "Bahorda polizga 20 kg kartoshka urug'i ekilsa kuzga kelib undan 140 kg hosil olish mumkin. Polizdan 770 kg kartoshka olish uchun bahorda necha kg urug' ekish kerak?",
+      "options": [
+        {
+          "id": "A",
+          "text": "70 kg"
+        },
+        {
+          "id": "B",
+          "text": "100 kg"
+        },
+        {
+          "id": "C",
+          "text": "110 kg"
+        },
+        {
+          "id": "D",
+          "text": "590 kg"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 15,
+      "section": "math",
+      "stem": "Fermada 12 ta qo'y va 21 ta tovuq bor. Hayvonlarning jami oyoqlari nechta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "66"
+        },
+        {
+          "id": "B",
+          "text": "90"
+        },
+        {
+          "id": "C",
+          "text": "86"
+        },
+        {
+          "id": "D",
+          "text": "72"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 16,
+      "section": "logic",
+      "stem": "Agar Akmal Sobirdan baland bo'lsa, Karim esa Zokirdan pastroq Akmaldan balandroq bo'lsa, ularning eng past bo'ylisi kim?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sobir"
+        },
+        {
+          "id": "B",
+          "text": "Akmal"
+        },
+        {
+          "id": "C",
+          "text": "Karim"
+        },
+        {
+          "id": "D",
+          "text": "Zokir"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 17,
+      "section": "logic",
+      "stem": "Bir g'aroyib shaharda yo'Ining o'ng tomonidagi uylar nomeri barchasi toq sonlar.Ammo shahardagilar uylarni nomerlashda 3 raqamidan foydalanishmaydi. O'ng tomondagi I-uyning nomeri 1 bo'lsa, 15-uyning nomerini toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "47"
+        },
+        {
+          "id": "B",
+          "text": "41"
+        },
+        {
+          "id": "C",
+          "text": "43"
+        },
+        {
+          "id": "D",
+          "text": "45"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 18,
+      "section": "logic",
+      "stem": "Barcha bank mijozlari keksalar. Hamma keksalar boy. Quyidagilardan qaysi biri to'g'ri bo'lishi kerak?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Barcha boylar keksa"
+        },
+        {
+          "id": "B",
+          "text": "Barcha keksa odamlar bank mijozlari"
+        },
+        {
+          "id": "C",
+          "text": "Barcha yoshlar kambag'aldir"
+        },
+        {
+          "id": "D",
+          "text": "Barcha bank mijozlari boy"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 19,
+      "section": "logic",
+      "stem": "Har doim to'g'ri bo'Igan mulohazani toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "14 yoshli qiz bolaning bo'yi 10 yoshli qiz bolaning bo'yidan uzunroq."
+        },
+        {
+          "id": "B",
+          "text": "14 yoshli qiz bola hayotida bir marta hozirgi bo'yining yarmiga teng bo'Igan."
+        },
+        {
+          "id": "C",
+          "text": "Butun sonning o'zini o'ziga ko'paytirganda natija juft son bo'ladi."
+        },
+        {
+          "id": "D",
+          "text": "Butun sonning o'zini o' ziga qo'shganda natija toq son bo'ladi."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 20,
+      "section": "logic",
+      "stem": "Dastlabki suv ostiga sho'ng'ish uchun mo'ljallangan kostyumning og'irligi tahminan 380 kilogrammni tashkil qilgan. 80 kg vaznga ega b'lgan 3 ta g'ovvozlarni tortib olish uchun yuk ko'tarish krani qancha og'irlikni ko'tarishiga to'g'ri kelgan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "680 kg"
+        },
+        {
+          "id": "B",
+          "text": "1220 kg"
+        },
+        {
+          "id": "C",
+          "text": "620 kg"
+        },
+        {
+          "id": "D",
+          "text": "1380 kg"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 21,
+      "section": "english",
+      "stem": "This …. my sister.",
+      "options": [
+        {
+          "id": "A",
+          "text": "is"
+        },
+        {
+          "id": "B",
+          "text": "am"
+        },
+        {
+          "id": "C",
+          "text": "are"
+        },
+        {
+          "id": "D",
+          "text": "we"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 22,
+      "section": "english",
+      "stem": "Are …. a doctor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "he"
+        },
+        {
+          "id": "B",
+          "text": "you"
+        },
+        {
+          "id": "C",
+          "text": "I"
+        },
+        {
+          "id": "D",
+          "text": "she"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 23,
+      "section": "english",
+      "stem": "….. name is Odina",
+      "options": [
+        {
+          "id": "A",
+          "text": "I"
+        },
+        {
+          "id": "B",
+          "text": "we"
+        },
+        {
+          "id": "C",
+          "text": "they"
+        },
+        {
+          "id": "D",
+          "text": "her"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 24,
+      "section": "english",
+      "stem": "There …. A blanket on the bed.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Is"
+        },
+        {
+          "id": "B",
+          "text": "are"
+        },
+        {
+          "id": "C",
+          "text": "am"
+        },
+        {
+          "id": "D",
+          "text": "his"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 25,
+      "section": "english",
+      "stem": "There …. Books on the table.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Is"
+        },
+        {
+          "id": "B",
+          "text": "are"
+        },
+        {
+          "id": "C",
+          "text": "am"
+        },
+        {
+          "id": "D",
+          "text": "his"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 26,
+      "section": "english",
+      "stem": "I …… go to school on Sunday.",
+      "options": [
+        {
+          "id": "A",
+          "text": "usually"
+        },
+        {
+          "id": "B",
+          "text": "never"
+        },
+        {
+          "id": "C",
+          "text": "sometimes"
+        },
+        {
+          "id": "D",
+          "text": "always"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 27,
+      "section": "english",
+      "stem": "It ……cold.",
+      "options": [
+        {
+          "id": "A",
+          "text": "is"
+        },
+        {
+          "id": "B",
+          "text": "am"
+        },
+        {
+          "id": "C",
+          "text": "are"
+        },
+        {
+          "id": "D",
+          "text": "have"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 28,
+      "section": "english",
+      "stem": "I ……. Football",
+      "options": [
+        {
+          "id": "A",
+          "text": "eat"
+        },
+        {
+          "id": "B",
+          "text": "do"
+        },
+        {
+          "id": "C",
+          "text": "play"
+        },
+        {
+          "id": "D",
+          "text": "swim"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 29,
+      "section": "english",
+      "stem": "I …… swim.",
+      "options": [
+        {
+          "id": "A",
+          "text": "can"
+        },
+        {
+          "id": "B",
+          "text": "am"
+        },
+        {
+          "id": "C",
+          "text": "do"
+        },
+        {
+          "id": "D",
+          "text": "have"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 30,
+      "section": "english",
+      "stem": "The ladybird can fly …... walk.",
+      "options": [
+        {
+          "id": "A",
+          "text": "do"
+        },
+        {
+          "id": "B",
+          "text": "but"
+        },
+        {
+          "id": "C",
+          "text": "with"
+        },
+        {
+          "id": "D",
+          "text": "and"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    }
+  ]
+}

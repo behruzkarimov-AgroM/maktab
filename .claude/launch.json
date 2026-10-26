@@ -1,0 +1,22 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "maktab-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000
+    },
+    {
+      "name": "maktab-dev-demo",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "env": {
+        "ALLOW_ADMIN_DEMO": "true",
+        "BOT_API_SECRET": "local-test-secret-0123456789abcdef0123456789",
+        "TELEGRAM_BOT_USERNAME": "maktab_test_bot"
+      },
+      "port": 3000
+    }
+  ]
+}

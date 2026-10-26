@@ -1,0 +1,4363 @@
+{
+  "grade": 2,
+  "notes": [
+    "v1 #2: 'eng kichik bir xonali son' - variantlarda 1 yo'q edi (9, 10, 13, 17), B variant '10' ning o'rniga '1' yozildi (to'g'ri javob B).",
+    "v1 #20: B variant 'buyurtma' ma'nosiz edi (to'g'ri javob 'bir xil' D da), 'hech biri' ga almashtirildi.",
+    "v1 #7: 'jo'yak' va 'julyak' so'zlari aralash yozilgan edi, ikkalasi 'jo'yak' qilindi. So'zning ma'nosini (nima chopilgani) tekshirib ko'ring.",
+    "v1 #25: rasm (shakl) o'rniga hujjatdagi matn (U 7∙3, L 13∙5, M 25∙4, A 26∙3, I 9∙6, B 24∙2) savol matniga kiritildi; to'g'ri javob MALIBU.",
+    "v1: imlo/tinish belgilari tuzatildi (#3 'ularda'->'ulardan', #6 'ortirilgan'->'orttirilgan', #8, #9, #10, #22 vergul/nuqta, #5 va #19 variantlarda bo'shliqlar). Savol mazmuni o'zgarmadi.",
+    "v1 #1, #20, #25 bo'limi 'mantiq' (logic) deb belgilandi, qolganlari 'matematika'. Hujjatda javob kaliti yo'q edi, barcha javoblar kod bilan qayta hisoblandi."
+  ],
+  "variants": [
+    {
+      "variant": 1,
+      "title": {
+        "uz": "2-sinf · Aralash test · 1-variant",
+        "ru": "2 класс · Смешанный тест · Вариант 1",
+        "en": "Grade 2 · Mixed test · Variant 1"
+      },
+      "description": {
+        "uz": "2-sinf o'quvchilari uchun matematika va mantiq testi: sonlar, qo'shish va ayirish, masalalar, ko'paytirish va bo'lish.",
+        "ru": "Тест по математике и логике для 2 класса: числа, сложение и вычитание, задачи, умножение и деление.",
+        "en": "Maths and logic test for Grade 2: numbers, addition and subtraction, word problems, multiplication and division."
+      },
+      "durationMinutes": 40,
+      "passPercent": 60,
+      "difficulty": "easy",
+      "questions": [
+        {
+          "section": "logic",
+          "stem": {
+            "uz": "Tushirib qoldirilgan sonlarni belgilang: 24, 23, 22, __, 20, 19, __, 17, 16, 15, __, __, 12, 11"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "21, 18, 14, 13"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "22, 23, 19, 17"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "15, 14, 13, 12"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "20, 18, 14, 13"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Sonlar 1 tadan kamayib boradi: 22 dan keyin 21, 19 dan keyin 18, 15 dan keyin 14 va 13."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "seq",
+            "start": 24,
+            "step": -1,
+            "len": 14,
+            "blanks": [
+              3,
+              6,
+              10,
+              11
+            ]
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Sonlar ichidan eng kichik bir xonali sonni belgilang."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "9"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "1"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "13"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "17"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Bir xonali sonlar: 1, 2, ... 9. Ulardan eng kichigi 1."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "extreme",
+            "mode": "min",
+            "digits": 1
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Avtobusda 8 ta o'g'il bola va 5 ta qiz bola bor edi. Bekatda ulardan 4 tasi tushib qoldi. Avtobusda nechta bola qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "17 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "7 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "9 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "8 ta"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "8 + 5 = 13 ta bola bor edi. 13 - 4 = 9 ta bola qoldi."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "8+5-4"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Uchta sonning yig'indisi 76 ga teng. Birinchi son 22, ikkinchi son 34 bo'lsa, uchinchi sonni belgilang."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "54"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "20"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "22"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "42"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "22 + 34 = 56. 76 - 56 = 20."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "76-22-34"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "48 sonining qo'shni sonlarini ayting."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "45, 46"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "49, 50"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "49, 51"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "47, 49"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "48 dan oldin 47, keyin 49 turadi."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "neighbors",
+            "n": 48
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "30 ni 17 ta orttirilgan javobni toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "37"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "13"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "47"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "17"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "30 + 17 = 47."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "30+17"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Sardor 16 ta jo'yakni, Maxmud esa 4 ta ortiq jo'yakni chopdi. Maxmud necha jo'yakni chopgan?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "12 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "64 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "20 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "8 ta"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Maxmud 4 ta ortiq chopgan: 16 + 4 = 20."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "16+4"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Kamola hozir 9 yoshda. 3 yildan keyin u necha yoshda bo'ladi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "12 yoshda"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "6 yoshda"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "9 yoshda"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "13 yoshda"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "9 + 3 = 12."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "9+3"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "O'ylangan sondan 70 ni ayirishdi, 27 hosil bo'ldi. O'ylangan sonni belgilang."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "97"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "37"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "13"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "47"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "O'ylangan son - 70 = 27, demak son = 70 + 27 = 97."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "70+27"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Taqsimchada 3 ta nok va 4 ta olma bor edi. 2 ta xurmo qo'yildi. Mevalar soni nechta bo'ldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "7 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "14 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "87 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "9 ta"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "3 + 4 + 2 = 9."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "3+4+2"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Bir to'pda 50 m, ikkinchi to'pda 28 m kam gazlama bor. Ikkala to'pda qancha gazlama bor?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "78 m"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "28 m"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "72 m"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "22 m"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Ikkinchi to'pda 50 - 28 = 22 m. Ikkalasida 50 + 22 = 72 m."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "50+(50-28)"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Qo'chqorning og'irligi 38 kg, buzoq undan 5 kg og'ir. Buzoqning og'irligini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "42 kg"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "43 kg"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "38 kg"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "44 kg"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "38 + 5 = 43 kg."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "38+5"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "To'rtta quyonning har biriga 2 tadan sabzi berishdi. Quyonlarga hammasi bo'lib nechta sabzi berishgan?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "10 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "8 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "2 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "6 ta"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "4 × 2 = 8 ta sabzi."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "4*2",
+            "skipStem": true
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "39 kg olma va 21 kg anor olib kelishdi. 24 kg mevani sarflashdi. Necha kilogramm meva qolgan?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "84 kg"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "60 kg"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "21 kg"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "36 kg"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "39 + 21 = 60 kg. 60 - 24 = 36 kg."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "39+21-24"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Chizg'ich 10 so'm turadi. Shunday 3 ta chizg'ich qancha turadi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "13 so'm"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "30 so'm"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "10 so'm"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "7 so'm"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "10 × 3 = 30 so'm."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "10*3"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Javobida 2 chiqadigan misolni belgilang."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "(70-22):6"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "63:9+13"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "18-14+15"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "24+8-30"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "(70-22):6 = 8; 63:9+13 = 20; 18-14+15 = 19; 24+8-30 = 2. Javob 2 bo'lgani D."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "exprs",
+            "target": 2
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Beshta shar 45 so'm turadi. 54 so'mga shunday sharlardan nechta sotib olish mumkin?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "8 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "6 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "5 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "9 ta"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Bitta shar 45 : 5 = 9 so'm. 54 : 9 = 6 ta shar."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "54/(45/5)",
+            "skipStem": true
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "56 soni 8 dan necha marta katta?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "7 marta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "64 marta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "8 marta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "48 marta"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "56 : 8 = 7 marta."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "56/8"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Qaysi qatordagi sonlar 9 ga qoldiqsiz bo'linadi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "27, 36, 40, 54"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "9, 18, 24, 36"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "18, 27, 36, 45"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "18, 99, 56, 90"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "18, 27, 36, 45 sonlarining hammasi 9 ga qoldiqsiz bo'linadi. Boshqa qatorlarda 9 ga bo'linmaydigan son bor (40, 24, 56)."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "divlist",
+            "n": 9
+          }
+        },
+        {
+          "section": "logic",
+          "stem": {
+            "uz": "Nima og'ir: yuz kilogramm paxtami yoki yuz kilogramm temirmi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "paxta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "hech biri"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "temir"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "bir xil"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Ikkalasi ham 100 kg, demak og'irligi bir xil."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "compare",
+            "a": [
+              100,
+              "kg"
+            ],
+            "b": [
+              100,
+              "kg"
+            ],
+            "aText": "paxta",
+            "bText": "temir",
+            "eqText": "bir xil"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "12 ta qiz bola, o'g'il bolalar esa qizlardan 3 marta kam sayohatga chiqqan. Hammasi bo'lib qancha bola sayohatga chiqishdi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "16 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "9 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "10 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "12 ta"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "O'g'il bolalar 12 : 3 = 4 ta. Hammasi 12 + 4 = 16 ta."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "12+12/3"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "To'rtta shoxda 7 tadan behi bor. 7 ta behini terib oldilar. Nechta behi qolgan?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "28 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "36 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "15 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "21 ta"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "4 × 7 = 28 ta behi. 28 - 7 = 21 ta."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "4*7-7",
+            "skipStem": true
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "56 metrli arqonning 7 dan bir qismini qirqib olishdi. Necha metr arqon qolgan?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "48"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "21"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "0"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "14"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "56 ning 7 dan biri: 56 : 7 = 8 m. 56 - 8 = 48 m."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "56-56/7"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "O'quvchi 20 ta qizil va 8 ta oq atirgul sotib oldi. Ulardan 13 tasini o'qituvchisiga sovg'a qildi. O'quvchida nechta atirgul qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "28"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "15"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "13"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "18"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "20 + 8 = 28 ta. 28 - 13 = 15 ta."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "expr",
+            "expr": "20+8-13"
+          }
+        },
+        {
+          "section": "logic",
+          "stem": {
+            "uz": "Misollarning javobini kamayish tartibida joylashtiring. Qaysi so'z hosil bo'ladi? U: 7 × 3; L: 13 × 5; M: 25 × 4; A: 26 × 3; I: 9 × 6; B: 24 × 2"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "GENTRA"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "UBILAM"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "MALIBU"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "NOPIHE"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "M = 100, A = 78, L = 65, I = 54, B = 48, U = 21. Kamayish tartibida: MALIBU."
+          },
+          "source": "doc",
+          "check": {
+            "kind": "wordsort",
+            "items": [
+              [
+                "U",
+                "7*3"
+              ],
+              [
+                "L",
+                "13*5"
+              ],
+              [
+                "M",
+                "25*4"
+              ],
+              [
+                "A",
+                "26*3"
+              ],
+              [
+                "I",
+                "9*6"
+              ],
+              [
+                "B",
+                "24*2"
+              ]
+            ],
+            "order": "desc"
+          }
+        }
+      ]
+    },
+    {
+      "variant": 2,
+      "title": {
+        "uz": "2-sinf · Aralash test · 2-variant",
+        "ru": "2 класс · Смешанный тест · Вариант 2",
+        "en": "Grade 2 · Mixed test · Variant 2"
+      },
+      "description": {
+        "uz": "2-sinf o'quvchilari uchun matematika va mantiq testi: sonlar, qo'shish va ayirish, masalalar, ko'paytirish va bo'lish.",
+        "ru": "Тест по математике и логике для 2 класса: числа, сложение и вычитание, задачи, умножение и деление.",
+        "en": "Maths and logic test for Grade 2: numbers, addition and subtraction, word problems, multiplication and division."
+      },
+      "durationMinutes": 40,
+      "passPercent": 60,
+      "difficulty": "easy",
+      "questions": [
+        {
+          "section": "logic",
+          "stem": {
+            "uz": "Qatordagi tushib qolgan sonlarni toping: 35, 36, __, 38, 39, __, 41, 42, __, __, 45, 46, 47, 48"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "38, 41, 44, 45"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "36, 39, 42, 43"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "37, 40, 44, 45"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "37, 40, 43, 44"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Qatorda sonlar har safar 1 ta ortadi. Tushib qolgan sonlar: 37, 40, 43, 44."
+          },
+          "source": "new",
+          "check": {
+            "kind": "seq",
+            "start": 35,
+            "step": 1,
+            "len": 14,
+            "blanks": [
+              2,
+              5,
+              8,
+              9
+            ]
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Sonlar ichidan eng katta bir xonali sonni belgilang."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "9"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "10"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "8"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "99"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Bir xonali sonlarning eng kattasi 9."
+          },
+          "source": "new",
+          "check": {
+            "kind": "extreme",
+            "mode": "max",
+            "digits": 1
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Savatda 6 ta olma va 9 ta nok bor edi. 4 tasini yeb qo'yishdi. Savatda nechta meva qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "15 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "19 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "11 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "7 ta"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "6 + 9 = 15. 15 - 4 = 11."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "6+9-4"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Uchta sonning yig'indisi 77 ga teng. Birinchi son 31, ikkinchi son 32 bo'lsa, uchinchi sonni toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "14"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "46"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "45"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "63"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "31 + 32 = 63. 77 - 63 = 14."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "77-31-32",
+            "skipStem": false
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "89 sonidan oldingi va keyingi sonlarni toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "88, 91"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "88, 90"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "87, 88"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "87, 90"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "89 dan oldin 88, keyin 90 turadi."
+          },
+          "source": "new",
+          "check": {
+            "kind": "neighbors",
+            "n": 89
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "42 sonini 12 ta orttirsak, qancha bo'ladi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "30"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "45"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "54"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "64"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "42 + 12 = 54."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "42+12"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Dilnoza 32 ta gul terdi. Malika undan 6 ta ko'p gul terdi. Malika nechta gul terdi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "26"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "48"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "28"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "38"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Malika ko'p terdi: 32 + 6 = 38."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "32+6"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Ali hozir 8 yoshda. 3 yildan keyin u necha yoshda bo'ladi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "5 yoshda"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "11 yoshda"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "12 yoshda"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "10 yoshda"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "8 + 3 = 11."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "8+3"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "O'ylangan songa 17 ni qo'shishdi, 45 hosil bo'ldi. O'ylangan sonni toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "62"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "28"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "17"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "45"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "O'ylangan son + 17 = 45, demak son = 45 - 17 = 28."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "45-17"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Idishda 3 ta shaftoli va 5 ta behi bor edi. Yana 4 ta anor qo'yishdi. Idishda nechta meva bo'ldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "8 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "12 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "9 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "13 ta"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "3 + 5 + 4 = 12."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "3+5+4"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Birinchi ipning uzunligi 38 m, ikkinchisi undan 11 m qisqa. Ikkala ip uzunligi qancha?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "49 m"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "27 m"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "76 m"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "65 m"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Ikkinchisida 38 - 11 = 27. Ikkalasida 38 + 27 = 65."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "38+(38-11)"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Qo'zichoqning og'irligi 27 kg. Echki undan 9 kg og'ir. Echkining og'irligini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "18 kg"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "37 kg"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "35 kg"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "36 kg"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "27 + 9 = 36 kg."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "27+9"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "9 ta qutining har birida 6 tadan qalam bor. Hammasi bo'lib nechta qalam bor?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "15 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "54 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "63 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "48 ta"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "9 × 6 = 54."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "9*6"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "30 kg kartoshka va 17 kg sabzi olib kelishdi. 27 kg sabzavotni sarflashdi. Necha kilogramm sabzavot qolgan?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "47 kg"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "74 kg"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "20 kg"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "3 kg"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "30 + 17 = 47. 47 - 27 = 20."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "30+17-27"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Bitta qalam 20 so'm turadi. Shunday 3 ta qalam qancha turadi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "23 so'm"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "60 so'm"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "80 so'm"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "40 so'm"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "20 × 3 = 60 so'm."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "20*3"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Javobi 5 ga teng bo'lgan misolni toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "(50-5):9"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "25+8-27"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "22-16+2"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "24:4+1"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "(50-5):9 = 5. Boshqa misollarning javobi 5 emas."
+          },
+          "source": "new",
+          "check": {
+            "kind": "exprs",
+            "target": 5
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "4 ta qalam 20 so'm turadi. 30 so'mga shunday qalamlardan nechta sotib olish mumkin?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "6 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "7 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "5 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "4 ta"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Bittasi 20 : 4 = 5 so'm. 30 : 5 = 6 ta."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "30/(20/4)"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "36 soni 6 dan necha marta katta?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "7 marta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "5 marta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "6 marta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "30 marta"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "36 : 6 = 6 marta."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "36/6"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Qaysi qatordagi sonlar 6 ga qoldiqsiz bo'linadi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "12, 18, 42, 66"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "31, 45, 55, 67"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "22, 43, 49, 67"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "13, 21, 43, 49"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "12 : 6 = 2; 18 : 6 = 3; 42 : 6 = 7; 66 : 6 = 11. Bu qatorda barcha sonlar 6 ga bo'linadi."
+          },
+          "source": "new",
+          "check": {
+            "kind": "divlist",
+            "n": 6
+          }
+        },
+        {
+          "section": "logic",
+          "stem": {
+            "uz": "Qaysi biri og'irroq: 1 kg guruchmi yoki 1000 g unmi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "1 kg guruch"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "bir xil"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "1000 g un"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "aniqlab bo'lmaydi"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "1 kg = 1000 g, ikkalasi baravar og'ir."
+          },
+          "source": "new",
+          "check": {
+            "kind": "compare",
+            "a": [
+              1,
+              "kg"
+            ],
+            "b": [
+              1000,
+              "g"
+            ],
+            "aText": "1 kg guruch",
+            "bText": "1000 g un",
+            "eqText": "bir xil"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Bog'da 35 ta qizil gul bor. Sariq gullar qizil gullardan 5 marta kam. Bog'da hammasi bo'lib nechta gul bor?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "35 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "7 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "28 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "42 ta"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Kam turi: 35 : 5 = 7. Jami 35 + 7 = 42."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "35+35/5"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "3 ta qutida 5 tadan qalam bor. 5 ta qalamni ishlatib bo'lishdi. Nechta qalam qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "20 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "15 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "10 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "11 ta"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "3 × 5 = 15. 15 - 5 = 10."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "3*5-5"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "54 metrli ipning 6 dan bir qismini kesib olishdi. Necha metr ip qolgan?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "9 m"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "54 m"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "63 m"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "45 m"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "54 ning 6 dan biri: 54 : 6 = 9. 54 - 9 = 45."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "54-54/6"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Qizcha 28 ta qizil va 9 ta ko'k munchoq terdi. Ulardan 15 tasini singlisiga berdi. Qizchada nechta munchoq qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "22 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "37 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "52 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "13 ta"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "28 + 9 = 37. 37 - 15 = 22."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "28+9-15"
+          }
+        },
+        {
+          "section": "logic",
+          "stem": {
+            "uz": "Misollarning javobini kamayish tartibida joylashtiring. Qaysi so'z hosil bo'ladi? T: 12 × 5; K: 13 × 6; O: 11 × 5; I: 12 × 6; B: 7 × 6"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "ITOBK"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "BOTIK"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "KITOB"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "IKTOB"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "K = 78, I = 72, T = 60, O = 55, B = 42. Kamayish tartibida: KITOB."
+          },
+          "source": "new",
+          "check": {
+            "kind": "wordsort",
+            "items": [
+              [
+                "K",
+                "13*6"
+              ],
+              [
+                "I",
+                "12*6"
+              ],
+              [
+                "T",
+                "12*5"
+              ],
+              [
+                "O",
+                "11*5"
+              ],
+              [
+                "B",
+                "7*6"
+              ]
+            ],
+            "order": "desc"
+          }
+        }
+      ]
+    },
+    {
+      "variant": 3,
+      "title": {
+        "uz": "2-sinf · Aralash test · 3-variant",
+        "ru": "2 класс · Смешанный тест · Вариант 3",
+        "en": "Grade 2 · Mixed test · Variant 3"
+      },
+      "description": {
+        "uz": "2-sinf o'quvchilari uchun matematika va mantiq testi: sonlar, qo'shish va ayirish, masalalar, ko'paytirish va bo'lish.",
+        "ru": "Тест по математике и логике для 2 класса: числа, сложение и вычитание, задачи, умножение и деление.",
+        "en": "Maths and logic test for Grade 2: numbers, addition and subtraction, word problems, multiplication and division."
+      },
+      "durationMinutes": 40,
+      "passPercent": 60,
+      "difficulty": "easy",
+      "questions": [
+        {
+          "section": "logic",
+          "stem": {
+            "uz": "Sonlar qatorini davom ettirib, bo'sh joylarga mos sonlarni belgilang: 62, 61, __, 59, 58, __, 56, 55, __, __, 52, 51, 50"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "59, 56, 53, 52"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "60, 57, 54, 53"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "61, 58, 55, 54"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "60, 57, 53, 52"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Qatorda sonlar har safar 1 ta kamayadi. Tushib qolgan sonlar: 60, 57, 54, 53."
+          },
+          "source": "new",
+          "check": {
+            "kind": "seq",
+            "start": 62,
+            "step": -1,
+            "len": 13,
+            "blanks": [
+              2,
+              5,
+              8,
+              9
+            ]
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Quyidagi sonlardan eng kichik ikki xonali sonni toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "1"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "10"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "11"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "100"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Ikki xonali sonlar 10 dan boshlanadi. Eng kichigi 10."
+          },
+          "source": "new",
+          "check": {
+            "kind": "extreme",
+            "mode": "min",
+            "digits": 2
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Sinfda 5 ta qiz va 7 ta o'g'il bola bor. 8 nafari uyga ketdi. Sinfda nechta bola qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "12 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "20 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "4 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "10 ta"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "5 + 7 = 12. 12 - 8 = 4."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "5+7-8"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Uchta qutida hammasi bo'lib 65 ta qalam bor. Birinchi qutida 29 ta, ikkinchisida 25 ta qalam bor. Uchinchi qutida nechta qalam bor?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "36"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "40"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "11"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "54"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "29 + 25 = 54. 65 - 54 = 11."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "65-29-25",
+            "skipStem": false
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Qaysi qatorda 64 sonining qo'shni sonlari yozilgan?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "63, 65"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "63, 66"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "62, 65"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "62, 63"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "64 dan oldin 63, keyin 65 turadi."
+          },
+          "source": "new",
+          "check": {
+            "kind": "neighbors",
+            "n": 64
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "62 sonini 15 ta kamaytirsak, qancha bo'ladi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "77"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "74"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "57"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "47"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "62 - 15 = 47."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "62-15"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Anvar 52 ta kitob o'qidi. Bobur undan 12 ta kam kitob o'qidi. Bobur nechta kitob o'qidi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "64"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "50"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "40"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "30"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Bobur kam o'qigan: 52 - 12 = 40."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "52-12"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Madina hozir 10 yoshda. 4 yil oldin u necha yoshda edi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "14 yoshda"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "6 yoshda"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "7 yoshda"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "5 yoshda"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "10 - 4 = 6."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "10-4"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "O'ylangan sondan 27 ni ayirishdi, 69 qoldi. O'ylangan son nechta?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "42"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "27"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "69"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "96"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "O'ylangan son - 27 = 69, demak son = 69 + 27 = 96."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "69+27"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Vazada 6 ta qizil, 7 ta sariq va 4 ta oq lola bor. Vazada hammasi bo'lib nechta lola bor?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "13 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "17 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "11 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "18 ta"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "6 + 7 + 4 = 17."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "6+7+4"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Birinchi idishda 32 l sut bor, ikkinchisida undan 17 l kam. Ikkala idishda necha litr sut bor?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "49 l"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "15 l"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "64 l"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "47 l"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Ikkinchisida 32 - 17 = 15. Ikkalasida 32 + 15 = 47."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "32+(32-17)"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Qovunning massasi 12 kg. Tarvuz undan 4 kg yengil. Tarvuzning massasi qancha?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "16 kg"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "9 kg"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "8 kg"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "7 kg"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "12 - 4 = 8 kg."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "12-4"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Har bir stolda 8 tadan bola o'tiribdi. 9 ta stolda nechta bola o'tiribdi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "72 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "17 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "81 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "64 ta"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "9 × 8 = 72."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "9*8"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Do'konda 22 ta daftar va 35 ta kitob bor edi. 22 tasi sotildi. Do'konda nechta narsa qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "35 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "57 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "79 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "0 ta"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "22 + 35 = 57. 57 - 22 = 35."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "22+35-22"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Bir dona non 25 so'm. 3 dona non necha so'm turadi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "28 so'm"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "100 so'm"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "75 so'm"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "50 so'm"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "25 × 3 = 75 so'm."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "25*3"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Qaysi misolning natijasi 7 bo'ladi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "20+19-35"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "(58-22):4"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "23-21+5"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "42:6+3"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "23-21+5 = 7. Boshqa misollarning javobi 7 emas."
+          },
+          "source": "new",
+          "check": {
+            "kind": "exprs",
+            "target": 7
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "3 ta bulka 15 so'm turadi. 45 so'mga shunday bulkalardan nechta olish mumkin?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "9 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "10 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "8 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "3 ta"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Bittasi 15 : 3 = 5 so'm. 45 : 5 = 9 ta."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "45/(15/3)"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "42 ta olma 7 ta nokdan necha marta ko'p?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "6 marta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "7 marta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "5 marta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "35 marta"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "42 : 7 = 6 marta."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "42/7"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "8 ga bo'lganda qoldiq chiqmaydigan sonlar qatorini belgilang."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "17, 25, 41, 49"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "16, 32, 64, 88"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "18, 25, 33, 57"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "25, 41, 49, 54"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "16 : 8 = 2; 32 : 8 = 4; 64 : 8 = 8; 88 : 8 = 11. Bu qatorda barcha sonlar 8 ga bo'linadi."
+          },
+          "source": "new",
+          "check": {
+            "kind": "divlist",
+            "n": 8
+          }
+        },
+        {
+          "section": "logic",
+          "stem": {
+            "uz": "Qaysi biri uzunroq: 3 m li arqonmi yoki 250 sm li lentami?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "250 sm li lenta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "bir xil"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "aniqlab bo'lmaydi"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "3 m li arqon"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "3 m = 300 sm. 300 sm > 250 sm, arqon uzunroq."
+          },
+          "source": "new",
+          "check": {
+            "kind": "compare",
+            "a": [
+              3,
+              "m"
+            ],
+            "b": [
+              250,
+              "sm"
+            ],
+            "aText": "3 m li arqon",
+            "bText": "250 sm li lenta",
+            "eqText": "bir xil"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Sinfda 30 ta o'g'il bola bor. Qizlar o'g'il bolalardan 5 marta kam. Sinfda hammasi bo'lib nechta bola bor?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "30 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "6 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "24 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "36 ta"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Kam turi: 30 : 5 = 6. Jami 30 + 6 = 36."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "30+30/5"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "4 ta idishning har birida 7 tadan olma bor edi. 8 ta olmani yeb qo'yishdi. Nechta olma qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "36 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "28 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "20 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "21 ta"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "4 × 7 = 28. 28 - 8 = 20."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "4*7-8"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "32 ta olmaning 4 dan bir qismini sotishdi. Nechta olma qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "8 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "32 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "40 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "24 ta"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "32 ning 4 dan biri: 32 : 4 = 8. 32 - 8 = 24."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "32-32/4"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Ali 28 ta qizil va 9 ta yashil qalam sotib oldi. Ulardan 16 tasini do'stiga berdi. Alida nechta qalam qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "37 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "21 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "53 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "12 ta"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "28 + 9 = 37. 37 - 16 = 21."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "28+9-16"
+          }
+        },
+        {
+          "section": "logic",
+          "stem": {
+            "uz": "Misollarning javobini o'sish tartibida joylashtiring. Qaysi so'z hosil bo'ladi? L: 7 × 6; A: 10 × 5; A: 6 × 4; M: 14 × 4; Q: 3 × 4"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "QALAM"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "ALAMQ"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "MALAQ"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "AQLAM"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Q = 12, A = 24, L = 42, A = 50, M = 56. O'sish tartibida: QALAM."
+          },
+          "source": "new",
+          "check": {
+            "kind": "wordsort",
+            "items": [
+              [
+                "Q",
+                "3*4"
+              ],
+              [
+                "A",
+                "6*4"
+              ],
+              [
+                "L",
+                "7*6"
+              ],
+              [
+                "A",
+                "10*5"
+              ],
+              [
+                "M",
+                "14*4"
+              ]
+            ],
+            "order": "asc"
+          }
+        }
+      ]
+    },
+    {
+      "variant": 4,
+      "title": {
+        "uz": "2-sinf · Aralash test · 4-variant",
+        "ru": "2 класс · Смешанный тест · Вариант 4",
+        "en": "Grade 2 · Mixed test · Variant 4"
+      },
+      "description": {
+        "uz": "2-sinf o'quvchilari uchun matematika va mantiq testi: sonlar, qo'shish va ayirish, masalalar, ko'paytirish va bo'lish.",
+        "ru": "Тест по математике и логике для 2 класса: числа, сложение и вычитание, задачи, умножение и деление.",
+        "en": "Maths and logic test for Grade 2: numbers, addition and subtraction, word problems, multiplication and division."
+      },
+      "durationMinutes": 40,
+      "passPercent": 60,
+      "difficulty": "easy",
+      "questions": [
+        {
+          "section": "logic",
+          "stem": {
+            "uz": "Bo'sh joylarga qaysi sonlar mos keladi? 40, 42, __, 46, 48, __, 52, 54, __, __, 60, 62, 64"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "44, 50, 56, 58"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "46, 52, 58, 60"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "42, 48, 54, 56"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "44, 50, 58, 60"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Qatorda sonlar har safar 2 ta ortadi. Tushib qolgan sonlar: 44, 50, 56, 58."
+          },
+          "source": "new",
+          "check": {
+            "kind": "seq",
+            "start": 40,
+            "step": 2,
+            "len": 13,
+            "blanks": [
+              2,
+              5,
+              8,
+              9
+            ]
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Eng katta ikki xonali sonni belgilang."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "100"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "90"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "9"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "99"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Ikki xonali sonlarning eng kattasi 99. 100 uch xonali son."
+          },
+          "source": "new",
+          "check": {
+            "kind": "extreme",
+            "mode": "max",
+            "digits": 2
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Simda 8 ta qaldirg'och va 8 ta chumchuq o'tirgan edi. 3 tasi uchib ketdi. Simda nechta qush qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "13 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "16 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "19 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "3 ta"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "8 + 8 = 16. 16 - 3 = 13."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "8+8-3"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "16 + 34 + ? = 74. Savol belgisi o'rniga qaysi sonni qo'yish kerak?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "24"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "58"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "40"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "50"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "16 + 34 = 50. 74 - 50 = 24."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "74-16-34",
+            "skipStem": false
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "81 dan bir kam va bir ko'p sonlarni belgilang."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "79, 80"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "80, 82"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "79, 82"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "82, 83"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "81 dan oldin 80, keyin 82 turadi."
+          },
+          "source": "new",
+          "check": {
+            "kind": "neighbors",
+            "n": 81
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "42 va 45 sonlarining yig'indisini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "78"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "97"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "88"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "87"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "42 + 45 = 87."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "42+45"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Birinchi savatda 45 ta tuxum bor. Ikkinchi savatda birinchisidan 12 ta ortiq tuxum bor. Ikkinchi savatda nechta tuxum bor?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "33"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "57"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "67"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "47"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "45 + 12 = 57."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "45+12"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Opam hozir 12 yoshda, men esa undan 3 yosh kichikman. Men necha yoshdaman?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "15 yoshda"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "9 yoshda"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "10 yoshda"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "8 yoshda"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "12 - 3 = 9."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "12-3"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "80 dan o'ylangan sonni ayirishdi, 28 hosil bo'ldi. O'ylangan sonni toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "108"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "80"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "52"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "28"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "80 - son = 28, demak son = 80 - 28 = 52."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "80-28"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Qutiga 6 ta qalam, 3 ta ruchka va 5 ta marker solishdi. Qutida nechta buyum bo'ldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "9 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "14 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "8 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "15 ta"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "6 + 3 + 5 = 14."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "6+3+5"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Birinchi qopda 32 kg un bor. Ikkinchi qopda undan 5 kg kam. Ikkala qopda necha kilogramm un bor?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "37 kg"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "27 kg"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "64 kg"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "59 kg"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Ikkinchisida 32 - 5 = 27. Ikkalasida 32 + 27 = 59."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "32+(32-5)"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Karimning vazni 30 kg. Salimning vazni Karimnikidan 5 kg ortiq. Salimning vazni necha kilogramm?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "25 kg"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "36 kg"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "35 kg"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "34 kg"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "30 + 5 = 35 kg."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "30+5"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "5 ta mushukning har biriga 3 tadan baliq berishdi. Hammasi bo'lib nechta baliq berilgan?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "8 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "20 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "12 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "15 ta"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "5 × 3 = 15."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "5*3"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Sinf kutubxonasida 25 ta ertak va 20 ta she'r kitobi bor edi. O'quvchilar 21 ta kitobni olib ketishdi. Kutubxonada nechta kitob qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "45 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "66 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "24 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "4 ta"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "25 + 20 = 45. 45 - 21 = 24."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "25+20-21"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Bitta daftar 15 so'm turadi. 4 ta daftar uchun necha so'm to'lash kerak?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "19 so'm"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "75 so'm"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "45 so'm"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "60 so'm"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "15 × 4 = 60 so'm."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "15*4"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Quyidagi misollardan qaysi birining javobi 4 ga teng?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "36:9+3"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "20+17-29"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "(40-24):4"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "18-16+4"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "(40-24):4 = 4. Boshqa misollarning javobi 4 emas."
+          },
+          "source": "new",
+          "check": {
+            "kind": "exprs",
+            "target": 4
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "6 ta ruchka 36 so'm turadi. 30 so'mga shunday ruchkalardan nechta sotib olsa bo'ladi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "6 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "4 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "15 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "5 ta"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Bittasi 36 : 6 = 6 so'm. 30 : 6 = 5 ta."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "30/(36/6)"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "16 ning ichida 4 ni necha marta olish mumkin?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "4 marta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "5 marta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "3 marta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "12 marta"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "16 : 4 = 4 marta."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "16/4"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "7 ning ko'paytirish jadvalidagi sonlardan iborat qatorni toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "14, 28, 56, 63"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "34, 43, 57, 71"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "15, 43, 50, 78"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "29, 51, 65, 71"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "14 : 7 = 2; 28 : 7 = 4; 56 : 7 = 8; 63 : 7 = 9. Bu qatorda barcha sonlar 7 ga bo'linadi."
+          },
+          "source": "new",
+          "check": {
+            "kind": "divlist",
+            "n": 7
+          }
+        },
+        {
+          "section": "logic",
+          "stem": {
+            "uz": "Qaysi biri uzoqroq davom etadi: 2 soatmi yoki 90 daqiqami?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "90 daqiqa"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "2 soat"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "bir xil"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "aniqlab bo'lmaydi"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "2 soat = 120 daqiqa. 120 > 90, 2 soat uzoqroq."
+          },
+          "source": "new",
+          "check": {
+            "kind": "compare",
+            "a": [
+              2,
+              "soat"
+            ],
+            "b": [
+              90,
+              "daqiqa"
+            ],
+            "aText": "2 soat",
+            "bText": "90 daqiqa",
+            "eqText": "bir xil"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Hovlida 15 ta tovuq bor. O'rdaklar tovuqlardan 3 marta kam. Hovlida jami nechta parranda bor?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "20 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "15 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "5 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "10 ta"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Kam turi: 15 : 3 = 5. Jami 15 + 5 = 20."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "15+15/3"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "4 ta qatorda 7 tadan stul bor. 12 ta stulni olib chiqib ketishdi. Nechta stul qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "40 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "28 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "16 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "17 ta"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "4 × 7 = 28. 28 - 12 = 16."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "4*7-12"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "27 kg unning 3 dan bir qismini ishlatishdi. Necha kilogramm un qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "9 kg"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "27 kg"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "36 kg"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "18 kg"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "27 ning 3 dan biri: 27 : 3 = 9. 27 - 9 = 18."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "27-27/3"
+          }
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Oyim 15 ta non va 9 ta somsa yopdi. Mehmonlar 15 tasini yeyishdi. Nechta non va somsa qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "24 ta"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "39 ta"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "9 ta"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "0 ta"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "15 + 9 = 24. 24 - 15 = 9."
+          },
+          "source": "new",
+          "check": {
+            "kind": "expr",
+            "expr": "15+9-15"
+          }
+        },
+        {
+          "section": "logic",
+          "stem": {
+            "uz": "Misollarning javobini kamayish tartibida joylashtiring. Qaysi so'z hosil bo'ladi? A: 9 × 3; A: 9 × 4; D: 8 × 6; F: 7 × 5; T: 5 × 6; R: 3 × 6"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "AFTARD"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "DAFTAR"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "RATFAD"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "ADFTAR"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "D = 48, A = 36, F = 35, T = 30, A = 27, R = 18. Kamayish tartibida: DAFTAR."
+          },
+          "source": "new",
+          "check": {
+            "kind": "wordsort",
+            "items": [
+              [
+                "D",
+                "8*6"
+              ],
+              [
+                "A",
+                "9*4"
+              ],
+              [
+                "F",
+                "7*5"
+              ],
+              [
+                "T",
+                "5*6"
+              ],
+              [
+                "A",
+                "9*3"
+              ],
+              [
+                "R",
+                "3*6"
+              ]
+            ],
+            "order": "desc"
+          }
+        }
+      ]
+    }
+  ]
+}

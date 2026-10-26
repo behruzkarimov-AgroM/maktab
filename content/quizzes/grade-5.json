@@ -1,0 +1,4529 @@
+{
+  "grade": 5,
+  "notes": [
+    "Word faylda javoblar kaliti yo'q edi: barcha 49 ta savolni biz yechdik. Iltimos, 1- va 2-variantdagi to'g'ri javoblarni maktab o'qituvchisi tekshirib chiqsin.",
+    "Manba faylning 50 ta savolidan № 29 (shakl bo'yicha yuz topish) rasmga bog'liq bo'lgani uchun kiritilmadi. Qolgan 49 tasi ikkiga bo'lindi: 1-variantga № 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 30 (matematika) va № 31, 33, ..., 49 (ingliz tili); 2-variantga № 2, 4, 6, ..., 28 (matematika) va № 32, 34, ..., 50 (ingliz tili). Har variantga 2-3 ta yangi savol qo'shildi (source: new) — jami 27 tadan.",
+    "Javob variantlari harflar tekis taqsimlansin deb aralashtirildi (to'g'ri javob doim bir xil harfda bo'lmasligi uchun); savol matnlari o'zgarmadi.",
+    "№ 4: manbada qavslar muvozanatsiz edi: “3 · (2 · (6x - 2) = 24”. Mo'ljallangan ifoda “3 · (2 · (6x - 2)) = 24” deb olindi, javob x = 1 (variantlarda bor).",
+    "№ 8: ʘ va E belgilari x va y harflariga almashtirildi (25 · x + 1 = 51 va 8 · y + 45 = 53, javob (x + y) : 3 = 1).",
+    "№ 13 (moslashtirish turi, ichki ro'yxatli) oddiy 4 variantli savolga aylantirildi: “Qaysi tenglik to'g'ri?” (17 km = 17000 m to'g'ri; boshqalari: 17 ar = 17 ha, 17 m^2 = 170 dm^2, 17 ar = 170 m^2 noto'g'ri). Manbada “17 00 dm^2” deb yozilgan xato ham bor edi.",
+    "№ 9: natural sonlar 1 dan boshlanadi va cheksiz — to'g'ri javob “1,2,3,...,9…” qatori (0 natural son emas deb olindi).",
+    "№ 10: 1 ar = 1 sotix deb olindi, demak 15 ar = 15 sotix.",
+    "№ 14: ikkita yosh (77 va 79) ham shartga mos keladi, “77 yoki 79” varianti to'g'ri.",
+    "№ 30: variantlar tozalandi: “T.J.Y” -> “To'g'ri javob yo'q”, “(((1/5)))^0” -> “(1/5)^0”. a : b = 1 va (1/5)^0 = 1, demak to'g'ri javob (1/5)^0.",
+    "№ 39: “doesn't” va “can't” ikkalasi ham grammatik jihatdan to'g'ri edi (ikki to'g'ri javob). “doesn't” varianti “don't” ga almashtirildi, to'g'ri javob — “can't”.",
+    "№ 46: C va D variantlari bir xil edi (“dictionaries”). D varianti “dictionary” ga almashtirildi, to'g'ri javob — “dictionaries”.",
+    "№ 48: “leaves” va “is leaving” ikkalasi ham to'g'ri bo'la oladi, “left” ham mumkin edi. Gapga “every morning” qo'shildi, “is leaving” -> “leaving”, “left” -> “leaved” deb o'zgartirildi; to'g'ri javob — “leaves”.",
+    "Kichik tuzatishlar: № 31 “Any” -> “any”; № 41 “I 'm not” -> “I'm not”; № 33 va 35 dagi “\\” belgisi “/” ga almashtirildi; bo'sh joylar “___” bilan belgilandi; kasrlar (1/13) o'rniga 1/13 ko'rinishida; № 26 da “harfiy ifoda” iborasi va ko'paytirish belgisi aniqlashtirildi; № 17 va 30 matnlari o'qiladigan qilib qayta yozildi."
+  ],
+  "variants": [
+    {
+      "variant": 1,
+      "title": {
+        "uz": "5-sinf · Aralash test · 1-variant",
+        "ru": "5 класс · Смешанный тест · Вариант 1",
+        "en": "Grade 5 · Mixed test · Variant 1"
+      },
+      "description": {
+        "uz": "5-sinf uchun matematika va ingliz tili bo'yicha aralash test (27 ta savol).",
+        "ru": "Смешанный тест для 5 класса по математике и английскому языку (27 вопросов).",
+        "en": "A mixed maths and English test for Grade 5 (27 questions)."
+      },
+      "durationMinutes": 45,
+      "passPercent": 60,
+      "difficulty": "medium",
+      "questions": [
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Ifodaning qiymatini toping: 11160 : 6 + 576 : 12 - 199 + 1"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "1800"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "1710"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "1709"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "1740"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "11160 : 6 = 1860; 576 : 12 = 48. 1860 + 48 = 1908; 1908 - 199 = 1709; 1709 + 1 = 1710."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "To'g'ri bajarilgan ifodani toping:"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "87 · 99 = 8623"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "3267 : 33 = 99"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "109 · 107 = 11563"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "1892 : 172 = 21"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "33 × 99 = 3267, demak 3267 : 33 = 99 to'g'ri. Qolganlari: 87 · 99 = 8613; 109 · 107 = 11663; 1892 : 172 = 11."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Ko'paytma necha xonali son? 12345 · 987"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "7"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "8"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "11"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "9"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "12345 · 987 = 12 184 515 — 8 xonali son."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Hisoblang: 7^2 - 6^2 + 5^2 - 4^2"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "22"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "23"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "27"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "21"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "49 - 36 + 25 - 16 = 13 + 9 = 22."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Natural sonlar ketma-ketligi to'g'ri berilgan qatorni toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "1,2,3,4,5,6,7,8,9"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "0,1,2,3,4,5,6,7,8,9,…"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "10,11,12,13,…"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "1,2,3,4,5,6,7,8,9…"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Natural sonlar 1 dan boshlanadi (0 natural son emas) va cheksiz davom etadi."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Jasur kitobning beshdan bir qismini o'qiganidan so'ng, kitobning yana 48 beti qoldi. Kitob necha betli?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "96"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "108"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "60"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "52"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Qolgan qism 4/5. 4/5 = 48 bet, 1/5 = 12 bet, butun kitob 12 × 5 = 60 bet."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Qaysi tenglik to'g'ri?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "17 ar = 17 ha"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "17 km = 17000 m"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "17 m^2 = 170 dm^2"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "17 ar = 170 m^2"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "1 km = 1000 m, demak 17 km = 17000 m. Boshqalari: 17 ar = 1700 m^2; 17 m^2 = 1700 dm^2; 17 ar = 0,17 ha."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "84 ta kitob sotib olindi. Hamma kitobning (3/7) qismi rus tilida, qolgani o'zbek tilida. Nechta o'zbekcha kitob sotib olingan?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "48"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "42"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "49"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "63"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "O'zbekcha kitoblar 4/7 qism: 84 : 7 × 4 = 12 × 4 = 48."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "(1/8) + (1/8) + (1/8) + … + (1/8) (n ta qo'shiluvchi) = 95 bo'lsa, n ning qiymatini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "660"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "560"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "760"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "780"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "n × (1/8) = 95, n = 95 × 8 = 760."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Hisoblang: 11 sm^2 - 1000 mm^2"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "200 mm^2"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "20 mm^2"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "100 mm^2"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "11 mm^2"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "1 sm^2 = 100 mm^2, demak 11 sm^2 = 1100 mm^2. 1100 - 1000 = 100 mm^2."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Oralaridagi masofa 108 km bo'lgan ikki velosipedchi bir vaqtda bir-biriga qarab yo'lga chiqdi va 3 soatdan keyin uchrashishdi. Birinchi velosipedchining tezligi ikkinchisidan 4 km/h ortiq bo'lsa, har bir velosipedchining tezligini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "20 km/h, 16 km/h"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "18 km/h, 14 km/h"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "22 km/h, 18 km/h"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "16 km/h, 12 km/h"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Yaqinlashish tezligi 108 : 3 = 36 km/h. Ikkinchisi (36 - 4) : 2 = 16 km/h, birinchisi 20 km/h."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "(27/11) va (3 · x/121) kasrlar x ning qanday qiymatida teng bo'ladi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "88"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "108"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "81"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "99"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "27/11 = 3x/121 bo'lsa, 3x = 27 · 11 = 297, x = 99."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Hisoblang: (1 - (1/2024)) : (2023/2024) + 2023"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "2023"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "2025"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "2024"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "2026"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "1 - 1/2024 = 2023/2024. (2023/2024) : (2023/2024) = 1. 1 + 2023 = 2024."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "A mulohaza: “Har qanday juft son 6 ga qoldiqsiz bo'linadi”, B mulohaza: “Har qanday 6 ga qoldiqsiz bo'linadigan son juft son bo'ladi”. Ushbu mulohazalar asosida to'g'ri javobni toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "A rost va B yolg'on"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "A yolg'on va B yolg'on"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "A yolg'on va B rost"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "A rost va B rost"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "A yolg'on: 4 juft, lekin 6 ga bo'linmaydi. B rost: 6 ga bo'linadigan har bir son 2 ga ham bo'linadi."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Agar a = (666/222) + (444/111) - (55/11) va b = (999/333) + (333/111) - (44/11) bo'lsa, a : b = ?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "(1/5)^0"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "22/23"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "10"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "To'g'ri javob yo'q"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "a = 3 + 4 - 5 = 2; b = 3 + 3 - 4 = 2. a : b = 1. (1/5)^0 = 1 (har qanday noldan farqli sonning 0-darajasi 1 ga teng)."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Hisoblang: 2^5 + sqrt(49) - 3 × 4"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "39"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "23"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "27"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "5"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "2^5 = 32; sqrt(49) = 7; 3 × 4 = 12. 32 + 7 - 12 = 27."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "“Are you Canadian?” “No, but I have ___ good friends in Canada.”",
+            "ru": "“Are you Canadian?” “No, but I have ___ good friends in Canada.”",
+            "en": "“Are you Canadian?” “No, but I have ___ good friends in Canada.”"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "any",
+                "ru": "any",
+                "en": "any"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "a",
+                "ru": "a",
+                "en": "a"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "an",
+                "ru": "an",
+                "en": "an"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "some",
+                "ru": "some",
+                "en": "some"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Darak gapda ko'plikdagi sanaladigan otlar oldidan “some” ishlatiladi."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "There are ___ sandwiches, but there ___ any chips.",
+            "ru": "There are ___ sandwiches, but there ___ any chips.",
+            "en": "There are ___ sandwiches, but there ___ any chips."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "some / aren't",
+                "ru": "some / aren't",
+                "en": "some / aren't"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "some / are",
+                "ru": "some / are",
+                "en": "some / are"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "any / aren't",
+                "ru": "any / aren't",
+                "en": "any / aren't"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "any / are",
+                "ru": "any / are",
+                "en": "any / are"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Darak gapda “some sandwiches”, inkor gapda “aren't any chips”."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "___ your father ___ at the Medical College? – Yes, he does.",
+            "ru": "___ your father ___ at the Medical College? – Yes, he does.",
+            "en": "___ your father ___ at the Medical College? – Yes, he does."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "Do / work",
+                "ru": "Do / work",
+                "en": "Do / work"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "Does / works",
+                "ru": "Does / works",
+                "en": "Does / works"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "Do / works",
+                "ru": "Do / works",
+                "en": "Do / works"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "Does / work",
+                "ru": "Does / work",
+                "en": "Does / work"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "He/she/it bilan savolda “Does” ishlatiladi, fe'l esa asosiy shaklda: Does your father work...?"
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "Nick ___ yesterday.",
+            "ru": "Nick ___ yesterday.",
+            "en": "Nick ___ yesterday."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "will not come",
+                "ru": "will not come",
+                "en": "will not come"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "did not come",
+                "ru": "did not come",
+                "en": "did not come"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "did not came",
+                "ru": "did not came",
+                "en": "did not came"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "comes",
+                "ru": "comes",
+                "en": "comes"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "“Yesterday” — o'tgan zamon; did not dan keyin fe'l asosiy shaklda: did not come."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "John ___ play the guitar. He can play the piano.",
+            "ru": "John ___ play the guitar. He can play the piano.",
+            "en": "John ___ play the guitar. He can play the piano."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "can",
+                "ru": "can",
+                "en": "can"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "can't",
+                "ru": "can't",
+                "en": "can't"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "does",
+                "ru": "does",
+                "en": "does"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "don't",
+                "ru": "don't",
+                "en": "don't"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Ikkinchi gap “U pianino chala oladi” deydi, demak gitara chala olmaydi: John can't play."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "Are you a worker? No, ___.",
+            "ru": "Are you a worker? No, ___.",
+            "en": "Are you a worker? No, ___."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "I am",
+                "ru": "I am",
+                "en": "I am"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "you aren't",
+                "ru": "you aren't",
+                "en": "you aren't"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "I amn't",
+                "ru": "I amn't",
+                "en": "I amn't"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "I'm not",
+                "ru": "I'm not",
+                "en": "I'm not"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Inkor javob: No, I'm not. “Amn't” shakli ishlatilmaydi."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "It often rains ___ spring.",
+            "ru": "It often rains ___ spring.",
+            "en": "It often rains ___ spring."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "on",
+                "ru": "on",
+                "en": "on"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "at",
+                "ru": "at",
+                "en": "at"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "in",
+                "ru": "in",
+                "en": "in"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "-",
+                "ru": "-",
+                "en": "-"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Fasllar bilan “in” ishlatiladi: in spring."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "Is ___ his bag on the table? Yes, it is.",
+            "ru": "Is ___ his bag on the table? Yes, it is.",
+            "en": "Is ___ his bag on the table? Yes, it is."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "that",
+                "ru": "that",
+                "en": "that"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "these",
+                "ru": "these",
+                "en": "these"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "the",
+                "ru": "the",
+                "en": "the"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "those",
+                "ru": "those",
+                "en": "those"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Birlikdagi uzoqdagi narsaga “that” ishlatiladi: Is that his bag...?"
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "The mixture looks rather dry. Maybe you should add ___ water.",
+            "ru": "The mixture looks rather dry. Maybe you should add ___ water.",
+            "en": "The mixture looks rather dry. Maybe you should add ___ water."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "a little",
+                "ru": "a little",
+                "en": "a little"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "a",
+                "ru": "a",
+                "en": "a"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "a lot",
+                "ru": "a lot",
+                "en": "a lot"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "many",
+                "ru": "many",
+                "en": "many"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Water sanalmaydi: “a little water” (ozgina suv). “Many” va “a” mos kelmaydi."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "We do not go to school ___ Sunday.",
+            "ru": "We do not go to school ___ Sunday.",
+            "en": "We do not go to school ___ Sunday."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "in",
+                "ru": "in",
+                "en": "in"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "at",
+                "ru": "at",
+                "en": "at"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "to",
+                "ru": "to",
+                "en": "to"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "on",
+                "ru": "on",
+                "en": "on"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Hafta kunlari bilan “on” ishlatiladi: on Sunday."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "___ is your teacher from? – From Tashkent.",
+            "ru": "___ is your teacher from? – From Tashkent.",
+            "en": "___ is your teacher from? – From Tashkent."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "When",
+                "ru": "When",
+                "en": "When"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "Where",
+                "ru": "Where",
+                "en": "Where"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "Who",
+                "ru": "Who",
+                "en": "Who"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "Why",
+                "ru": "Why",
+                "en": "Why"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Qayerdan ekanligini so'rash uchun “Where” ishlatiladi."
+          },
+          "source": "new"
+        }
+      ]
+    },
+    {
+      "variant": 2,
+      "title": {
+        "uz": "5-sinf · Aralash test · 2-variant",
+        "ru": "5 класс · Смешанный тест · Вариант 2",
+        "en": "Grade 5 · Mixed test · Variant 2"
+      },
+      "description": {
+        "uz": "5-sinf uchun matematika va ingliz tili bo'yicha aralash test (27 ta savol).",
+        "ru": "Смешанный тест для 5 класса по математике и английскому языку (27 вопросов).",
+        "en": "A mixed maths and English test for Grade 5 (27 questions)."
+      },
+      "durationMinutes": 45,
+      "passPercent": 60,
+      "difficulty": "medium",
+      "questions": [
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Yuzi 289 dm^2 ga teng bo'lgan kvadratning perimetrini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "68 sm"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "17 dm"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "68 dm"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "34 dm"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Kvadrat tomoni 17 dm (17 × 17 = 289). Perimetr = 4 × 17 = 68 dm."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Tenglamani yeching: 3 · (2 · (6x - 2)) = 24"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "1"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "9"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "7"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "17"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Ikkala tomonni 3 ga bo'lamiz: 2 · (6x - 2) = 8, so'ng 2 ga: 6x - 2 = 4, 6x = 6, x = 1."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Yig'indini hisoblang: (6/13) + (12/26) + (2/26)"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "13"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "1"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "1/13"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "1/26"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "6/13 = 12/26. 12/26 + 12/26 + 2/26 = 26/26 = 1."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "25 · x + 1 = 51 va 8 · y + 45 = 53 bo'lsa, (x + y) : 3 ni toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "0"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "2"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "1"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "3"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "25x = 50, x = 2; 8y = 8, y = 1. (2 + 1) : 3 = 1."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "15 ar necha sotixga teng?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "1500"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "15"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "15000"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "150"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "1 ar = 1 sotix (100 m^2). Demak 15 ar = 15 sotix."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Tenglamani yeching: 2025 + (3x/2) = 4048 + (x/2)"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "2023"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "2024"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "2025"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "1/2024"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "3x/2 - x/2 = 4048 - 2025, ya'ni x = 2023."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Uchta nevara buvisidan uning yoshi haqida so'radi. Buvi esa “O'zlaring topib ko'ringlar-chi?!” – deb javob berdi. Shundan keyin nevaralar quyidagicha o'z fikrlarini aytishdi: “Sizning yoshingiz 75 da”, “Sizning yoshingiz 78 da”, “Sizning yoshingiz 81 da”. Nevaralarning aytganlaridan bittasi 1 yilga, boshqasi 2 yilga, yana boshqasi 4 yilga adashdi. Buvining yoshi nechada bo'lishi mumkin?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "77 yoki 80"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "79 yoki 80"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "79 yoki 82"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "77 yoki 79"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "77 bo'lsa xatolar 2, 1, 4 — mos. 79 bo'lsa xatolar 4, 1, 2 — mos. Boshqa yosh mos kelmaydi."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "O'lchamlari 5 sm, 6 sm, 7 sm bo'lgan to'g'ri burchakli parallelepiped hajmini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "120 sm^3"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "210 sm^2"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "240 sm^3"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "210 sm^3"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Hajm = 5 × 6 × 7 = 210 sm^3."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Hisoblang: ((202)^2 - 54^2 + 256 · 352) : (4^4 · 10^2)"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "4"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "1"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "10"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "5"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "202^2 = 40804; 54^2 = 2916; 256 · 352 = 90112. Surat: 40804 - 2916 + 90112 = 128000. Maxraj: 256 · 100 = 25600. 128000 : 25600 = 5."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Yig'indini hisoblang: (1/(1 - (1/2))) + (1/(1 - (1/2)))"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "2"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "4"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "3"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "1"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "1 - 1/2 = 1/2, 1 : (1/2) = 2. 2 + 2 = 4."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Agar 4a + 5d - 2c = 2024 bo'lsa, (a + 4d - 2c + 1) + (d + 3a) = ?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "2023"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "2025"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "2024"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "2027"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Qavslarni ochib o'xshashlarini jamlaymiz: 4a + 5d - 2c + 1 = 2024 + 1 = 2025."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Ifodaning qiymatini toping: ((12/17) + (1/19) + (32/43)) + ((18/19) + (5/17) + (11/43))"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "973/323"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "3"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "897/323"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "1236/817"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Bir xil maxrajlilarni juftlaymiz: 12/17 + 5/17 = 1; 1/19 + 18/19 = 1; 32/43 + 11/43 = 1. Jami 3."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Agar x = 7 bo'lsa, ifodaning qiymatini toping: 3 · (47 - x) + 29 - 38 + x - 80 + x"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "45"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "57"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "83"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "59"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "3 · 40 = 120. 120 + 29 - 38 + 7 - 80 + 7 = 45."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Anora, Salim, Javlon va Aziz yaqin do'st. Anora Salimdan 3 yosh va Javlondan esa 6 yosh katta. Aziz esa 36 yosh va u Javlondan 3 yosh katta bo'lsa, to'rtta do'stning yoshlari yig'indisini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "124"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "152"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "144"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "156"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Javlon 36 - 3 = 33; Anora 33 + 6 = 39; Salim 39 - 3 = 36; Aziz 36. Yig'indi: 33 + 39 + 36 + 36 = 144."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Hisoblang: 3 2/7 + 1 4/7"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "4 4/7"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "5 6/7"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "4 6/7"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "4 6/14"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Butun qismlar: 3 + 1 = 4. Kasr qismlar: 2/7 + 4/7 = 6/7. Javob: 4 6/7."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Eni 8 sm, bo'yi 15 sm bo'lgan to'g'ri to'rtburchakning yuzini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "120 sm^2"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "46 sm^2"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "120 sm"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "60 sm^2"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Yuz = eni × bo'yi = 8 × 15 = 120 sm^2."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "___ rice is there?",
+            "ru": "___ rice is there?",
+            "en": "___ rice is there?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "How much",
+                "ru": "How much",
+                "en": "How much"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "How many",
+                "ru": "How many",
+                "en": "How many"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "How long",
+                "ru": "How long",
+                "en": "How long"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "How",
+                "ru": "How",
+                "en": "How"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Rice sanalmaydigan ot, shuning uchun “How much” ishlatiladi."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "They ___ oranges, they are pineapples.",
+            "ru": "They ___ oranges, they are pineapples.",
+            "en": "They ___ oranges, they are pineapples."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "haven't",
+                "ru": "haven't",
+                "en": "haven't"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "don't",
+                "ru": "don't",
+                "en": "don't"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "are",
+                "ru": "are",
+                "en": "are"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "aren't",
+                "ru": "aren't",
+                "en": "aren't"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "“They are pineapples” — ular apelsin emas: “They aren't oranges”."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "I ___ know this person.",
+            "ru": "I ___ know this person.",
+            "en": "I ___ know this person."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "doesn't",
+                "ru": "doesn't",
+                "en": "doesn't"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "didn't",
+                "ru": "didn't",
+                "en": "didn't"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "don't",
+                "ru": "don't",
+                "en": "don't"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "am not",
+                "ru": "am not",
+                "en": "am not"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "“I” bilan Present Simple inkori: I don't know."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "There are a few ___ in the forest.",
+            "ru": "There are a few ___ in the forest.",
+            "en": "There are a few ___ in the forest."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "deers",
+                "ru": "deers",
+                "en": "deers"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "deeres",
+                "ru": "deeres",
+                "en": "deeres"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "a deer",
+                "ru": "a deer",
+                "en": "a deer"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "deer",
+                "ru": "deer",
+                "en": "deer"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "“Deer” ko'plikda ham o'zgarmaydi; “a few” ko'plik ot bilan keladi."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "She ___ dishes every day.",
+            "ru": "She ___ dishes every day.",
+            "en": "She ___ dishes every day."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "washes",
+                "ru": "washes",
+                "en": "washes"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "wash",
+                "ru": "wash",
+                "en": "wash"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "washs",
+                "ru": "washs",
+                "en": "washs"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "washing",
+                "ru": "washing",
+                "en": "washing"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "She bilan Present Simple: fe'lga -es qo'shiladi (wash -> washes)."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "– Do you like swimming? – Yes, I ___.",
+            "ru": "– Do you like swimming? – Yes, I ___.",
+            "en": "– Do you like swimming? – Yes, I ___."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "likes",
+                "ru": "likes",
+                "en": "likes"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "do",
+                "ru": "do",
+                "en": "do"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "am",
+                "ru": "am",
+                "en": "am"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "does",
+                "ru": "does",
+                "en": "does"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Do bilan berilgan savolga qisqa javob: Yes, I do."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "___ old is your mother?",
+            "ru": "___ old is your mother?",
+            "en": "___ old is your mother?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "What",
+                "ru": "What",
+                "en": "What"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "How",
+                "ru": "How",
+                "en": "How"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "Where",
+                "ru": "Where",
+                "en": "Where"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "Why",
+                "ru": "Why",
+                "en": "Why"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Yoshni so'rash: How old...?"
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "Do you have any ___? No, I don't.",
+            "ru": "Do you have any ___? No, I don't.",
+            "en": "Do you have any ___? No, I don't."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "a dictionary",
+                "ru": "a dictionary",
+                "en": "a dictionary"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "dictionarys",
+                "ru": "dictionarys",
+                "en": "dictionarys"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "dictionaries",
+                "ru": "dictionaries",
+                "en": "dictionaries"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "dictionary",
+                "ru": "dictionary",
+                "en": "dictionary"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "“Any” dan keyin ko'plik ot keladi; dictionary -> dictionaries (y -> ies)."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "My plane ___ at 5:30 every morning.",
+            "ru": "My plane ___ at 5:30 every morning.",
+            "en": "My plane ___ at 5:30 every morning."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "leaves",
+                "ru": "leaves",
+                "en": "leaves"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "leaving",
+                "ru": "leaving",
+                "en": "leaving"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "leave",
+                "ru": "leave",
+                "en": "leave"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "leaved",
+                "ru": "leaved",
+                "en": "leaved"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "“Plane” birlik (it) va takrorlanuvchi ish: Present Simple -s bilan — leaves."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "These shoes are ___.",
+            "ru": "These shoes are ___.",
+            "en": "These shoes are ___."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "my",
+                "ru": "my",
+                "en": "my"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "I",
+                "ru": "I",
+                "en": "I"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "me",
+                "ru": "me",
+                "en": "me"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "mine",
+                "ru": "mine",
+                "en": "mine"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Egalik olmoshi (mustaqil shakl): These shoes are mine."
+          },
+          "source": "doc"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "He ___ got a computer.",
+            "ru": "He ___ got a computer.",
+            "en": "He ___ got a computer."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "haven't",
+                "ru": "haven't",
+                "en": "haven't"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "doesn't",
+                "ru": "doesn't",
+                "en": "doesn't"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "hasn't",
+                "ru": "hasn't",
+                "en": "hasn't"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "don't",
+                "ru": "don't",
+                "en": "don't"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "He bilan have got inkori: hasn't got."
+          },
+          "source": "new"
+        }
+      ]
+    },
+    {
+      "variant": 3,
+      "title": {
+        "uz": "5-sinf · Aralash test · 3-variant",
+        "ru": "5 класс · Смешанный тест · Вариант 3",
+        "en": "Grade 5 · Mixed test · Variant 3"
+      },
+      "description": {
+        "uz": "5-sinf uchun matematika va ingliz tili bo'yicha aralash test (27 ta savol).",
+        "ru": "Смешанный тест для 5 класса по математике и английскому языку (27 вопросов).",
+        "en": "A mixed maths and English test for Grade 5 (27 questions)."
+      },
+      "durationMinutes": 45,
+      "passPercent": 60,
+      "difficulty": "medium",
+      "questions": [
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Ifodaning qiymatini toping: 7200 : 8 + 432 : 12 - 150 + 3"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "789"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "786"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "1089"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "799"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "7200 : 8 = 900; 432 : 12 = 36. 900 + 36 = 936; 936 - 150 = 786; 786 + 3 = 789."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Yuzi 196 dm^2 ga teng bo'lgan kvadratning perimetrini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "14 dm"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "28 dm"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "56 sm"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "56 dm"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Kvadrat tomoni 14 dm (14 × 14 = 196). Perimetr = 4 × 14 = 56 dm."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Quyidagi tengliklardan qaysi biri to'g'ri bajarilgan?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "46 · 98 = 4508"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "64 · 25 = 1650"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "2415 : 15 = 171"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "123 · 101 = 12333"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "46 × 98 = 46 × 100 - 46 × 2 = 4600 - 92 = 4508. Qolganlari: 64 · 25 = 1600; 2415 : 15 = 161; 123 · 101 = 12423."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Tenglamani yeching: 4 · (3x - 2) = 40"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "3"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "5"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "12"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "4"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Ikkala tomonni 4 ga bo'lamiz: 3x - 2 = 10, 3x = 12, x = 4."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Ko'paytma necha xonali son? 4321 · 765"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "5"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "6"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "8"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "7"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "4321 · 765 = 3305565 — 7 xonali son."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Yig'indini hisoblang: (5/14) + (3/7) + (1/14)"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "9/35"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "6/7"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "5/7"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "9/14"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "3/7 = 6/14. 5/14 + 6/14 + 1/14 = 12/14 = 6/7."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Hisoblang: 9^2 - 8^2 + 7^2 - 6^2"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "28"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "32"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "36"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "30"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "81 - 64 + 49 - 36 = 17 + 13 = 30."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "12 · x + 3 = 51 va 7 · y + 20 = 48 bo'lsa, (x + y) : 2 ni toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "4"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "3"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "5"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "8"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "12x = 48, x = 4; 7y = 28, y = 4. (4 + 4) : 2 = 4."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "30 ar necha m^2 ga teng?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "300 m^2"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "3000 m^2"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "30000 m^2"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "30 m^2"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "1 ar = 100 m^2. 30 ar = 30 × 100 = 3000 m^2."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Madina kitobning (1/4) qismini o'qiganidan so'ng, kitobning yana 36 beti qoldi. Kitob necha betli?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "45"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "144"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "48"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "40"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Qolgan qism 3/4. 3/4 = 36 bet, 1/4 = 12 bet, butun kitob 12 × 4 = 48 bet."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Tenglamani yeching: 100 + (5x/3) = 130 + (2x/3)"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "10"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "90"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "130"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "30"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "5x/3 - 2x/3 = 130 - 100, ya'ni 3x/3 = x = 30."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "O'lchamlari 4 sm, 5 sm, 9 sm bo'lgan to'g'ri burchakli parallelepiped hajmini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "180 sm^2"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "90 sm^3"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "180 sm^3"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "36 sm^3"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Hajm = 4 × 5 × 9 = 180 sm^3."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "(18/24) kasrni qisqartiring."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "2/3"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "1/3"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "3/4"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "6/7"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Surat va maxrajni 6 ga bo'lamiz: 18/24 = 3/4."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Do'konda 63 ta daftar bor edi. Ularning (4/9) qismi sotildi. Nechta daftar qoldi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "28"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "45"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "35"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "7"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Qolgan qism 5/9. 63 : 9 × 5 = 7 × 5 = 35."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Oralaridagi masofa 120 km bo'lgan ikki mototsiklchi bir vaqtda bir-biriga qarab yo'lga chiqdi va 2 soatdan keyin uchrashishdi. Birinchisining tezligi ikkinchisidan 10 km/h ortiq bo'lsa, ularning tezliklarini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "40 km/h, 30 km/h"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "30 km/h, 20 km/h"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "35 km/h, 25 km/h"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "45 km/h, 15 km/h"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Yaqinlashish tezligi 120 : 2 = 60 km/h. Ikkinchisi (60 - 10) : 2 = 25 km/h, birinchisi 35 km/h."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Ketma-ket uchta natural sonning yig'indisi 48 ga teng. Shu sonlarning eng kichigini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "15"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "14"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "16"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "17"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Sonlar n, n + 1, n + 2: 3n + 3 = 48, n = 15 (15 + 16 + 17 = 48)."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "My sister ___ a doctor.",
+            "ru": "My sister ___ a doctor.",
+            "en": "My sister ___ a doctor."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "are",
+                "ru": "are",
+                "en": "are"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "am",
+                "ru": "am",
+                "en": "am"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "is",
+                "ru": "is",
+                "en": "is"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "be",
+                "ru": "be",
+                "en": "be"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "She (my sister) bilan “to be” ning shakli — is."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "We ___ football on Saturdays.",
+            "ru": "We ___ football on Saturdays.",
+            "en": "We ___ football on Saturdays."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "play",
+                "ru": "play",
+                "en": "play"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "plays",
+                "ru": "plays",
+                "en": "plays"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "playing",
+                "ru": "playing",
+                "en": "playing"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "to play",
+                "ru": "to play",
+                "en": "to play"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "We bilan Present Simple: fe'l asosiy shaklda — play."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "Look! The children ___ in the garden.",
+            "ru": "Look! The children ___ in the garden.",
+            "en": "Look! The children ___ in the garden."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "play",
+                "ru": "play",
+                "en": "play"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "are playing",
+                "ru": "are playing",
+                "en": "are playing"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "plays",
+                "ru": "plays",
+                "en": "plays"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "is playing",
+                "ru": "is playing",
+                "en": "is playing"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "“Look!” — hozir bo'layotgan ish (Present Continuous). Children ko'plik: are playing."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "I have ___ umbrella in my bag.",
+            "ru": "I have ___ umbrella in my bag.",
+            "en": "I have ___ umbrella in my bag."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "an",
+                "ru": "an",
+                "en": "an"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "a",
+                "ru": "a",
+                "en": "a"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "two",
+                "ru": "two",
+                "en": "two"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "these",
+                "ru": "these",
+                "en": "these"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "“Umbrella” unli tovush bilan boshlanadi, shuning uchun “an umbrella”."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "There ___ some milk in the fridge.",
+            "ru": "There ___ some milk in the fridge.",
+            "en": "There ___ some milk in the fridge."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "are",
+                "ru": "are",
+                "en": "are"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "is",
+                "ru": "is",
+                "en": "is"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "am",
+                "ru": "am",
+                "en": "am"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "be",
+                "ru": "be",
+                "en": "be"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Milk sanalmaydigan ot, “there is” ishlatiladi."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "The book is ___ the table.",
+            "ru": "The book is ___ the table.",
+            "en": "The book is ___ the table."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "in",
+                "ru": "in",
+                "en": "in"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "at",
+                "ru": "at",
+                "en": "at"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "on",
+                "ru": "on",
+                "en": "on"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "of",
+                "ru": "of",
+                "en": "of"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Stol ustida: on the table."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "Tom has a blue bike. The blue bike is ___.",
+            "ru": "Tom has a blue bike. The blue bike is ___.",
+            "en": "Tom has a blue bike. The blue bike is ___."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "he",
+                "ru": "he",
+                "en": "he"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "his",
+                "ru": "his",
+                "en": "his"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "him",
+                "ru": "him",
+                "en": "him"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "he's",
+                "ru": "he's",
+                "en": "he's"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Tom (erkak) — egalik olmoshi “his” (uniki)."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "___ do you go to school? – By bus.",
+            "ru": "___ do you go to school? – By bus.",
+            "en": "___ do you go to school? – By bus."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "What",
+                "ru": "What",
+                "en": "What"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "How",
+                "ru": "How",
+                "en": "How"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "Who",
+                "ru": "Who",
+                "en": "Who"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "Where",
+                "ru": "Where",
+                "en": "Where"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Qanday qatnashni so'rash: How do you go...? (By bus — avtobusda)."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "I haven't got ___ money.",
+            "ru": "I haven't got ___ money.",
+            "en": "I haven't got ___ money."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "any",
+                "ru": "any",
+                "en": "any"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "some",
+                "ru": "some",
+                "en": "some"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "a",
+                "ru": "a",
+                "en": "a"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "many",
+                "ru": "many",
+                "en": "many"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Inkor gapda sanalmaydigan ot bilan “any” ishlatiladi."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "There are two ___ in the box.",
+            "ru": "There are two ___ in the box.",
+            "en": "There are two ___ in the box."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "knifes",
+                "ru": "knifes",
+                "en": "knifes"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "knives",
+                "ru": "knives",
+                "en": "knives"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "knife",
+                "ru": "knife",
+                "en": "knife"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "knive",
+                "ru": "knive",
+                "en": "knive"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Knife -> knives (-fe -> -ves)."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "How ___ students are there in your class?",
+            "ru": "How ___ students are there in your class?",
+            "en": "How ___ students are there in your class?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "much",
+                "ru": "much",
+                "en": "much"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "a lot",
+                "ru": "a lot",
+                "en": "a lot"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "little",
+                "ru": "little",
+                "en": "little"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "many",
+                "ru": "many",
+                "en": "many"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Students sanaladigan ot, shuning uchun “How many”."
+          },
+          "source": "new"
+        }
+      ]
+    },
+    {
+      "variant": 4,
+      "title": {
+        "uz": "5-sinf · Aralash test · 4-variant",
+        "ru": "5 класс · Смешанный тест · Вариант 4",
+        "en": "Grade 5 · Mixed test · Variant 4"
+      },
+      "description": {
+        "uz": "5-sinf uchun matematika va ingliz tili bo'yicha aralash test (27 ta savol).",
+        "ru": "Смешанный тест для 5 класса по математике и английскому языку (27 вопросов).",
+        "en": "A mixed maths and English test for Grade 5 (27 questions)."
+      },
+      "durationMinutes": 45,
+      "passPercent": 60,
+      "difficulty": "medium",
+      "questions": [
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Ifodaning qiymatini toping: 4800 : 6 + 392 : 14 - 125 + 5"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "708"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "703"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "958"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "718"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "4800 : 6 = 800; 392 : 14 = 28. 800 + 28 = 828; 828 - 125 = 703; 703 + 5 = 708."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Perimetri 52 sm bo'lgan kvadratning yuzini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "52 sm^2"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "169 sm^2"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "26 sm^2"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "169 sm"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Kvadrat tomoni 52 : 4 = 13 sm. Yuz = 13 × 13 = 169 sm^2."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Qaysi amal natijasi to'g'ri yozilgan?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "75 · 12 = 950"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "2924 : 34 = 84"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "38 · 99 = 3762"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "205 · 31 = 6455"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "38 × 99 = 3800 - 38 = 3762. Qolganlari: 75 · 12 = 900; 2924 : 34 = 86; 205 · 31 = 6355."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Tenglamani yeching: 5 · (2x + 3) = 65"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "4"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "5"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "6"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "10"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Ikkala tomonni 5 ga bo'lamiz: 2x + 3 = 13, 2x = 10, x = 5."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Ko'paytma necha xonali son? 98765 · 4321"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "7"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "8"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "10"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "9"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "98765 · 4321 = 426763565 — 9 xonali son."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Yig'indini hisoblang: (7/18) + (5/9) + (1/18)"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "13/45"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "1"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "17/18"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "1/18"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "5/9 = 10/18. 7/18 + 10/18 + 1/18 = 18/18 = 1."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Hisoblang: 10^2 - 9^2 + 8^2 - 7^2"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "32"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "34"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "36"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "38"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "100 - 81 + 64 - 49 = 19 + 15 = 34."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "15 · x + 5 = 65 va 9 · y + 18 = 72 bo'lsa, (x + y) : 5 ni toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "1"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "3"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "10"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "2"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "15x = 60, x = 4; 9y = 54, y = 6. (4 + 6) : 5 = 2."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "6 gektar necha ar ga teng?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "60 ar"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "600 ar"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "6000 ar"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "6 ar"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "1 gektar = 100 ar. 6 gektar = 6 × 100 = 600 ar."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Sardor pulining (2/5) qismini sarfladi, yana 45000 so'm qoldi. Dastlab necha so'm pul bor edi?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "18000"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "75000"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "112500"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "60000"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Qolgan qism 3/5. 3/5 = 45000 so'm, 1/5 = 15000, hammasi 15000 × 5 = 75000 so'm."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Tenglamani yeching: (7x/4) + 12 = (3x/4) + 40"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "24"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "40"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "112"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "28"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "7x/4 - 3x/4 = 40 - 12, ya'ni 4x/4 = x = 28."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Uzunligi 12 m, eni 7 m bo'lgan to'g'ri to'rtburchakning perimetrini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "38 m"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "84 m"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "19 m"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "38 m^2"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Perimetr = 2 × (12 + 7) = 2 × 19 = 38 m."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Aralash sonni noto'g'ri kasrga aylantiring: 2 3/5"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "13/5"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "6/5"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "11/5"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "17/5"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "2 3/5 = (2 × 5 + 3)/5 = 13/5."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "72 ta olma bor. Ularning (5/8) qismi qizil, qolgani yashil. Nechta yashil olma bor?"
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "45"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "40"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "27"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "9"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Yashil olmalar 3/8 qism: 72 : 8 × 3 = 9 × 3 = 27."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Oralaridagi masofa 90 km bo'lgan ikki skuterchi bir vaqtda bir-biriga qarab yo'lga chiqdi va 3 soatdan keyin uchrashishdi. Birinchisining tezligi ikkinchisidan 6 km/h ortiq bo'lsa, ularning tezliklarini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "18 km/h, 12 km/h"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "20 km/h, 14 km/h"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "21 km/h, 9 km/h"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "16 km/h, 10 km/h"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Yaqinlashish tezligi 90 : 3 = 30 km/h. Ikkinchisi (30 - 6) : 2 = 12 km/h, birinchisi 18 km/h."
+          },
+          "source": "new"
+        },
+        {
+          "section": "math",
+          "stem": {
+            "uz": "Ketma-ket uchta natural sonning yig'indisi 63 ga teng. Shu sonlarning eng kichigini toping."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "19"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "21"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "22"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "20"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Sonlar n, n + 1, n + 2: 3n + 3 = 63, n = 20 (20 + 21 + 22 = 63)."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "My brothers ___ at school now.",
+            "ru": "My brothers ___ at school now.",
+            "en": "My brothers ___ at school now."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "is",
+                "ru": "is",
+                "en": "is"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "am",
+                "ru": "am",
+                "en": "am"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "are",
+                "ru": "are",
+                "en": "are"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "be",
+                "ru": "be",
+                "en": "be"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Brothers ko'plik: are."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "Tom ___ breakfast at 7 o'clock.",
+            "ru": "Tom ___ breakfast at 7 o'clock.",
+            "en": "Tom ___ breakfast at 7 o'clock."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "has",
+                "ru": "has",
+                "en": "has"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "have",
+                "ru": "have",
+                "en": "have"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "having",
+                "ru": "having",
+                "en": "having"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "haves",
+                "ru": "haves",
+                "en": "haves"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Tom (he) bilan Present Simple: have -> has."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "Listen! She ___ to music.",
+            "ru": "Listen! She ___ to music.",
+            "en": "Listen! She ___ to music."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "is listening",
+                "ru": "is listening",
+                "en": "is listening"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "listen",
+                "ru": "listen",
+                "en": "listen"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "listening",
+                "ru": "listening",
+                "en": "listening"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "are listening",
+                "ru": "are listening",
+                "en": "are listening"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "“Listen!” — hozir bo'layotgan ish: she is listening."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "He is ___ honest boy.",
+            "ru": "He is ___ honest boy.",
+            "en": "He is ___ honest boy."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "a",
+                "ru": "a",
+                "en": "a"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "many",
+                "ru": "many",
+                "en": "many"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "these",
+                "ru": "these",
+                "en": "these"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "an",
+                "ru": "an",
+                "en": "an"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "“Honest” dagi h o'qilmaydi, so'z unli tovush bilan boshlanadi: an honest boy."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "There ___ three cats under the tree.",
+            "ru": "There ___ three cats under the tree.",
+            "en": "There ___ three cats under the tree."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "are",
+                "ru": "are",
+                "en": "are"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "is",
+                "ru": "is",
+                "en": "is"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "am",
+                "ru": "am",
+                "en": "am"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "be",
+                "ru": "be",
+                "en": "be"
+              }
+            }
+          ],
+          "correct": "A",
+          "explanation": {
+            "uz": "Three cats — ko'plik: there are."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "We have lunch ___ 1 o'clock.",
+            "ru": "We have lunch ___ 1 o'clock.",
+            "en": "We have lunch ___ 1 o'clock."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "in",
+                "ru": "in",
+                "en": "in"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "on",
+                "ru": "on",
+                "en": "on"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "at",
+                "ru": "at",
+                "en": "at"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "to",
+                "ru": "to",
+                "en": "to"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Aniq soat bilan “at” ishlatiladi."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "This pen is mine and that pen is Ann's. That pen is ___.",
+            "ru": "This pen is mine and that pen is Ann's. That pen is ___.",
+            "en": "This pen is mine and that pen is Ann's. That pen is ___."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "she",
+                "ru": "she",
+                "en": "she"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "her",
+                "ru": "her",
+                "en": "her"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "hers",
+                "ru": "hers",
+                "en": "hers"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "she's",
+                "ru": "she's",
+                "en": "she's"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Ann (ayol) — egalik olmoshi “hers” (uniki)."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "___ is your birthday? – In May.",
+            "ru": "___ is your birthday? – In May.",
+            "en": "___ is your birthday? – In May."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "Who",
+                "ru": "Who",
+                "en": "Who"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "Where",
+                "ru": "Where",
+                "en": "Where"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "When",
+                "ru": "When",
+                "en": "When"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "Whose",
+                "ru": "Whose",
+                "en": "Whose"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "Vaqtni so'rash: When?"
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "We don't have ___ bread today.",
+            "ru": "We don't have ___ bread today.",
+            "en": "We don't have ___ bread today."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "some",
+                "ru": "some",
+                "en": "some"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "any",
+                "ru": "any",
+                "en": "any"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "a",
+                "ru": "a",
+                "en": "a"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "many",
+                "ru": "many",
+                "en": "many"
+              }
+            }
+          ],
+          "correct": "B",
+          "explanation": {
+            "uz": "Inkor gapda sanalmaydigan ot bilan “any”."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "I see five ___ in the picture.",
+            "ru": "I see five ___ in the picture.",
+            "en": "I see five ___ in the picture."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "womans",
+                "ru": "womans",
+                "en": "womans"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "womens",
+                "ru": "womens",
+                "en": "womens"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "woman",
+                "ru": "woman",
+                "en": "woman"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "women",
+                "ru": "women",
+                "en": "women"
+              }
+            }
+          ],
+          "correct": "D",
+          "explanation": {
+            "uz": "Woman -> women (tartibsiz ko'plik)."
+          },
+          "source": "new"
+        },
+        {
+          "section": "english",
+          "stem": {
+            "uz": "She drinks ___ of water every day.",
+            "ru": "She drinks ___ of water every day.",
+            "en": "She drinks ___ of water every day."
+          },
+          "options": [
+            {
+              "id": "A",
+              "text": {
+                "uz": "many",
+                "ru": "many",
+                "en": "many"
+              }
+            },
+            {
+              "id": "B",
+              "text": {
+                "uz": "much",
+                "ru": "much",
+                "en": "much"
+              }
+            },
+            {
+              "id": "C",
+              "text": {
+                "uz": "a lot",
+                "ru": "a lot",
+                "en": "a lot"
+              }
+            },
+            {
+              "id": "D",
+              "text": {
+                "uz": "few",
+                "ru": "few",
+                "en": "few"
+              }
+            }
+          ],
+          "correct": "C",
+          "explanation": {
+            "uz": "“A lot of” sanaladigan va sanalmaydigan otlar bilan ishlatiladi."
+          },
+          "source": "new"
+        }
+      ]
+    }
+  ]
+}

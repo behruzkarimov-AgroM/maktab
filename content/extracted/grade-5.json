@@ -1,0 +1,1339 @@
+{
+  "sourceFile": "5-sinf Toshkent 1.docx",
+  "grade": 5,
+  "counts": {
+    "total": 50,
+    "needsFigure": 1,
+    "withEquations": 23
+  },
+  "warnings": [],
+  "items": [
+    {
+      "no": 1,
+      "section": "math",
+      "stem": "Ifodaning qiymatini toping: 11160 : 6 + 576 : 12 - 199 + 1",
+      "options": [
+        {
+          "id": "A",
+          "text": "1710"
+        },
+        {
+          "id": "B",
+          "text": "1800"
+        },
+        {
+          "id": "C",
+          "text": "1709"
+        },
+        {
+          "id": "D",
+          "text": "1740"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 2,
+      "section": "math",
+      "stem": "Yuzi 289 dm^2 ga teng bo'lgan kvadratning perimetrini toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "68 sm"
+        },
+        {
+          "id": "B",
+          "text": "17 dm"
+        },
+        {
+          "id": "C",
+          "text": "68 dm"
+        },
+        {
+          "id": "D",
+          "text": "34 dm"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 3,
+      "section": "math",
+      "stem": "To'g'ri bajarilgan ifodani toping:",
+      "options": [
+        {
+          "id": "A",
+          "text": "87 · 99 = 8623"
+        },
+        {
+          "id": "B",
+          "text": "3267 : 33 = 99"
+        },
+        {
+          "id": "C",
+          "text": "109 · 107 = 11563"
+        },
+        {
+          "id": "D",
+          "text": "1892 : 172 = 21"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 4,
+      "section": "math",
+      "stem": "Tenglamani yeching: 3 · (2 · (6x - 2) = 24",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "9"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "17"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": [
+        "Formulada qavslar muvozanatsiz (manba hujjatda ham shunday): 3 · (2 · (6x - 2) = 24"
+      ]
+    },
+    {
+      "no": 5,
+      "section": "math",
+      "stem": "Ko'paytma necha xonali son? 12345 · 987",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "11"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 6,
+      "section": "math",
+      "stem": "Yig'indini hisoblang: (6/13) + (12/26) + (2/26)",
+      "options": [
+        {
+          "id": "A",
+          "text": "13"
+        },
+        {
+          "id": "B",
+          "text": "(1/13)"
+        },
+        {
+          "id": "C",
+          "text": "(1/26)"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 7,
+      "section": "math",
+      "stem": "Hisoblang: 7^2 - 6^2 + 5^2 - 4^2",
+      "options": [
+        {
+          "id": "A",
+          "text": "23"
+        },
+        {
+          "id": "B",
+          "text": "27"
+        },
+        {
+          "id": "C",
+          "text": "22"
+        },
+        {
+          "id": "D",
+          "text": "21"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 8,
+      "section": "math",
+      "stem": "25 · ʘ + 1 = 51 va 8 · E + 45 = 53 bo'lsa, (ʘ + E) : 3 ni toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "2"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 9,
+      "section": "math",
+      "stem": "Natural sonlar ketma-ketligi to'g'ri berilgan qatorni toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "1,2,3,4,5,6,7,8,9"
+        },
+        {
+          "id": "B",
+          "text": "0,1,2,3,4,5,6,7,8,9,….."
+        },
+        {
+          "id": "C",
+          "text": "10,11,12,13….."
+        },
+        {
+          "id": "D",
+          "text": "1,2,3,4,5,6,7,8,9…."
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 10,
+      "section": "math",
+      "stem": "15 ar necha sotixga teng?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1500"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "15000"
+        },
+        {
+          "id": "D",
+          "text": "150"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 11,
+      "section": "math",
+      "stem": "Jasur kitobning beshdan bir qismini o'qiganidan so'ng, kitobning yana 48 beti qoldi. Kitob necha betli?",
+      "options": [
+        {
+          "id": "A",
+          "text": "96"
+        },
+        {
+          "id": "B",
+          "text": "60"
+        },
+        {
+          "id": "C",
+          "text": "108"
+        },
+        {
+          "id": "D",
+          "text": "52"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 12,
+      "section": "math",
+      "stem": "Tenglamani yeching: 2025 + (3x/2) = 4048 + (x/2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "2024"
+        },
+        {
+          "id": "B",
+          "text": "2023"
+        },
+        {
+          "id": "C",
+          "text": "2025"
+        },
+        {
+          "id": "D",
+          "text": "(1/2024)"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 13,
+      "section": "math",
+      "stem": "Hisoblang va har biriga mos javoblarni belgilang. 1. 17 km 2. 17 ar 3. 17 m^2 A) 17 000 m B) 17 00 dm^2 C) 1700 m^2 D) 17 ha",
+      "options": [
+        {
+          "id": "A",
+          "text": "1-B; 2-C; 3-D"
+        },
+        {
+          "id": "B",
+          "text": "1-A; 2-C; 3-B"
+        },
+        {
+          "id": "C",
+          "text": "1-A; 2-D; 3-B"
+        },
+        {
+          "id": "D",
+          "text": "1-C; 2-D; 3-C"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 14,
+      "section": "math",
+      "stem": "Uchta nevara buvisidan uning yoshi haqida so'radi. Buvi esa “O'zlaring topib ko'ringlar-chi?!” – deb javob berdi. Shundan keyin nevaralar quyidagicha o'z fikrlarini aytishdi: “Sizning yoshingiz 75 da”, “Sizning yoshingiz 78 da”, “Sizning yoshingiz 81 da”. Nevaralarning aytganlaridan bittasi 1 yilga, boshqasi 2 yilga, yana boshqasi 4 yilga adashdi. Buvining yoshi nechada bo'lishi mumkin ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "77 yoki 79"
+        },
+        {
+          "id": "B",
+          "text": "77 yoki 80"
+        },
+        {
+          "id": "C",
+          "text": "79 yoki 80"
+        },
+        {
+          "id": "D",
+          "text": "79 yoki 82"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 15,
+      "section": "math",
+      "stem": "84 ta kitob sotib olindi. Hamma kitobning (3/7) qismi rus tilida, qolgani o'zbek tilida. Nechta o'zbekcha kitob sotib olingan?",
+      "options": [
+        {
+          "id": "A",
+          "text": "42"
+        },
+        {
+          "id": "B",
+          "text": "49"
+        },
+        {
+          "id": "C",
+          "text": "63"
+        },
+        {
+          "id": "D",
+          "text": "48"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 16,
+      "section": "math",
+      "stem": "O'lchamlari 5sm, 6sm, 7sm bo'lgan to'g'ri burchakli parallelepiped hajmini toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "120sm^3"
+        },
+        {
+          "id": "B",
+          "text": "210sm^2"
+        },
+        {
+          "id": "C",
+          "text": "210sm^3"
+        },
+        {
+          "id": "D",
+          "text": "240sm^3"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 17,
+      "section": "math",
+      "stem": "((1/8) + (1/8) + (1/8) + … + (1/8))_(n ta) = 95 bunga ko'ra n ning qiymatini toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "660"
+        },
+        {
+          "id": "B",
+          "text": "560"
+        },
+        {
+          "id": "C",
+          "text": "760"
+        },
+        {
+          "id": "D",
+          "text": "780"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 18,
+      "section": "math",
+      "stem": "Hisoblang: ((202)^2 - 54^2 + 256 · 352) : (4^4 · 10^2)",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 19,
+      "section": "math",
+      "stem": "Hisoblang: 11sm^2 - 1000mm^2",
+      "options": [
+        {
+          "id": "A",
+          "text": "200mm^2"
+        },
+        {
+          "id": "B",
+          "text": "20 mm^2"
+        },
+        {
+          "id": "C",
+          "text": "100 mm^2"
+        },
+        {
+          "id": "D",
+          "text": "11mm^2"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 20,
+      "section": "math",
+      "stem": "Yig'indini hisoblang: (1/(1 - (1/2))) + (1/(1 - (1/2)))",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 21,
+      "section": "math",
+      "stem": "Oralaridagi masofa 108 km bo'lgan ikki velosipedchi bir vaqtda bir-biriga qarab yo'lga chiqdi va 3 soatdan keyin uchrashishdi. Birinchi velosipedchining tezligi ikkinchisidan 4km/h ortiq bo'lsa, har bir velosipedchini tezligini toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "18 km/h, 14 km/h"
+        },
+        {
+          "id": "B",
+          "text": "22 km/h, 18 km/h"
+        },
+        {
+          "id": "C",
+          "text": "20 km/h, 16 km/h"
+        },
+        {
+          "id": "D",
+          "text": "16km/h, 12km/h"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 22,
+      "section": "math",
+      "stem": "Agar 4a + 5d - 2c = 2024 bo'lsa, (a + 4d - 2c + 1) + (d + 3a) = ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2023"
+        },
+        {
+          "id": "B",
+          "text": "2024"
+        },
+        {
+          "id": "C",
+          "text": "2025"
+        },
+        {
+          "id": "D",
+          "text": "2027"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 23,
+      "section": "math",
+      "stem": "(27/11) va (3 · x/121) kasrlar x ning qanday qiymatida teng bo'ladi?",
+      "options": [
+        {
+          "id": "A",
+          "text": "88"
+        },
+        {
+          "id": "B",
+          "text": "108"
+        },
+        {
+          "id": "C",
+          "text": "99"
+        },
+        {
+          "id": "D",
+          "text": "81"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 24,
+      "section": "math",
+      "stem": "Ifodaning qiymatini toping. ((12/17) + (1/19) + (32/43)) + ((18/19) + (5/17) + (11/43))",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "(973/323)"
+        },
+        {
+          "id": "C",
+          "text": "(897/323)"
+        },
+        {
+          "id": "D",
+          "text": "(1236/817)"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 25,
+      "section": "math",
+      "stem": "Hisoblang: (1 - (1/2024)) : (2023/2024) + 2023",
+      "options": [
+        {
+          "id": "A",
+          "text": "2023"
+        },
+        {
+          "id": "B",
+          "text": "2025"
+        },
+        {
+          "id": "C",
+          "text": "2026"
+        },
+        {
+          "id": "D",
+          "text": "2024"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 26,
+      "section": "math",
+      "stem": "Agar x=7 bo'lsa, harfiy ifodaning qiymatini toping. 3(47 - x) + 29 - 38 + x - 80 + x",
+      "options": [
+        {
+          "id": "A",
+          "text": "45"
+        },
+        {
+          "id": "B",
+          "text": "57"
+        },
+        {
+          "id": "C",
+          "text": "83"
+        },
+        {
+          "id": "D",
+          "text": "59"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 27,
+      "section": "math",
+      "stem": "A mulohaza ,,Har qanday juft son 6 ga qoldiqsiz bo'linadi”, B mulohaza ,,Har qanday 6 ga qoldiqsiz bo'lingan son juft son bo'ladi”. Ushbu mulohazalar asosida to'g'ri javobni toping.",
+      "options": [
+        {
+          "id": "A",
+          "text": "A rost va B yolg'on"
+        },
+        {
+          "id": "B",
+          "text": "A yolg'on va B rost"
+        },
+        {
+          "id": "C",
+          "text": "A yolg'on va B yolg'on"
+        },
+        {
+          "id": "D",
+          "text": "A rost va B rost"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 28,
+      "section": "math",
+      "stem": "Anora, Salim, Javlon va Aziz yaqin do'st. Anora Salimdan 3 yosh va Javlondan esa 6 yosh katta. Aziz esa 36 yosh va u Javlondan 3 yosh katta bo'lsa, to'rtta do'stning yoshlari yig'indisini toping?",
+      "options": [
+        {
+          "id": "A",
+          "text": "124"
+        },
+        {
+          "id": "B",
+          "text": "144"
+        },
+        {
+          "id": "C",
+          "text": "152"
+        },
+        {
+          "id": "D",
+          "text": "156"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 29,
+      "section": "math",
+      "stem": "Quyida berilgan shaklning yuzini toping:",
+      "options": [
+        {
+          "id": "A",
+          "text": "160 sm^2"
+        },
+        {
+          "id": "B",
+          "text": "170 sm^2"
+        },
+        {
+          "id": "C",
+          "text": "180 sm^2"
+        },
+        {
+          "id": "D",
+          "text": "260 sm^2"
+        }
+      ],
+      "hasFigure": true,
+      "needsFigure": true,
+      "figureKind": "image",
+      "figureImage": "content/extracted/media/g5-q29.png",
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 30,
+      "section": "math",
+      "stem": "Agar a = (666/222) + (444/111) - (55/11) va b = (999/333) + (333/111) - (44/11) ga teng bo'lsa, (a/b) = ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(22/23)"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "T.J.Y"
+        },
+        {
+          "id": "D",
+          "text": "(((1/5)))^0"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "hasEquation": true,
+      "warnings": []
+    },
+    {
+      "no": 31,
+      "section": "english",
+      "stem": "”Are you Canadian ?” “No,but I have ……..good friends in Canada.”",
+      "options": [
+        {
+          "id": "A",
+          "text": "Any"
+        },
+        {
+          "id": "B",
+          "text": "a"
+        },
+        {
+          "id": "C",
+          "text": "an"
+        },
+        {
+          "id": "D",
+          "text": "some"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 32,
+      "section": "english",
+      "stem": "…….rice is there?",
+      "options": [
+        {
+          "id": "A",
+          "text": "How many"
+        },
+        {
+          "id": "B",
+          "text": "How much"
+        },
+        {
+          "id": "C",
+          "text": "How long"
+        },
+        {
+          "id": "D",
+          "text": "How"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 33,
+      "section": "english",
+      "stem": "There are ……sandwiches ,but there ……any chips.",
+      "options": [
+        {
+          "id": "A",
+          "text": "some\\aren't"
+        },
+        {
+          "id": "B",
+          "text": "some\\are"
+        },
+        {
+          "id": "C",
+          "text": "any\\aren't"
+        },
+        {
+          "id": "D",
+          "text": "any\\are"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 34,
+      "section": "english",
+      "stem": "They ………oranges,they are pineapples.",
+      "options": [
+        {
+          "id": "A",
+          "text": "aren't"
+        },
+        {
+          "id": "B",
+          "text": "haven't"
+        },
+        {
+          "id": "C",
+          "text": "don't"
+        },
+        {
+          "id": "D",
+          "text": "are"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 35,
+      "section": "english",
+      "stem": "- …….your father …..at the Medical College? -Yes,he does.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Do\\work"
+        },
+        {
+          "id": "B",
+          "text": "Does\\works"
+        },
+        {
+          "id": "C",
+          "text": "Does\\work"
+        },
+        {
+          "id": "D",
+          "text": "Do\\works"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 36,
+      "section": "english",
+      "stem": "I ………know this person.",
+      "options": [
+        {
+          "id": "A",
+          "text": "doesn't"
+        },
+        {
+          "id": "B",
+          "text": "don't"
+        },
+        {
+          "id": "C",
+          "text": "didn't"
+        },
+        {
+          "id": "D",
+          "text": "am not"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 37,
+      "section": "english",
+      "stem": "Nick …..yesterday.",
+      "options": [
+        {
+          "id": "A",
+          "text": "will not come"
+        },
+        {
+          "id": "B",
+          "text": "did not come"
+        },
+        {
+          "id": "C",
+          "text": "did not came"
+        },
+        {
+          "id": "D",
+          "text": "comes"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 38,
+      "section": "english",
+      "stem": "There are a few ……..in the forest.",
+      "options": [
+        {
+          "id": "A",
+          "text": "deer"
+        },
+        {
+          "id": "B",
+          "text": "deers"
+        },
+        {
+          "id": "C",
+          "text": "deeres"
+        },
+        {
+          "id": "D",
+          "text": "a deer"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 39,
+      "section": "english",
+      "stem": "John ……play the guitar.He can play the piano.",
+      "options": [
+        {
+          "id": "A",
+          "text": "can"
+        },
+        {
+          "id": "B",
+          "text": "does"
+        },
+        {
+          "id": "C",
+          "text": "doesn't"
+        },
+        {
+          "id": "D",
+          "text": "can't"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 40,
+      "section": "english",
+      "stem": "She …..dishes every day.",
+      "options": [
+        {
+          "id": "A",
+          "text": "washes"
+        },
+        {
+          "id": "B",
+          "text": "wash"
+        },
+        {
+          "id": "C",
+          "text": "washs"
+        },
+        {
+          "id": "D",
+          "text": "washing"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 41,
+      "section": "english",
+      "stem": "Are you a worker? No,……………",
+      "options": [
+        {
+          "id": "A",
+          "text": "I 'm not"
+        },
+        {
+          "id": "B",
+          "text": "I am"
+        },
+        {
+          "id": "C",
+          "text": "you aren't"
+        },
+        {
+          "id": "D",
+          "text": "I amn't"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 42,
+      "section": "english",
+      "stem": "-Do you like swimming? -Yes,I ………..",
+      "options": [
+        {
+          "id": "A",
+          "text": "likes"
+        },
+        {
+          "id": "B",
+          "text": "am"
+        },
+        {
+          "id": "C",
+          "text": "does"
+        },
+        {
+          "id": "D",
+          "text": "do"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 43,
+      "section": "english",
+      "stem": "It often rains ……..spring.",
+      "options": [
+        {
+          "id": "A",
+          "text": "in"
+        },
+        {
+          "id": "B",
+          "text": "on"
+        },
+        {
+          "id": "C",
+          "text": "at"
+        },
+        {
+          "id": "D",
+          "text": "-"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 44,
+      "section": "english",
+      "stem": "..........old is your mother?",
+      "options": [
+        {
+          "id": "A",
+          "text": "What"
+        },
+        {
+          "id": "B",
+          "text": "How"
+        },
+        {
+          "id": "C",
+          "text": "Where"
+        },
+        {
+          "id": "D",
+          "text": "Why"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 45,
+      "section": "english",
+      "stem": "Is ……his bag on the table? Yes,it is.",
+      "options": [
+        {
+          "id": "A",
+          "text": "that"
+        },
+        {
+          "id": "B",
+          "text": "these"
+        },
+        {
+          "id": "C",
+          "text": "the"
+        },
+        {
+          "id": "D",
+          "text": "those"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 46,
+      "section": "english",
+      "stem": "Do you have any……..? No ,I don't",
+      "options": [
+        {
+          "id": "A",
+          "text": "a dictionary"
+        },
+        {
+          "id": "B",
+          "text": "dictionarys"
+        },
+        {
+          "id": "C",
+          "text": "dictionaries"
+        },
+        {
+          "id": "D",
+          "text": "dictionaries"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 47,
+      "section": "english",
+      "stem": "The mixture looks rather dry.Maybe you should add…….water.",
+      "options": [
+        {
+          "id": "A",
+          "text": "a"
+        },
+        {
+          "id": "B",
+          "text": "a lot"
+        },
+        {
+          "id": "C",
+          "text": "many"
+        },
+        {
+          "id": "D",
+          "text": "a little"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 48,
+      "section": "english",
+      "stem": "My plane …….at 5:30.",
+      "options": [
+        {
+          "id": "A",
+          "text": "leaves"
+        },
+        {
+          "id": "B",
+          "text": "is leaving"
+        },
+        {
+          "id": "C",
+          "text": "leave"
+        },
+        {
+          "id": "D",
+          "text": "left"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 49,
+      "section": "english",
+      "stem": "We do not go to school …….Sunday.",
+      "options": [
+        {
+          "id": "A",
+          "text": "in"
+        },
+        {
+          "id": "B",
+          "text": "on"
+        },
+        {
+          "id": "C",
+          "text": "at"
+        },
+        {
+          "id": "D",
+          "text": "to"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    },
+    {
+      "no": 50,
+      "section": "english",
+      "stem": "These shoes are ………",
+      "options": [
+        {
+          "id": "A",
+          "text": "mine"
+        },
+        {
+          "id": "B",
+          "text": "my"
+        },
+        {
+          "id": "C",
+          "text": "I"
+        },
+        {
+          "id": "D",
+          "text": "me"
+        }
+      ],
+      "hasFigure": false,
+      "needsFigure": false,
+      "warnings": []
+    }
+  ]
+}
